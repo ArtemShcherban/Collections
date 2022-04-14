@@ -10,10 +10,16 @@ import UIKit
 
 struct AppConstants {
     static let mainTitle = "Collections"
+    static let setTitle = "Set"
     static let initialTableViewTitles = ["Array", "Set", "Dictionary"]
     static let rightArrowImage = UIImage(named: "fi-rr-angle-small-right")
     static let bigButtonTitle = "Create Int array with 10_000_000 elements"
     static let numberOfElements = 500
+    static let textFieldHeight = 36
+    
+    static let buttonsTitles = ["All matching letters",
+                                "All characters that do not match",
+                                "All unique characters from the first text field that do not match in the text fields"]
     
     static let taskstitles = ["Insert \(numberOfElements) elements at the begining of the array one-by-one",
                               "Insert \(numberOfElements) elements at the begining of the array",
@@ -27,4 +33,5 @@ struct AppConstants {
                               "Remove \(numberOfElements) elements at the middle of the array",
                               "Remove \(numberOfElements) elements at the begining of the array one-by-one",
                               "Remove \(numberOfElements) elements at the begining of the array"]
+    
 }
