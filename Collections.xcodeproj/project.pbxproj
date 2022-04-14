@@ -22,6 +22,7 @@
 		F4D9FA7428080A38009146FA /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA7328080A38009146FA /* SetViewController.swift */; };
 		F4D9FA7828080B7B009146FA /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA7728080B7B009146FA /* DictionaryViewController.swift */; };
 		F4D9FA7C28080C08009146FA /* ArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA7B28080C08009146FA /* ArrayViewController.swift */; };
+		F4D9FA7E28081013009146FA /* ErrorsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA7D28081013009146FA /* ErrorsConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F4D9FA7328080A38009146FA /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		F4D9FA7728080B7B009146FA /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		F4D9FA7B28080C08009146FA /* ArrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayViewController.swift; sourceTree = "<group>"; };
+		F4D9FA7D28081013009146FA /* ErrorsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsConstants.swift; sourceTree = "<group>"; };
 		FBE04EF89276C6A010993A98 /* Pods-Collections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collections.debug.xcconfig"; path = "Target Support Files/Pods-Collections/Pods-Collections.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0DEA73437FDB598AFAEAC0 /* Pods_Collections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Collections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 			children = (
 				F4C9350027FECB050099F865 /* AppConstants.swift */,
 				F4D2E84F27FEF29A0048047C /* ColorsConstants.swift */,
+				F4D9FA7D28081013009146FA /* ErrorsConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				F4C9350127FECB050099F865 /* AppConstants.swift in Sources */,
 				F4C40D5E27FEA5D00058C9BC /* InitialMainViewController.swift in Sources */,
 				F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */,
+				F4D9FA7E28081013009146FA /* ErrorsConstants.swift in Sources */,
 				F4C934FC27FEBDC30099F865 /* InitialMainView.swift in Sources */,
 				F4C9350327FED10B0099F865 /* InitialTableViewCell.swift in Sources */,
 				F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */,

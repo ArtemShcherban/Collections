@@ -24,12 +24,18 @@ final class InitialMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialMainView?.createInitialMainView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationBarConfigure()
     }
     
     private func navigationBarConfigure() {
-        title = "Collections"
+        title = AppConstants.mainTitle
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = ColorsConstants.tabBarColor
+        navigationController?.navigationBar.layer.shadowOffset = CGSize.zero
     }
 }
 
@@ -42,9 +48,26 @@ extension InitialMainViewController: InitialMainViewDelegate {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier:
                                                         InitialTableViewCell.reuseIdentifier) as? InitialTableViewCell else { return UITableViewCell() }
-        let cellTitle = initialMainModel.reciveTitle(indexPath)
+        let cellTitle = initialMainModel.receiveTitle(indexPath)
         cell.configure(title: cellTitle)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var viewcontroller: UIViewController!
+        
+        switch indexPath.row {
+        case 0:
+            viewcontroller = ArrayViewController()
+        case 1:
+            viewcontroller = SetViewController()
+        case 2:
+            viewcontroller = DictionaryViewController()
+        default:
+            break
+        }
+        tableView.deselectRow(at: indexPath, animated: false)
+        navigationController?.pushViewController(viewcontroller, animated: true)
     }
 }

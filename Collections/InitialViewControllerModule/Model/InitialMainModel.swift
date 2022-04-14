@@ -15,7 +15,7 @@ final class InitialMainModel {
         return titles.count
     }
     
-    func reciveTitle(_ indexPath: IndexPath) -> String {
+    func receiveTitle(_ indexPath: IndexPath) -> String {
         titles[indexPath.row]
     }
 }

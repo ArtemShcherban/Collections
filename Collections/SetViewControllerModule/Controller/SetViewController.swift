@@ -21,4 +21,3 @@ class SetViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
     }
 }
-
