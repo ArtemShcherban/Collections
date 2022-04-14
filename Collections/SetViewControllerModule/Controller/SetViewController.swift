@@ -52,11 +52,7 @@ class SetViewController: UIViewController {
 extension SetViewController: SetMainViewDelegate {
     
     func textFieldDidChange(_ sender: CustomTextField) {
-//        if sender.text?.isEmpty == false {
-       
         sender.text = setMainModel.addCharacterToSet(sender.tag, sender.text ?? "")
-  
-//        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
