@@ -15,7 +15,7 @@ struct AppConstants {
     static let rightArrowImage = UIImage(named: "fi-rr-angle-small-right")
     static let bigButtonTitle = "Create Int array with 10_000_000 elements"
     static let numberOfElements = 500
-    static let textFieldHeight = 36
+    static let textViewHeight: CGFloat = 36
     
     static let buttonsTitles = ["All matching letters",
                                 "All characters that do not match",

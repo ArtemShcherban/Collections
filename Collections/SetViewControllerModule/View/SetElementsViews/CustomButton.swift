@@ -12,11 +12,15 @@ final class CustomButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
+        setConstraints()
+        setTitleLabelConstraint()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configure()
+        setConstraints()
+        setTitleLabelConstraint()
     }
     
    lazy var titleTextlabel: UILabel = {
@@ -31,11 +35,14 @@ final class CustomButton: UIButton {
     private func configure() {
         addSubview(titleTextlabel)
         titleLabel?.numberOfLines = 0
-        translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([heightAnchor.constraint(equalTo: titleTextlabel.heightAnchor)])
-        setTitleLabelConstraint()
+
     }
     
+    private func setConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalTo: titleTextlabel.heightAnchor).isActive = true
+    }
+
     private func setTitleLabelConstraint() {
         titleTextlabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([titleTextlabel.topAnchor.constraint(equalTo: self.topAnchor),

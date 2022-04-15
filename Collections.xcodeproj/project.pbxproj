@@ -27,7 +27,9 @@
 		F4D9FA8528081EE5009146FA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8428081EE5009146FA /* CustomTextField.swift */; };
 		F4D9FA8728083260009146FA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8628083260009146FA /* CustomButton.swift */; };
 		F4D9FA8928085834009146FA /* IndentsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8828085834009146FA /* IndentsConstants.swift */; };
-		F4D9FA8B28086251009146FA /* SetMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8A28086251009146FA /* SetMainModel.swift */; };
+		F4D9FA8B28086251009146FA /* SetCreationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8A28086251009146FA /* SetCreationModel.swift */; };
+		F4D9FA8D280946A9009146FA /* SetWorkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8C280946A9009146FA /* SetWorkingModel.swift */; };
+		F4D9FA8F28094CAB009146FA /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8E28094CAB009146FA /* CustomTextLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +55,9 @@
 		F4D9FA8428081EE5009146FA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F4D9FA8628083260009146FA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F4D9FA8828085834009146FA /* IndentsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentsConstants.swift; sourceTree = "<group>"; };
-		F4D9FA8A28086251009146FA /* SetMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMainModel.swift; sourceTree = "<group>"; };
+		F4D9FA8A28086251009146FA /* SetCreationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCreationModel.swift; sourceTree = "<group>"; };
+		F4D9FA8C280946A9009146FA /* SetWorkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetWorkingModel.swift; sourceTree = "<group>"; };
+		F4D9FA8E28094CAB009146FA /* CustomTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
 		FBE04EF89276C6A010993A98 /* Pods-Collections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collections.debug.xcconfig"; path = "Target Support Files/Pods-Collections/Pods-Collections.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0DEA73437FDB598AFAEAC0 /* Pods_Collections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Collections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				F4C934F427FEBB0A0099F865 /* SuportingFiles */,
-				F4D9FA8328081E9B009146FA /* ElementsViews */,
 				F4C934F727FEBD4F0099F865 /* InitialViewControllerModule */,
 				F4D9FA7928080BCC009146FA /* ArrayViewControllerModule */,
 				F4D9FA7528080B51009146FA /* DictionaryViewControllerModule */,
@@ -230,6 +233,7 @@
 		F4D9FA7F280819E2009146FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4D9FA8328081E9B009146FA /* SetElementsViews */,
 				F4D9FA8128081A10009146FA /* SetMainView.swift */,
 			);
 			path = View;
@@ -238,18 +242,20 @@
 		F4D9FA80280819F0009146FA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F4D9FA8A28086251009146FA /* SetMainModel.swift */,
+				F4D9FA8A28086251009146FA /* SetCreationModel.swift */,
+				F4D9FA8C280946A9009146FA /* SetWorkingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F4D9FA8328081E9B009146FA /* ElementsViews */ = {
+		F4D9FA8328081E9B009146FA /* SetElementsViews */ = {
 			isa = PBXGroup;
 			children = (
 				F4D9FA8428081EE5009146FA /* CustomTextField.swift */,
 				F4D9FA8628083260009146FA /* CustomButton.swift */,
+				F4D9FA8E28094CAB009146FA /* CustomTextLabel.swift */,
 			);
-			path = ElementsViews;
+			path = SetElementsViews;
 			sourceTree = "<group>";
 		};
 		FA16CFD2A5A90720634ED14B /* Frameworks */ = {
@@ -389,15 +395,17 @@
 				F4C934FE27FEC9E40099F865 /* InitialMainModel.swift in Sources */,
 				F4D9FA8928085834009146FA /* IndentsConstants.swift in Sources */,
 				F4D9FA8228081A10009146FA /* SetMainView.swift in Sources */,
-				F4D9FA8B28086251009146FA /* SetMainModel.swift in Sources */,
+				F4D9FA8B28086251009146FA /* SetCreationModel.swift in Sources */,
 				F4D9FA7428080A38009146FA /* SetViewController.swift in Sources */,
 				F4C9350127FECB050099F865 /* AppConstants.swift in Sources */,
+				F4D9FA8D280946A9009146FA /* SetWorkingModel.swift in Sources */,
 				F4C40D5E27FEA5D00058C9BC /* InitialMainViewController.swift in Sources */,
 				F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */,
 				F4D9FA7E28081013009146FA /* ErrorsConstants.swift in Sources */,
 				F4C934FC27FEBDC30099F865 /* InitialMainView.swift in Sources */,
 				F4C9350327FED10B0099F865 /* InitialTableViewCell.swift in Sources */,
 				F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */,
+				F4D9FA8F28094CAB009146FA /* CustomTextLabel.swift in Sources */,
 				F4D2E85027FEF29A0048047C /* ColorsConstants.swift in Sources */,
 				F4D9FA7C28080C08009146FA /* ArrayViewController.swift in Sources */,
 				F4D9FA8728083260009146FA /* CustomButton.swift in Sources */,

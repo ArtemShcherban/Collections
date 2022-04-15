@@ -8,11 +8,11 @@
 import UIKit
 
 class SetViewController: UIViewController {
-   
-    private lazy var setMainModel = SetMainModel()
+    
+    private lazy var setWorkingModel = SetWorkingModel()
     
     private lazy var setMainView: SetMainView? = {
-     let view = SetMainView()
+        let view = SetMainView()
         view.delegate = self
         return view
     }()
@@ -20,7 +20,7 @@ class SetViewController: UIViewController {
     override func loadView() {
         view = setMainView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setMainView?.createMainView()
@@ -29,6 +29,10 @@ class SetViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        configureNavigationBar()
+    }
+    
+    private func configureNavigationBar() {
         title = AppConstants.setTitle
         navigationController?.navigationBar.backgroundColor = ColorsConstants.tabBarColor
         navigationController?.navigationBar.prefersLargeTitles = false
@@ -52,22 +56,18 @@ class SetViewController: UIViewController {
 extension SetViewController: SetMainViewDelegate {
     
     func textFieldDidChange(_ sender: CustomTextField) {
-        sender.text = setMainModel.addCharacterToSet(sender.tag, sender.text ?? "")
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print(textField.text ?? "")
+        sender.text = setWorkingModel.addCharacterToSet(sender.tag, sender.text ?? "")
     }
     
     func buttonFirstTapped() {
-            
+        setMainView?.textLabelFirst.text = setWorkingModel.searchMatchingCharacters()
     }
     
     func buttonSecondTapped() {
-        
+        setMainView?.textLabelSecond.text = setWorkingModel.searchNotMatchingCharacters()
     }
     
     func buttonThirdTapped() {
-        
+        setMainView?.textLabelThird.text = setWorkingModel.searchUniqueCharacters()
     }
 }

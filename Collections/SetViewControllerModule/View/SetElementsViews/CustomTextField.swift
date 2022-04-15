@@ -22,6 +22,8 @@ final class CustomTextField: UITextField {
     }
     
     private func configure() {
+        autocorrectionType = .no
+        spellCheckingType = .no
         layer.borderColor = ColorsConstants.grayColor.cgColor
         layer.borderWidth = 0.7
         layer.cornerRadius = 10
@@ -31,7 +33,7 @@ final class CustomTextField: UITextField {
     }
     
     private func setConstraints() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([self.heightAnchor.constraint(equalToConstant: CGFloat(AppConstants.textFieldHeight))])
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: AppConstants.textViewHeight).isActive = true
     }
 }
