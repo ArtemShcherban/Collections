@@ -11,6 +11,7 @@
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
 		F460412E280C4B3600597B25 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412D280C4B3600597B25 /* CollectionView.swift */; };
 		F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412F280C75D600597B25 /* CollectionViewCell.swift */; };
+		F4604132280C7E2700597B25 /* DictionaryWorkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604131280C7E2700597B25 /* DictionaryWorkingModel.swift */; };
 		F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */; };
 		F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */; };
 		F4C40D5E27FEA5D00058C9BC /* InitialMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5D27FEA5D00058C9BC /* InitialMainViewController.swift */; };
@@ -35,6 +36,7 @@
 		F4604121280C160600597B25 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
 		F460412D280C4B3600597B25 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		F460412F280C75D600597B25 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F4604131280C7E2700597B25 /* DictionaryWorkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryWorkingModel.swift; sourceTree = "<group>"; };
 		F4C40D5627FEA5D00058C9BC /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D9FA94280BE660009146FA /* DictionaryMainModel.swift */,
+				F4604131280C7E2700597B25 /* DictionaryWorkingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				F4604122280C160600597B25 /* BigButton.swift in Sources */,
 				F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */,
 				F4C9350127FECB050099F865 /* AppConstants.swift in Sources */,
+				F4604132280C7E2700597B25 /* DictionaryWorkingModel.swift in Sources */,
 				F4D9FA95280BE660009146FA /* DictionaryMainModel.swift in Sources */,
 				F4C40D5E27FEA5D00058C9BC /* InitialMainViewController.swift in Sources */,
 				F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */,

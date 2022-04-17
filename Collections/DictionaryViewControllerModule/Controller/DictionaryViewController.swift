@@ -9,7 +9,7 @@ import UIKit
 
 class DictionaryViewController: UIViewController {
     
-    private lazy var dictionaryMainModel = DictionaryMainModel()
+    private lazy var dictionaryWorkingModel = DictionaryWorkingModel()
     
     private lazy var dictionaryMainView: DictionaryMainView? = {
         let view = DictionaryMainView()
@@ -24,7 +24,6 @@ class DictionaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dictionaryMainView?.createMainView()
-        dictionaryMainView?.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Main")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,18 +39,23 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Main", for: indexPath) as UICollectionViewCell
-        cell.backgroundColor = .gray
-        cell.layer.borderWidth = 0.2
-        cell.layer.borderColor = UIColor.black.cgColor
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier,
+                                                            for: indexPath) as? CollectionViewCell else { fatalError(ErrorConstants.errorOne.rawValue)}
+
+        let cellTitle = dictionaryWorkingModel.receiveTitleFoCell(indexPath)
+        cell.cellConfigure(cellTitle)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
     }
     
     func arrayButtonPressed() {
         dictionaryMainView?.arrayButton.update()
         dictionaryMainView?.arrayButton.startActivityIndicator()
         DispatchQueue.main.async {
-            self.dictionaryMainModel.createContactsArray()
+            self.dictionaryWorkingModel.createContactsArray()
             self.dictionaryMainView?.arrayButton.stopActivityIndicator()
             self.dictionaryMainView?.arrayButton.setTitle(AppConstants.buttonsTitles[0], for: .normal)
         }
@@ -61,7 +65,7 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
         dictionaryMainView?.dictionaryButton.update()
         dictionaryMainView?.dictionaryButton.startActivityIndicator()
         DispatchQueue.main.async {
-            self.dictionaryMainModel.createContactsDictionary()
+            self.dictionaryWorkingModel.createContactsDictionary()
             self.dictionaryMainView?.dictionaryButton.stopActivityIndicator()
             self.dictionaryMainView?.dictionaryButton.setTitle(AppConstants.buttonsTitles[1], for: .normal)
         }

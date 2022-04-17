@@ -42,6 +42,7 @@ class DictionaryMainView: UIView {
     func collectionViewConfigure() {
         collectionView.delegate = delegate
         collectionView.dataSource = delegate
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
     }
     
     func setButtonsConstraints() {

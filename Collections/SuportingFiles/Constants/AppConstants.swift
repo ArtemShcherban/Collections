@@ -28,4 +28,11 @@ struct AppConstants {
                               "Remove \(numberOfElements) elements at the middle of the array",
                               "Remove \(numberOfElements) elements at the begining of the array one-by-one",
                               "Remove \(numberOfElements) elements at the begining of the array"]
+    
+    static let dictionaryTasksTitles = ["Find the first element in array",
+                                        "Find the first element in dictionary",
+                                        "Find the last element in array",
+                                        "Find the last element in dictionary",
+                                        "Search for non-existing element in array",
+                                        "Search for non-existing element in dictionary"]
 }
