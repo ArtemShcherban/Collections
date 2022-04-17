@@ -20,15 +20,14 @@ class CollectionView: UICollectionView {
         collectionViewConfigure()
     }
     
-    func createCompositionalLayout(_ groupSize: NSCollectionLayoutSize =
-                                   NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                          heightDimension: .fractionalHeight(1 / 6))) -> UICollectionViewCompositionalLayout {
+    func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
        
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                               heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)
-
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1 / 6))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
