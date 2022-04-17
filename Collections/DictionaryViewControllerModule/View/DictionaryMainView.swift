@@ -9,20 +9,47 @@ import UIKit
 
 class DictionaryMainView: UIView {
     
-    lazy var button: UIButton = {
-       let tempButton = UIButton()
-        
-        tempButton.backgroundColor = .red
-     return tempButton
-    }()
+    weak var delegate: DictionaryMainViewDelegate?
+    
+    lazy var arrayButton = BigButton()
+    lazy var dictionaryButton = BigButton()
+    private lazy var buttons = [arrayButton, dictionaryButton]
     
     func createMainView() {
         backgroundColor = .purple
-        self.addSubview(button)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([button.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-                                     button.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-                                     button.heightAnchor.constraint(equalToConstant: 35),
-                                     button.widthAnchor.constraint(equalToConstant: 100)])
+        self.addSubview(arrayButton)
+        self.addSubview(dictionaryButton)
+        setButtonTitle()
+        addButtonTarget()
+        setButtonsConstraints()
     }
+    
+    func setButtonTitle() {
+        arrayButton.setTitle(AppConstants.buttonsTitles[0], for: .normal)
+        dictionaryButton.setTitle(AppConstants.buttonsTitles[1], for: .normal)
+    }
+    
+    func addButtonTarget() {
+        arrayButton.addTarget(delegate, action: #selector(delegate?.arrayButtonPressed), for: .touchUpInside)
+        dictionaryButton.addTarget(delegate, action: #selector(delegate?.dictionaryButtonPressed), for: .touchUpInside)
+    }
+    
+    func setButtonsConstraints() {
+        var horizontalInterval: CGFloat = 0
+        buttons.forEach { button in
+            button.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([button.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                                                         constant: horizontalInterval),
+                                         button.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+                                         button.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.width / 2) - 1),
+                                         button.heightAnchor.constraint(equalToConstant: 100)])
+           
+            horizontalInterval += (UIScreen.main.bounds.width / 2) + 1
+        }
+    }
+}
+
+@objc protocol DictionaryMainViewDelegate: AnyObject {
+    func arrayButtonPressed()
+    func dictionaryButtonPressed()
 }

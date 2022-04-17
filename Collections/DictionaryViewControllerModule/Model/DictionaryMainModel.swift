@@ -29,7 +29,7 @@ class DictionaryMainModel {
         print(timeInterval)
     }
     
-    func createContactDictionary() {
+    func createContactsDictionary() {
         let startTime = DispatchTime.now()
         for index in 0...9999999 {
             contactsDictionary.updateValue("\(index)", forKey: "Name_\(index)")

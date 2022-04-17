@@ -13,6 +13,7 @@ struct AppConstants {
     static let initialTableViewTitles = ["Array", "Set", "Dictionary"]
     static let rightArrowImage = UIImage(named: "fi-rr-angle-small-right")
     static let bigButtonTitle = "Create Int array with 10_000_000 elements"
+    static let buttonsTitles = ["Array", "Dictionary"]
     static let numberOfElements = 500
     
     static let taskstitles = ["Insert \(numberOfElements) elements at the begining of the array one-by-one",

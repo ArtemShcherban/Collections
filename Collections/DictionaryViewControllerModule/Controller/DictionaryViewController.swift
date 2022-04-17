@@ -13,6 +13,7 @@ class DictionaryViewController: UIViewController {
     
     private lazy var dictionaryMainView: DictionaryMainView? = {
         let view = DictionaryMainView()
+        view.delegate = self
         return view
     }()
     
@@ -23,7 +24,6 @@ class DictionaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dictionaryMainView?.createMainView()
-        dictionaryMainView?.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,9 +31,26 @@ class DictionaryViewController: UIViewController {
         title = "Dictionary"
         navigationController?.navigationBar.prefersLargeTitles = false
     }
+}
+
+extension DictionaryViewController: DictionaryMainViewDelegate {
+    func arrayButtonPressed() {
+        dictionaryMainView?.arrayButton.update()
+        dictionaryMainView?.arrayButton.startActivityIndicator()
+        DispatchQueue.main.async {
+            self.dictionaryMainModel.createContactsArray()
+            self.dictionaryMainView?.arrayButton.stopActivityIndicator()
+            self.dictionaryMainView?.arrayButton.setTitle(AppConstants.buttonsTitles[0], for: .normal)
+        }
+    }
     
-    @objc func buttonPressed() {
-        print("Button pressed")
-        dictionaryMainModel.createContactDictionary()
-      }
+    func dictionaryButtonPressed() {
+        dictionaryMainView?.dictionaryButton.update()
+        dictionaryMainView?.dictionaryButton.startActivityIndicator()
+        DispatchQueue.main.async {
+            self.dictionaryMainModel.createContactsDictionary()
+            self.dictionaryMainView?.dictionaryButton.stopActivityIndicator()
+            self.dictionaryMainView?.dictionaryButton.setTitle(AppConstants.buttonsTitles[1], for: .normal)
+        }
+    }
 }
