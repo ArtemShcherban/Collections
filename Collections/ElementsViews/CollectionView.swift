@@ -8,36 +8,34 @@
 import UIKit
 
 class CollectionView: UICollectionView {
-   private var compositionalLayout = UICollectionViewLayout()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-
-        super.init(frame: frame, collectionViewLayout: compositionalLayout)
-        createCompositionalLayout()
+        super.init(frame: frame, collectionViewLayout: UICollectionViewLayout())
+        collectionViewLayout = createCompositionalLayout()
         collectionViewConfigure()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        createCompositionalLayout()
         collectionViewConfigure()
     }
     
-    func createCompositionalLayout() {
+    func createCompositionalLayout(_ groupSize: NSCollectionLayoutSize =
+                                   NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                          heightDimension: .fractionalHeight(1 / 6))) -> UICollectionViewCompositionalLayout {
        
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                               heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(44))
+        item.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)
+
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        compositionalLayout = UICollectionViewCompositionalLayout(section: section)
+        return UICollectionViewCompositionalLayout(section: section)
     }
     
     private func collectionViewConfigure() {
-        collectionViewLayout = compositionalLayout
         backgroundColor = ColorsConstants.tabBarColor
     }
 }
