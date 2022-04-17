@@ -8,20 +8,25 @@
 import UIKit
 
 class DictionaryMainView: UIView {
-    
-    weak var delegate: DictionaryMainViewDelegate?
-    
+
     lazy var arrayButton = BigButton()
     lazy var dictionaryButton = BigButton()
     private lazy var buttons = [arrayButton, dictionaryButton]
+
+    lazy var collectionView = CollectionView()
+    
+    weak var delegate: DictionaryMainViewDelegate?
     
     func createMainView() {
         backgroundColor = .purple
         self.addSubview(arrayButton)
         self.addSubview(dictionaryButton)
+        addSubview(collectionView)
         setButtonTitle()
         addButtonTarget()
+        collectionViewConfigure()
         setButtonsConstraints()
+        setCollectionViewConstraints()
     }
     
     func setButtonTitle() {
@@ -32,6 +37,12 @@ class DictionaryMainView: UIView {
     func addButtonTarget() {
         arrayButton.addTarget(delegate, action: #selector(delegate?.arrayButtonPressed), for: .touchUpInside)
         dictionaryButton.addTarget(delegate, action: #selector(delegate?.dictionaryButtonPressed), for: .touchUpInside)
+    }
+    
+    func collectionViewConfigure() {
+        collectionView.delegate = delegate
+        collectionView.dataSource = delegate
+     
     }
     
     func setButtonsConstraints() {
@@ -47,9 +58,17 @@ class DictionaryMainView: UIView {
             horizontalInterval += (UIScreen.main.bounds.width / 2) + 1
         }
     }
+    
+    func setCollectionViewConstraints() {
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                                     collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+                                     collectionView.topAnchor.constraint(equalTo: arrayButton.bottomAnchor, constant: 1),
+                                     collectionView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)])
+    }
 }
 
-@objc protocol DictionaryMainViewDelegate: AnyObject {
+@objc protocol DictionaryMainViewDelegate: UICollectionViewDelegate, UICollectionViewDataSource {
     func arrayButtonPressed()
     func dictionaryButtonPressed()
 }

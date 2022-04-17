@@ -24,6 +24,7 @@ class DictionaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dictionaryMainView?.createMainView()
+        dictionaryMainView?.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Main")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +35,18 @@ class DictionaryViewController: UIViewController {
 }
 
 extension DictionaryViewController: DictionaryMainViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Main", for: indexPath) as UICollectionViewCell
+        cell.backgroundColor = .gray
+        cell.layer.borderWidth = 0.2
+        cell.layer.borderColor = UIColor.black.cgColor
+        return cell
+    }
+    
     func arrayButtonPressed() {
         dictionaryMainView?.arrayButton.update()
         dictionaryMainView?.arrayButton.startActivityIndicator()
