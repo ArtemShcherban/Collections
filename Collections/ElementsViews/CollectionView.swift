@@ -8,21 +8,23 @@
 import UIKit
 
 class CollectionView: UICollectionView {
-    var compositionalLayout = UICollectionViewLayout()
+   private var compositionalLayout = UICollectionViewLayout()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+
         super.init(frame: frame, collectionViewLayout: compositionalLayout)
         createCompositionalLayout()
+        collectionViewConfigure()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         createCompositionalLayout()
+        collectionViewConfigure()
     }
     
     func createCompositionalLayout() {
-        backgroundColor = .cyan
-        
+       
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                               heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -32,6 +34,10 @@ class CollectionView: UICollectionView {
         
         let section = NSCollectionLayoutSection(group: group)
         compositionalLayout = UICollectionViewCompositionalLayout(section: section)
-        
+    }
+    
+    private func collectionViewConfigure() {
+        collectionViewLayout = compositionalLayout
+        backgroundColor = ColorsConstants.tabBarColor
     }
 }
