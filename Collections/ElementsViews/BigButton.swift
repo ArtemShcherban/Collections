@@ -46,7 +46,7 @@ class BigButton: UIButton {
             isSelected.toggle()
         } else {
             setTitle(title, for: .selected)
-            backgroundColor = ColorsConstants.tabBarColor
+            backgroundColor = ColorsConstants.newColor
         }
     }
     

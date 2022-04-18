@@ -11,13 +11,7 @@ final class InitialTableViewCell: UITableViewCell {
     static let reuseIdentifier = String(describing: InitialTableViewCell.self)
     
     private lazy var rightArrowView = UIImageView()
-    
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//
-//        print("Something")
-//    }
-    
+        
     func configure(title: String) {
         var cellContent = self.defaultContentConfiguration()
         cellContent.attributedText = NSMutableAttributedString(string: title,

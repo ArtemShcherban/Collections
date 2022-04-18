@@ -14,6 +14,7 @@ final class InitialMainView: UIView {
     weak var delegate: InitialMainViewDelegate?
     
     func createInitialMainView() {
+        backgroundColor = ColorsConstants.tabBarColor
         addSubview(initialTableView)
         setInitialTableViewConstraints()
         initialTableViewConfigure()
@@ -29,7 +30,7 @@ final class InitialMainView: UIView {
         initialTableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([initialTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                                      initialTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-                                     initialTableView.topAnchor.constraint(equalTo: self.topAnchor),
+                                     initialTableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
                                      initialTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)])
     }
 }
