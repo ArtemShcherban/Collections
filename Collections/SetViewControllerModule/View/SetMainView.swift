@@ -63,7 +63,7 @@ final class SetMainView: UIView {
     
     private func setButtonTitle() {
         for (index, button) in buttons.enumerated() {
-            button.titleTextlabel.text = AppConstants.buttonsTitles[index]
+            button.titleTextlabel.text = AppConstants.setButtonsTitles[index]
         }
     }
     

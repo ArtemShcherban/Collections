@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		409D341CF17F75B3D8591048 /* Pods_Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0DEA73437FDB598AFAEAC0 /* Pods_Collections.framework */; };
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
+		F460412E280C4B3600597B25 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412D280C4B3600597B25 /* CollectionView.swift */; };
+		F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412F280C75D600597B25 /* CollectionViewCell.swift */; };
 		F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */; };
 		F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */; };
 		F4C40D5E27FEA5D00058C9BC /* InitialMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5D27FEA5D00058C9BC /* InitialMainViewController.swift */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		9E960AE9B1870A8FA855DDB2 /* Pods-Collections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collections.release.xcconfig"; path = "Target Support Files/Pods-Collections/Pods-Collections.release.xcconfig"; sourceTree = "<group>"; };
 		F4604121280C160600597B25 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
+		F460412D280C4B3600597B25 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		F460412F280C75D600597B25 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F4C40D5627FEA5D00058C9BC /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				F4604121280C160600597B25 /* BigButton.swift */,
+				F460412D280C4B3600597B25 /* CollectionView.swift */,
+				F460412F280C75D600597B25 /* CollectionViewCell.swift */,
 			);
 			path = ElementsViews;
 			sourceTree = "<group>";
@@ -407,8 +413,10 @@
 				F4D9FA8928085834009146FA /* IndentsConstants.swift in Sources */,
 				F4D9FA8228081A10009146FA /* SetMainView.swift in Sources */,
 				F4D9FA8B28086251009146FA /* SetCreationModel.swift in Sources */,
+				F460412E280C4B3600597B25 /* CollectionView.swift in Sources */,
 				F4D9FA7428080A38009146FA /* SetViewController.swift in Sources */,
 				F4604122280C160600597B25 /* BigButton.swift in Sources */,
+				F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */,
 				F4C9350127FECB050099F865 /* AppConstants.swift in Sources */,
 				F4D9FA8D280946A9009146FA /* SetWorkingModel.swift in Sources */,
 				F4C40D5E27FEA5D00058C9BC /* InitialMainViewController.swift in Sources */,
