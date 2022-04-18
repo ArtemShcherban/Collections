@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DictionaryViewController: UIViewController {
+final class DictionaryViewController: UIViewController {
     
     private lazy var dictionaryWorkingModel = DictionaryWorkingModel()
     
@@ -29,26 +29,42 @@ class DictionaryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         title = "Dictionary"
-        navigationController?.navigationBar.prefersLargeTitles = false
+                navigationController?.navigationBar.prefersLargeTitles = false
+                navigationController?.navigationBar.backgroundColor = ColorsConstants.tabBarColor
+                navigationController?.navigationBar.layer.shadowColor = UIColor.red.cgColor
+                navigationController?.navigationBar.layer.shadowRadius = 0
+                navigationController?.navigationBar.layer.shadowOpacity = 0.3
+                navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 1)
     }
 }
 
 extension DictionaryViewController: DictionaryMainViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return dictionaryWorkingModel.numberOfRows()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier,
                                                             for: indexPath) as? CollectionViewCell else { fatalError(ErrorConstants.errorOne.rawValue)}
-
+        
         let cellTitle = dictionaryWorkingModel.receiveTitleFoCell(indexPath)
         cell.cellConfigure(cellTitle)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell else { fatalError(ErrorConstants.errorTwo.rawValue + "\(indexPath)") }
+        
+        cell.titleUpdate()
+        cell.activityIndicator.startAnimating()
+        DispatchQueue.global(qos: .default).async {
+            self.dictionaryWorkingModel.startTaskAt(indexPath)
+            DispatchQueue.main.async {
+                cell.activityIndicator.stopAnimating()
+                cell.updateBackgroundColor()
+                cell.titleUpdate(self.dictionaryWorkingModel.createNewTitle())
+            }
+        }
     }
     
     func arrayButtonPressed() {
@@ -57,7 +73,7 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
         DispatchQueue.main.async {
             self.dictionaryWorkingModel.createContactsArray()
             self.dictionaryMainView?.arrayButton.stopActivityIndicator()
-            self.dictionaryMainView?.arrayButton.setTitle(AppConstants.buttonsTitles[0], for: .normal)
+            self.dictionaryMainView?.arrayButton.update(self.dictionaryWorkingModel.timeInterval)
         }
     }
     
@@ -67,7 +83,7 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
         DispatchQueue.main.async {
             self.dictionaryWorkingModel.createContactsDictionary()
             self.dictionaryMainView?.dictionaryButton.stopActivityIndicator()
-            self.dictionaryMainView?.dictionaryButton.setTitle(AppConstants.buttonsTitles[1], for: .normal)
+            self.dictionaryMainView?.dictionaryButton.update(self.dictionaryWorkingModel.timeInterval)
         }
     }
 }

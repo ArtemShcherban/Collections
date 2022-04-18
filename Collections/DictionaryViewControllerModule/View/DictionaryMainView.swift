@@ -7,45 +7,47 @@
 
 import UIKit
 
-class DictionaryMainView: UIView {
-
+final class DictionaryMainView: UIView {
+    
     lazy var arrayButton = BigButton()
     lazy var dictionaryButton = BigButton()
     private lazy var buttons = [arrayButton, dictionaryButton]
-
-    lazy var collectionView = CollectionView()
+    
+    private lazy var collectionView = CollectionView()
     
     weak var delegate: DictionaryMainViewDelegate?
     
     func createMainView() {
-        backgroundColor = .purple
-        self.addSubview(arrayButton)
-        self.addSubview(dictionaryButton)
+        backgroundColor = ColorsConstants.tabBarColor
+        addSubview(arrayButton)
+        addSubview(dictionaryButton)
         addSubview(collectionView)
-        setButtonTitle()
+        buttonsConfigure()
         addButtonTarget()
         collectionViewConfigure()
         setButtonsConstraints()
         setCollectionViewConstraints()
     }
     
-    func setButtonTitle() {
-        arrayButton.setTitle(AppConstants.buttonsTitles[0], for: .normal)
-        dictionaryButton.setTitle(AppConstants.buttonsTitles[1], for: .normal)
+    private func buttonsConfigure() {
+        for (index, button) in buttons.enumerated() {
+            button.setTitle(AppConstants.buttonsTitles[index], for: .normal)
+            button.backgroundColor = .white
+        }
     }
     
-    func addButtonTarget() {
+    private func addButtonTarget() {
         arrayButton.addTarget(delegate, action: #selector(delegate?.arrayButtonPressed), for: .touchUpInside)
         dictionaryButton.addTarget(delegate, action: #selector(delegate?.dictionaryButtonPressed), for: .touchUpInside)
     }
     
-    func collectionViewConfigure() {
+    private func collectionViewConfigure() {
         collectionView.delegate = delegate
         collectionView.dataSource = delegate
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
     }
     
-    func setButtonsConstraints() {
+    private func setButtonsConstraints() {
         var horizontalInterval: CGFloat = 0
         buttons.forEach { button in
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -54,17 +56,17 @@ class DictionaryMainView: UIView {
                                          button.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
                                          button.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.width / 2) - 1),
                                          button.heightAnchor.constraint(equalToConstant: 100)])
-           
+            
             horizontalInterval += (UIScreen.main.bounds.width / 2) + 1
         }
     }
     
-    func setCollectionViewConstraints() {
+    private func setCollectionViewConstraints() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                                      collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
                                      collectionView.topAnchor.constraint(equalTo: arrayButton.bottomAnchor, constant: 1),
-                                     collectionView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)])
+                                     collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)])
     }
 }
 

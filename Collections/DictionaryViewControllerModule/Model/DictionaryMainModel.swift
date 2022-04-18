@@ -7,7 +7,10 @@
 
 import Foundation
 
-class DictionaryMainModel {
+class DictionaryMainModel: TimeCalculateProtocol {
+    
+    var startTime = DispatchTime(uptimeNanoseconds: 0)
+    var endTime = DispatchTime(uptimeNanoseconds: 0)
     
     struct Contact {
         var name: String
@@ -18,25 +21,33 @@ class DictionaryMainModel {
     var contactsDictionary: [String: String] = [:]
     
     func createContactsArray() {
-        let startTime = DispatchTime.now()
-        for index in 0...9999999 {
-          let contact = Contact.init(name: "Name\\\(index)", phoneNumber: "\(index)")
+        startTime = DispatchTime.now()
+        for index in 0...9_999_999 {
+          let contact = Contact.init(name: "Name\(index)", phoneNumber: "\(index)")
             contactsArray.append(contact)
         }
-        let endTime = DispatchTime.now()
-        let nanoTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds)
-        let timeInterval = String(Double(nanoTime) / 1_000_000_000) + " s."
-        print(timeInterval)
+        endTime = DispatchTime.now()
     }
     
     func createContactsDictionary() {
-        let startTime = DispatchTime.now()
-        for index in 0...9999999 {
-            contactsDictionary.updateValue("\(index)", forKey: "Name_\(index)")
+        startTime = DispatchTime.now()
+        for index in 0...9_999_999 {
+            contactsDictionary.updateValue("\(index)", forKey: "Name\(index)")
         }
-        let endTime = DispatchTime.now()
-        let nanoTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds)
-        let timeInterval = String(Double(nanoTime) / 1_000_000_000) + " s."
-        print(timeInterval)
+        endTime = DispatchTime.now()
     }
+}
+
+protocol TimeCalculateProtocol {
+    var startTime: DispatchTime { get }
+    var endTime: DispatchTime { get }
+}
+
+extension TimeCalculateProtocol {
+    
+    var timeInterval: String {
+        let nanoTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds)
+        return String(format: "%.3f", Double(nanoTime) / 1_000_000) + " ms."
+    }
+
 }
