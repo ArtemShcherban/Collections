@@ -34,8 +34,7 @@ final class InitialMainViewController: UIViewController {
     private func navigationBarConfigure() {
         title = AppConstants.mainTitle
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = ColorsConstants.tabBarColor
-        navigationController?.navigationBar.layer.shadowOffset = CGSize.zero
+        navigationItem.scrollEdgeAppearance = initialMainView?.createNavigationBarAppearance()
     }
 }
 
