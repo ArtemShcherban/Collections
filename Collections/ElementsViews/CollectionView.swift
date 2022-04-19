@@ -35,6 +35,6 @@ class CollectionView: UICollectionView {
     }
     
     private func collectionViewConfigure() {
-        backgroundColor = ColorsConstants.tabBarColor
+        backgroundColor = ColorsConstants.mainColor
     }
 }

@@ -14,10 +14,17 @@ final class InitialMainView: UIView {
     weak var delegate: InitialMainViewDelegate?
     
     func createInitialMainView() {
-        backgroundColor = ColorsConstants.tabBarColor
+        backgroundColor = ColorsConstants.mainColor
         addSubview(initialTableView)
         setInitialTableViewConstraints()
         initialTableViewConfigure()
+    }
+    
+    func createNavigationBarAppearance() -> UINavigationBarAppearance {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = ColorsConstants.mainColor
+        appearance.shadowColor = .black
+        return appearance
     }
     
     private func initialTableViewConfigure() {
