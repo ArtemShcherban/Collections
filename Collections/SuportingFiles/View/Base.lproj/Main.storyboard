@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7CX-v1-G4A"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Atk-Lc-baa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fje-5t-cnY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
