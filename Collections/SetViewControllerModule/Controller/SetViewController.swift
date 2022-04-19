@@ -34,7 +34,7 @@ class SetViewController: UIViewController {
     
     private func configureNavigationBar() {
         title = AppConstants.setTitle
-        navigationController?.navigationBar.backgroundColor = ColorsConstants.tabBarColor
+        navigationController?.navigationBar.backgroundColor = ColorsConstants.mainColor
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 1)
         navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
