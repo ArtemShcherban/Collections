@@ -30,7 +30,7 @@ final class DictionaryViewController: UIViewController {
         super.viewWillAppear(animated)
         title = "Dictionary"
                 navigationController?.navigationBar.prefersLargeTitles = false
-                navigationController?.navigationBar.backgroundColor = ColorsConstants.tabBarColor
+                navigationController?.navigationBar.backgroundColor = ColorsConstants.mainColor
                 navigationController?.navigationBar.layer.shadowColor = UIColor.red.cgColor
                 navigationController?.navigationBar.layer.shadowRadius = 0
                 navigationController?.navigationBar.layer.shadowOpacity = 0.3

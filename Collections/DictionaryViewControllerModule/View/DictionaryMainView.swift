@@ -18,7 +18,7 @@ final class DictionaryMainView: UIView {
     weak var delegate: DictionaryMainViewDelegate?
     
     func createMainView() {
-        backgroundColor = ColorsConstants.tabBarColor
+        backgroundColor = ColorsConstants.mainColor
         addSubview(arrayButton)
         addSubview(dictionaryButton)
         addSubview(collectionView)
