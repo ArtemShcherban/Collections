@@ -8,11 +8,14 @@
 import UIKit
 
 class ArrayViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Array"
-        navigationController?.navigationBar.prefersLargeTitles = false
         view.backgroundColor = .cyan
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createNavigationBar(for: ArrayViewController.self)
     }
 }
