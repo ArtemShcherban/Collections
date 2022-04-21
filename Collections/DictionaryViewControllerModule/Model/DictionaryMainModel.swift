@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DictionaryMainModel: TimeCalculateProtocol {
+class DictionaryMainModel: TimeCalculation {
     
     var startTime = DispatchTime(uptimeNanoseconds: 0)
     var endTime = DispatchTime(uptimeNanoseconds: 0)
@@ -36,18 +36,4 @@ class DictionaryMainModel: TimeCalculateProtocol {
         }
         endTime = DispatchTime.now()
     }
-}
-
-protocol TimeCalculateProtocol {
-    var startTime: DispatchTime { get }
-    var endTime: DispatchTime { get }
-}
-
-extension TimeCalculateProtocol {
-    
-    var timeInterval: String {
-        let nanoTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds)
-        return String(format: "%.3f", Double(nanoTime) / 1_000_000) + " ms."
-    }
-
 }

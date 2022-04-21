@@ -28,13 +28,7 @@ final class DictionaryViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "Dictionary"
-                navigationController?.navigationBar.prefersLargeTitles = false
-                navigationController?.navigationBar.backgroundColor = ColorsConstants.mainColor
-                navigationController?.navigationBar.layer.shadowColor = UIColor.red.cgColor
-                navigationController?.navigationBar.layer.shadowRadius = 0
-                navigationController?.navigationBar.layer.shadowOpacity = 0.3
-                navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 1)
+        createNavigationBar(for: DictionaryViewController.self)
     }
 }
 
