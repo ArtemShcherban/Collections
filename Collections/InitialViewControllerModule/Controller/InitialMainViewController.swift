@@ -1,72 +1,46 @@
 //
-//  ViewController.swift
+//  InitialMainViewController.swift
 //  Collections
 //
-//  Created by Artem Shcherban on 07.04.2022.
+//  Created by Artem Shcherban on 21.04.2022.
 //
 
 import UIKit
 
-final class InitialMainViewController: UIViewController {
-    
-    private lazy var initialMainModel = InitialMainModel()
-    
-    private lazy var initialMainView: InitialMainView? = {
-        let view = InitialMainView()
-        view.delegate = self
-        return view
-    }()
-    
-    override func loadView() {
-        view = initialMainView
-    }
+final class InitialMainViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialMainView?.createInitialMainView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationBarConfigure()
+        createNavigationBar(for: InitialMainViewController.self)
     }
     
-    private func navigationBarConfigure() {
-        title = AppConstants.mainTitle
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.scrollEdgeAppearance = initialMainView?.createNavigationBarAppearance()
-    }
-}
-
-extension InitialMainViewController: InitialMainViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return initialMainModel.numberOfRows()
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier:
-                                                        InitialTableViewCell.reuseIdentifier) as? InitialTableViewCell else { return UITableViewCell() }
-        let cellTitle = initialMainModel.receiveTitle(indexPath)
-        cell.configure(title: cellTitle)
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var viewcontroller: UIViewController!
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
-        case 0:
-            viewcontroller = ArrayViewController()
         case 1:
-            viewcontroller = SetViewController()
+            performSegue(withIdentifier: "Set", sender: tableView)
         case 2:
-            viewcontroller = DictionaryViewController()
+            let viewController = DictionaryViewController()
+            viewController.navigationItem.title = ": \(String(Int.random(in: 100...999)))"
+            navigationController?.pushViewController(viewController, animated: true)
         default:
             break
         }
-        tableView.deselectRow(at: indexPath, animated: false)
-        navigationController?.pushViewController(viewcontroller, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Array",
+           let viewController = segue.destination as? ArrayViewController {
+            viewController.navigationItem.title = ": \(String(Int.random(in: 1000...1999)))"
+        }
+        if segue.identifier == "Set",
+           let viewController = segue.destination as? SetViewController {
+            viewController.navigationItem.title = ": \(String(Int.random(in: 1...99)))"
+        }
     }
 }

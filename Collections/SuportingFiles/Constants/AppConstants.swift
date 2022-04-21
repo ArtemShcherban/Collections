@@ -10,8 +10,7 @@ import UIKit
 
 struct AppConstants {
     static let mainTitle = "Collections"
-    static let setTitle = "Set"
-    static let initialTableViewTitles = ["Array", "Set", "Dictionary"]
+    static let titles = ["Array", "Set", "Dictionary"]
     static let rightArrowImage = UIImage(named: "fi-rr-angle-small-right")
     static let bigButtonTitle = "Create Int array with 10_000_000 elements"
     static let buttonsTitles = ["Array", "Dictionary"]

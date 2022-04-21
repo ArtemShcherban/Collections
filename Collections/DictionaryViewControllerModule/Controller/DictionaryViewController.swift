@@ -8,10 +8,14 @@
 import UIKit
 
 class DictionaryViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Dictionary"
         view.backgroundColor = .purple
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createNavigationBar(for: DictionaryViewController.self)
     }
 }

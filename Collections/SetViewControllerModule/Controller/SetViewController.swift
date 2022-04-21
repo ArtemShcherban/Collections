@@ -29,17 +29,7 @@ class SetViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureNavigationBar()
-    }
-    
-    private func configureNavigationBar() {
-        title = AppConstants.setTitle
-        navigationController?.navigationBar.backgroundColor = ColorsConstants.mainColor
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 1)
-        navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
-        navigationController?.navigationBar.layer.shadowRadius = 0
-        navigationController?.navigationBar.layer.shadowOpacity = 0.3
+        createNavigationBar(for: SetViewController.self)
     }
     
     private func setupHideKeyboardTapGesture() {
