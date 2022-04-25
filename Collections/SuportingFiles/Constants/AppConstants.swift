@@ -18,8 +18,8 @@ struct AppConstants {
     static let textViewHeight: CGFloat = 36
     
     static let setButtonsTitles = ["All matching letters",
-                                "All characters that do not match",
-                                "All unique characters from the first text field that do not match in the text fields"]
+                                   "All characters that do not match",
+                                   "All unique characters from the first text field that do not match in the text fields"]
     
     static let taskstitles = ["Insert \(numberOfElements) elements at the begining of the array one-by-one",
                               "Insert \(numberOfElements) elements at the begining of the array",
@@ -46,5 +46,5 @@ struct AppConstants {
                                   "Non-existing element search time: ", "Non-existing element search time: "]
     
     static let elementsForSearch = ["Name0", "Name0", "Name9999999", "Name9999999", "Name99fdd999", "Name99fdd999"]
-
+    static let aphabetLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 }

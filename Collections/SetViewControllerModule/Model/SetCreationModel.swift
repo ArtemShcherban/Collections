@@ -11,46 +11,60 @@ class SetCreationModel {
     
     private(set) lazy var firstSetOfCharacters: Set<Character> = []
     private(set) lazy var secondSetOfCharacters: Set<Character> = []
-    private lazy var checkString: String = ""
-    private lazy var checkStringOne: String = ""
-    private lazy var checkStringTwo: String = ""
-    private lazy var bufferString: String = ""
+    private lazy var controlString: String = ""
+    private lazy var controlStringOne: String = ""
+    private lazy var controlStringTwo: String = ""
+    private lazy var checkedString: String = ""
+    private lazy var letters = Array(AppConstants.aphabetLetters)
     
-    func addCharacterToSet(_ number: Int, _ string: String) -> String {
-        bufferString = string.lowercased()
-        checkString = number == 1 ? checkStringOne : checkStringTwo
-        let setOfCharacters = number == 1 ? firstSetOfCharacters : secondSetOfCharacters
-        
-        if checkString.count < string.count && setOfCharacters.contains(string.last ?? Character("")) {
-            bufferString.removeLast()
-            return bufferString
+    func inputHandling(_ number: Int, _ string: String) -> String {
+        if !string.isEmpty {
+            checkedString = checkingForLetters(string.lowercased())
+            if checkedString == string.lowercased() {
+                updateSetOfCharacters(number)
+                return checkedString
+            }
+            return checkedString
         }
+        checkedString = string
         updateSetOfCharacters(number)
-        return bufferString
-    }
+        return checkedString
+}
+
+private func checkingForLetters(_ string: String) -> String {
     
-    private func updateSetOfCharacters(_ number: Int) {
-        switch number {
-        case 1:
-            setUpdate(&firstSetOfCharacters)
-            checkStringOne = bufferString
-        case 2:
-            setUpdate(&secondSetOfCharacters)
-            checkStringTwo = bufferString
-        default:
-            break
-        }
+    if letters.contains(string.last ?? " ") {
+        return string
+    } else {
+        var updatedString = string
+        updatedString.removeLast()
+        return updatedString
     }
-    
-    private func setUpdate(_ set: inout Set<Character>) {
-        if checkString.count <= bufferString.count {
-            set.insert((bufferString.last ?? Character("")))
-            
-        } else if bufferString.count != 0 {
-            set.remove(checkString.last ?? Character(""))
-            
-        } else {
-            set = []
-        }
+}
+
+private func updateSetOfCharacters(_ number: Int) {
+    switch number {
+    case 1:
+        controlString = controlStringOne
+        setUpdate(&firstSetOfCharacters)
+        controlStringOne = checkedString
+    case 2:
+        controlString = controlStringTwo
+        setUpdate(&secondSetOfCharacters)
+        controlStringTwo = checkedString
+    default:
+        break
     }
+}
+
+private func setUpdate(_ set: inout Set<Character>) {
+    if checkedString.count == 0 {
+        set = []
+    } else if controlString.count <= checkedString.count {
+        set.insert((checkedString.last ?? Character("")))
+        
+    } else if checkedString.count != 0 && !checkedString.contains(controlString.last ?? Character("")) {
+        set.remove(controlString.last ?? Character(""))
+    }
+}
 }

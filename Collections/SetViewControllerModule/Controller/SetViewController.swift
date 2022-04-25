@@ -46,7 +46,21 @@ class SetViewController: UIViewController {
 extension SetViewController: SetMainViewDelegate {
     
     func textFieldDidChange(_ sender: CustomTextField) {
-        sender.text = setWorkingModel.addCharacterToSet(sender.tag, sender.text ?? "")
+        sender.text = setWorkingModel.inputHandling(sender.tag, sender.text ?? "")
+    }
+    
+    internal func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if let textField = textField as? CustomTextField {
+                    textField.isActive = true
+        }
+        return true
+    }
+    
+    internal func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if let textField = textField as? CustomTextField {
+                    textField.isActive = false
+        }
+        return true
     }
     
     func buttonFirstTapped() {
