@@ -17,13 +17,7 @@ final class ArrayMainView: UIView {
         return tempBigButton
     }()
     
-    lazy var collectionView: ArrayCollectionView = {
-        let tempCollectionView = ArrayCollectionView()
-        tempCollectionView.delegate = delegate
-        tempCollectionView.dataSource = delegate
-        tempCollectionView.register(ArrayCollectionViewCell.self, forCellWithReuseIdentifier: ArrayCollectionViewCell.reuseIdentifier)
-        return tempCollectionView
-    }()
+    private lazy var collectionView = CollectionView()
     
     private lazy var bottomView: UIView = {
         let tempBottomView = UIView()
@@ -33,7 +27,7 @@ final class ArrayMainView: UIView {
     }()
     
     func createMainView() {
-        backgroundColor = ColorsConstants.tabBarColor
+        backgroundColor = ColorsConstants.mainColor
         self.addSubview(bigButton)
         setBigButtonConstraints()
     }
@@ -41,8 +35,15 @@ final class ArrayMainView: UIView {
     func addCollectionView() {
         self.addSubview(collectionView)
         self.addSubview(bottomView)
+        collectionViewConfigure()
         setCollectionViewConstraints()
         setBottomViewConstraints()
+    }
+
+    private func collectionViewConfigure() {
+        collectionView.delegate = delegate
+        collectionView.dataSource = delegate
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
     }
     
     private  func setBigButtonConstraints() {
@@ -61,7 +62,7 @@ final class ArrayMainView: UIView {
                                      collectionView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -1)])
     }
     
-    func setBottomViewConstraints() {
+    private func setBottomViewConstraints() {
         bottomView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([bottomView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                                      bottomView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -71,5 +72,6 @@ final class ArrayMainView: UIView {
 }
 
 @objc protocol ArrayMainViewDelegate: UICollectionViewDelegate, UICollectionViewDataSource {
+   
     func bigButtonTapped()
 }

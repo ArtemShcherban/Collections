@@ -8,6 +8,8 @@
 import UIKit
 
 final class ArrayViewController: UIViewController {
+    static let reuseIdentifier = String(describing: ArrayViewController.self)
+    
     private lazy var arrayMainModel = ArrayMainModel()
     
     private lazy var arrayMainView: ArrayMainView? = {
@@ -30,16 +32,6 @@ final class ArrayViewController: UIViewController {
         super.viewWillAppear(animated)
         createNavigationBar(for: ArrayViewController.self)
     }
-    
-    private func navigationBarConfigure() {
-        title = AppConstants.initialTableViewTitles[0]
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.backgroundColor = ColorsConstants.tabBarColor
-        navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
-        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.0, height: 1)
-        navigationController?.navigationBar.layer.shadowRadius = 0
-        navigationController?.navigationBar.layer.shadowOpacity = 0.3
-    }
 }
 
 extension ArrayViewController: ArrayMainViewDelegate {
@@ -48,31 +40,30 @@ extension ArrayViewController: ArrayMainViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArrayCollectionViewCell.reuseIdentifier,
-                                                            for: indexPath) as? ArrayCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier,
+                                                            for: indexPath) as? CollectionViewCell
         else { fatalError(ErrorConstants.errorOne.rawValue) }
         
         let celltitle = arrayMainModel.receiveTitle(indexPath)
-        cell.configure(title: celltitle)
+        cell.configure(celltitle)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? ArrayCollectionViewCell
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell
         else { fatalError(ErrorConstants.errorTwo.rawValue + "\(indexPath)") }
         
-        cell.startActivityIndicator()
-        cell.textLabelUpdate()
+        cell.activityIndicator.startAnimating()
+        cell.titleUpdate()
         DispatchQueue.global(qos: .default).async {
             self.arrayMainModel.startTask(indexPath)
-            self.arrayMainModel.timeСalculation()
             DispatchQueue.main.async {
-                cell.stopActivityIndicator()
-                cell.textLabelUpdate(self.arrayMainModel.timeInterval)
+                cell.activityIndicator.stopAnimating()
+                cell.updateAppearance()
+                cell.titleUpdate(self.arrayMainModel.timeInterval)
             }
         }
-        print(indexPath.row)
     }
     
     func bigButtonTapped() {
@@ -81,7 +72,6 @@ extension ArrayViewController: ArrayMainViewDelegate {
             arrayMainView?.bigButton.startActivityIndicator()
             DispatchQueue.main.async {
                 self.arrayMainModel.createArray()
-                self.arrayMainModel.timeСalculation()
                 self.arrayMainView?.bigButton.stopActivityIndicator()
                 self.arrayMainView?.bigButton.update(self.arrayMainModel.timeInterval)
                 self.arrayMainView?.addCollectionView()
