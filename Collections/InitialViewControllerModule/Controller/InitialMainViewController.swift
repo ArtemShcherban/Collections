@@ -8,7 +8,10 @@
 import UIKit
 
 final class InitialMainViewController: UITableViewController {
+    static let reuseIdentifier = String(describing: InitialMainViewController.self)
     
+    @IBOutlet private(set) var initialTableView: UITableView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
     }
