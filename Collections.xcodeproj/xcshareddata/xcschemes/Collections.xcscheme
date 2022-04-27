@@ -53,7 +53,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F47289A02819074D00B7ECB1"
+               BlueprintIdentifier = "F42980602819824400880199"
                BuildableName = "InitialModuleUITests.xctest"
                BlueprintName = "InitialModuleUITests"
                ReferencedContainer = "container:Collections.xcodeproj">
