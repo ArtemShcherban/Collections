@@ -22,6 +22,7 @@
 		F47289972819047D00B7ECB1 /* ArrayMainModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289962819047D00B7ECB1 /* ArrayMainModelTests.swift */; };
 		F47289A42819074D00B7ECB1 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289A32819074D00B7ECB1 /* InitialModuleUITests.swift */; };
 		F47289A62819074D00B7ECB1 /* InitialModuleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289A52819074D00B7ECB1 /* InitialModuleUITestsLaunchTests.swift */; };
+		F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */; };
 		F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */; };
 		F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */; };
 		F4C40D6127FEA5D00058C9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C40D5F27FEA5D00058C9BC /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		F47289A12819074D00B7ECB1 /* InitialModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47289A32819074D00B7ECB1 /* InitialModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITests.swift; sourceTree = "<group>"; };
 		F47289A52819074D00B7ECB1 /* InitialModuleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerExtension.swift; sourceTree = "<group>"; };
 		F4C40D5627FEA5D00058C9BC /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F472898D281902DE00B7ECB1 /* IntegerExtension */,
+				F47289AC28190FFE00B7ECB1 /* IntegerExtension */,
 				F40C39C42811443500EE48E2 /* UIVIewControllerExtensions */,
 			);
 			path = Extensions;
@@ -192,6 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				F472898E281902DE00B7ECB1 /* IntegerExtension.swift */,
+		F47289AC28190FFE00B7ECB1 /* IntegerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */,
 			);
 			path = IntegerExtension;
 			sourceTree = "<group>";
@@ -621,6 +628,7 @@
 				F4604128280C18DE00597B25 /* ArrayMainView.swift in Sources */,
 				F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */,
 				F4D2E85027FEF29A0048047C /* ColorsConstants.swift in Sources */,
+				F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */,
 				F40C39A8280E6CAC00EE48E2 /* TimeCalculation.swift in Sources */,
 				F4D9FA7C28080C08009146FA /* ArrayViewController.swift in Sources */,
 			);
