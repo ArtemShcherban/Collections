@@ -12,9 +12,10 @@ struct AppConstants {
     static let mainTitle = "Collections"
     static let titles = ["Array", "Set", "Dictionary"]
     static let rightArrowImage = UIImage(named: "fi-rr-angle-small-right")
-    static let bigButtonTitle = "Create Int array with 10_000_000 elements"
+    static let maximumElements = 10_000_000
+    static let bigButtonTitle = "Create Int array with \(maximumElements.decimalFormat()) elements"
     static let buttonsTitles = ["Array", "Dictionary"]
-    static let numberOfElements = 500
+    static let numberOfElements = 1000
     static let textViewHeight: CGFloat = 36
     
     static let setButtonsTitles = ["All matching letters",
