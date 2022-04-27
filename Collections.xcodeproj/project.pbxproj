@@ -137,6 +137,8 @@
 				F470339C2817D98800F188F1 /* TestHelpers.swift */,
 			);
 			path = InitialModuleTests;
+               sourceTree = "<group>";
+               };
 		F4604123280C183F00597B25 /* View */ = {
 			isa = PBXGroup;
 			children = (
