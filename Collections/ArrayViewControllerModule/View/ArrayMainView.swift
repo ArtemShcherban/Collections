@@ -13,6 +13,7 @@ final class ArrayMainView: UIView {
     
     lazy var bigButton: BigButton = {
         let tempBigButton = BigButton()
+        tempBigButton.accessibilityIdentifier = "BigButton"
         tempBigButton.addTarget(delegate, action: #selector(delegate?.bigButtonTapped), for: .touchUpInside)
         return tempBigButton
     }()

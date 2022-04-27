@@ -8,10 +8,11 @@
 import Foundation
 
 final class ArrayMainModel: TimeCalculation {
-
+    
     var startTime = DispatchTime(uptimeNanoseconds: 0)
     var endTime = DispatchTime(uptimeNanoseconds: 0)
-    private lazy var integers: [Int] = []
+    private(set) lazy var integers: [Int] = []
+    private(set) lazy var tempIntegers: [Int] = []
     private lazy var tasksTitle = AppConstants.taskstitles
     private lazy var methods = [insertBeginingOneByOne, insertBeginingOnce,
                                 insertMiddleOneByOne, insertMiddleOnce,
@@ -20,9 +21,9 @@ final class ArrayMainModel: TimeCalculation {
                                 removeMiddleOneByOne, removeMiddleOnce,
                                 removeBeginingOneByOne, removeBeginingOnce]
     
-    func createArray() {
+    func createArray(with maximumElements: Int) {
         startTime = DispatchTime.now()
-        integers = Array(0...9_999_999)
+        integers = Array(0..<maximumElements)
         endTime = DispatchTime.now()
     }
     
@@ -34,104 +35,106 @@ final class ArrayMainModel: TimeCalculation {
         tasksTitle[indexPath.row]
     }
     
-    func startTask(_ indexPath: IndexPath) {
+    func startTask(_ indexPath: IndexPath, _ numberOfElements: Int = AppConstants.numberOfElements) {
         let method = methods[indexPath.row]
-        method()
+        method(numberOfElements)
     }
     
-    private func insertBeginingOneByOne() {
-        var tempIntegers = integers
+    private func insertBeginingOneByOne(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        for element in 1...AppConstants.numberOfElements {
+        for element in 1...numberOfElements {
             tempIntegers.insert(element, at: 0)
         }
         endTime = DispatchTime.now()
     }
     
-    private func insertBeginingOnce() {
-        var tempIntegers = integers
+    private func insertBeginingOnce(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        tempIntegers.insert(contentsOf: Array(1...AppConstants.numberOfElements), at: 0)
+        tempIntegers.insert(contentsOf: Array(1...numberOfElements), at: 0)
         endTime = DispatchTime.now()
     }
     
-    private func insertMiddleOneByOne() {
-        var tempIntegers = integers
+    private func insertMiddleOneByOne(_ numberOfElements: Int) {
+        tempIntegers = integers
+        let index = tempIntegers.count / 2
         startTime = DispatchTime.now()
-        for element in 1...AppConstants.numberOfElements {
-            tempIntegers.insert(element, at: (tempIntegers.count / 2 + 1))
+        for element in 1...numberOfElements {
+            tempIntegers.insert(element, at: (index + element))
         }
         endTime = DispatchTime.now()
     }
     
-    private func insertMiddleOnce() {
-        var tempIntegers = integers
+    private func insertMiddleOnce(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        tempIntegers.insert(contentsOf: Array(1...AppConstants.numberOfElements), at: (tempIntegers.count / 2 + 1))
+        tempIntegers.insert(contentsOf: Array(1...numberOfElements), at: (tempIntegers.count / 2 + 1))
         endTime = DispatchTime.now()
     }
     
-    private func insertEndOneByOne() {
-        var tempIntegers = integers
+    private func insertEndOneByOne(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        for element in 1...AppConstants.numberOfElements {
+        for element in 1...numberOfElements {
+            print(element)
             tempIntegers.append(element)
         }
         endTime = DispatchTime.now()
     }
     
-    private func insertEndOnce() {
-        var tempIntegers = integers
+    private func insertEndOnce(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        tempIntegers.append(contentsOf: Array(1...AppConstants.numberOfElements))
+        tempIntegers.append(contentsOf: Array(1...numberOfElements))
         endTime = DispatchTime.now()
     }
     
-    private func removeEndOneByOne() {
-        var tempIntegers = integers
+    private func removeEndOneByOne(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        for _ in 1...AppConstants.numberOfElements {
+        for _ in 1...numberOfElements {
             tempIntegers.removeLast(1)
         }
         endTime = DispatchTime.now()
     }
     
-    private func removeEndOnce() {
-        var tempIntegers = integers
+    private func removeEndOnce(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        tempIntegers.removeLast(AppConstants.numberOfElements)
+        tempIntegers.removeLast(numberOfElements)
         endTime = DispatchTime.now()
     }
     
-    private func removeMiddleOneByOne() {
-        var tempIntegers = integers
+    private func removeMiddleOneByOne(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        for _ in 1...AppConstants.numberOfElements {
+        for _ in 1...numberOfElements {
             tempIntegers.remove(at: Int(tempIntegers.count / 2))
         }
         endTime = DispatchTime.now()
     }
     
-    private func removeMiddleOnce() {
-        var tempIntegers = integers
+    private func removeMiddleOnce(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        tempIntegers.removeSubrange((tempIntegers.count / 2 - AppConstants.numberOfElements / 2)..<(tempIntegers.count / 2 + AppConstants.numberOfElements / 2) )
+        tempIntegers.removeSubrange((tempIntegers.count / 2 - numberOfElements / 2)..<(tempIntegers.count / 2 + numberOfElements / 2))
         endTime = DispatchTime.now()
     }
     
-    private func removeBeginingOneByOne() {
-        var tempIntegers = integers
+    private func removeBeginingOneByOne(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        for _ in 1...AppConstants.numberOfElements {
+        for _ in 1...numberOfElements {
             tempIntegers.remove(at: 0)
         }
         endTime = DispatchTime.now()
     }
     
-    private func removeBeginingOnce() {
-        var tempIntegers = integers
+    private func removeBeginingOnce(_ numberOfElements: Int) {
+        tempIntegers = integers
         startTime = DispatchTime.now()
-        tempIntegers.removeSubrange(0..<AppConstants.numberOfElements)
+        tempIntegers.removeSubrange(0..<numberOfElements)
         endTime = DispatchTime.now()
     }
 }

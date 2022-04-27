@@ -26,8 +26,7 @@ final class ArrayViewController: UIViewController {
         super.viewDidLoad()
         arrayMainView?.createMainView()
     }
-    
-    
+     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createNavigationBar(for: ArrayViewController.self)
@@ -71,7 +70,7 @@ extension ArrayViewController: ArrayMainViewDelegate {
             arrayMainView?.bigButton.update()
             arrayMainView?.bigButton.startActivityIndicator()
             DispatchQueue.main.async {
-                self.arrayMainModel.createArray()
+                self.arrayMainModel.createArray(with: AppConstants.maximumElements)
                 self.arrayMainView?.bigButton.stopActivityIndicator()
                 self.arrayMainView?.bigButton.update(self.arrayMainModel.timeInterval)
                 self.arrayMainView?.addCollectionView()
