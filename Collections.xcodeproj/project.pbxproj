@@ -11,9 +11,6 @@
 		F40C39A8280E6CAC00EE48E2 /* TimeCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39A7280E6CAC00EE48E2 /* TimeCalculation.swift */; };
 		F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */; };
 		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
-		F429804928194CF200880199 /* SetModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429804828194CF200880199 /* SetModelsTests.swift */; };
-		F429804B2819633800880199 /* SetModelsTestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429804A2819633800880199 /* SetModelsTestsExtensions.swift */; };
-		F429804D281979CA00880199 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429804C281979CA00880199 /* SetTestConstants.swift */; };
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
 		F460412E280C4B3600597B25 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412D280C4B3600597B25 /* CollectionView.swift */; };
 		F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412F280C75D600597B25 /* CollectionViewCell.swift */; };
@@ -41,13 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F429804328192B3000880199 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4C40D4E27FEA5D00058C9BC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4C40D5527FEA5D00058C9BC;
-			remoteInfo = Collections;
-		};
 		F47033972817D17300F188F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4C40D4E27FEA5D00058C9BC /* Project object */;
@@ -62,10 +52,6 @@
 		F40C39A7280E6CAC00EE48E2 /* TimeCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculation.swift; sourceTree = "<group>"; };
 		F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMainViewController.swift; sourceTree = "<group>"; };
 		F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
-		F429803F28192B3000880199 /* SetModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F429804828194CF200880199 /* SetModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModelsTests.swift; sourceTree = "<group>"; };
-		F429804A2819633800880199 /* SetModelsTestsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModelsTestsExtensions.swift; sourceTree = "<group>"; };
-		F429804C281979CA00880199 /* SetTestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTestConstants.swift; sourceTree = "<group>"; };
 		F4604121280C160600597B25 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
 		F460412D280C4B3600597B25 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		F460412F280C75D600597B25 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -98,13 +84,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F429803C28192B3000880199 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F47033902817D17300F188F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,16 +127,6 @@
 			path = UIVIewControllerExtensions;
 			sourceTree = "<group>";
 		};
-		F429804028192B3000880199 /* SetModuleTests */ = {
-			isa = PBXGroup;
-			children = (
-				F429804C281979CA00880199 /* SetTestConstants.swift */,
-				F429804828194CF200880199 /* SetModelsTests.swift */,
-				F429804A2819633800880199 /* SetModelsTestsExtensions.swift */,
-			);
-			path = SetModuleTests;
-			sourceTree = "<group>";
-		};
 		F4604120280C15EA00597B25 /* ElementsViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +159,6 @@
 			children = (
 				F4C40D5827FEA5D00058C9BC /* Collections */,
 				F47033942817D17300F188F1 /* InitialModuleTests */,
-				F429804028192B3000880199 /* SetModuleTests */,
 				F4C40D5727FEA5D00058C9BC /* Products */,
 				FAC236CC5DD43B66C92F3E9F /* Pods */,
 				FA16CFD2A5A90720634ED14B /* Frameworks */,
@@ -202,7 +170,6 @@
 			children = (
 				F4C40D5627FEA5D00058C9BC /* Collections.app */,
 				F47033932817D17300F188F1 /* InitialModuleTests.xctest */,
-				F429803F28192B3000880199 /* SetModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -377,24 +344,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F429803E28192B3000880199 /* SetModuleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F429804528192B3000880199 /* Build configuration list for PBXNativeTarget "SetModuleTests" */;
-			buildPhases = (
-				F429803B28192B3000880199 /* Sources */,
-				F429803C28192B3000880199 /* Frameworks */,
-				F429803D28192B3000880199 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F429804428192B3000880199 /* PBXTargetDependency */,
-			);
-			name = SetModuleTests;
-			productName = SetModuleTests;
-			productReference = F429803F28192B3000880199 /* SetModuleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		F47033922817D17300F188F1 /* InitialModuleTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F470339B2817D17300F188F1 /* Build configuration list for PBXNativeTarget "InitialModuleTests" */;
@@ -442,10 +391,6 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					F429803E28192B3000880199 = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = F4C40D5527FEA5D00058C9BC;
-					};
 					F47033922817D17300F188F1 = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = F4C40D5527FEA5D00058C9BC;
@@ -470,19 +415,11 @@
 			targets = (
 				F4C40D5527FEA5D00058C9BC /* Collections */,
 				F47033922817D17300F188F1 /* InitialModuleTests */,
-				F429803E28192B3000880199 /* SetModuleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F429803D28192B3000880199 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F47033912817D17300F188F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -545,16 +482,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F429803B28192B3000880199 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F429804928194CF200880199 /* SetModelsTests.swift in Sources */,
-				F429804B2819633800880199 /* SetModelsTestsExtensions.swift in Sources */,
-				F429804D281979CA00880199 /* SetTestConstants.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F470338F2817D17300F188F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,11 +523,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F429804428192B3000880199 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F4C40D5527FEA5D00058C9BC /* Collections */;
-			targetProxy = F429804328192B3000880199 /* PBXContainerItemProxy */;
-		};
 		F47033982817D17300F188F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F4C40D5527FEA5D00058C9BC /* Collections */;
@@ -628,44 +550,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F429804628192B3000880199 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34XV2JSY5D;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Shcherban.SetModuleTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Collections.app/Collections";
-			};
-			name = Debug;
-		};
-		F429804728192B3000880199 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34XV2JSY5D;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Shcherban.SetModuleTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Collections.app/Collections";
-			};
-			name = Release;
-		};
 		F47033992817D17300F188F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -885,15 +769,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F429804528192B3000880199 /* Build configuration list for PBXNativeTarget "SetModuleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F429804628192B3000880199 /* Debug */,
-				F429804728192B3000880199 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F470339B2817D17300F188F1 /* Build configuration list for PBXNativeTarget "InitialModuleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
