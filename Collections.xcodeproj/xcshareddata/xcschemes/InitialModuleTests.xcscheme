@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F429803E28192B3000880199"
+               BlueprintIdentifier = "F4298137281AAB8200880199"
                BuildableName = "SetModuleTests.xctest"
                BlueprintName = "SetModuleTests"
                ReferencedContainer = "container:Collections.xcodeproj">
@@ -65,6 +65,16 @@
                BlueprintIdentifier = "F42980C9281A880500880199"
                BuildableName = "SetModuleUnitTests.xctest"
                BlueprintName = "SetModuleUnitTests"
+               ReferencedContainer = "container:Collections.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F4298137281AAB8200880199"
+               BuildableName = "SetModuleTests.xctest"
+               BlueprintName = "SetModuleTests"
                ReferencedContainer = "container:Collections.xcodeproj">
             </BuildableReference>
          </TestableReference>

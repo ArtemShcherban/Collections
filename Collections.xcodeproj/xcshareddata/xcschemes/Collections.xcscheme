@@ -43,9 +43,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F42980602819824400880199"
+               BlueprintIdentifier = "F429806F2819829900880199"
                BuildableName = "InitialModuleUITests.xctest"
                BlueprintName = "InitialModuleUITests"
+               ReferencedContainer = "container:Collections.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F4298137281AAB8200880199"
+               BuildableName = "SetModuleTests.xctest"
+               BlueprintName = "SetModuleTests"
                ReferencedContainer = "container:Collections.xcodeproj">
             </BuildableReference>
          </TestableReference>
