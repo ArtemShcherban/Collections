@@ -12,22 +12,8 @@ struct AppConstants {
     static let mainTitle = "Collections"
     static let titles = ["Array", "Set", "Dictionary"]
     static let maximumElements = 10_000_000
-    static let bigButtonTitle = "Create Int array with \(maximumElements.decimalFormat()) elements"
     static let buttonsTitles = ["Array", "Dictionary"]
     static let numberOfElements = 1000
-    
-    static let taskstitles = ["Insert \(numberOfElements) elements at the begining of the array one-by-one",
-                              "Insert \(numberOfElements) elements at the begining of the array",
-                              "Insert \(numberOfElements) elements at the middle of the array one-by-one",
-                              "Insert \(numberOfElements) elements at the middle of the array",
-                              "Insert \(numberOfElements) elements at the end of the array one-by-one",
-                              "Insert \(numberOfElements) elements at the end of the array",
-                              "Remove \(numberOfElements) elements at the end of the array one-by-one",
-                              "Remove \(numberOfElements) elements at the end of the array",
-                              "Remove \(numberOfElements) elements at the middle of the array one-by-one",
-                              "Remove \(numberOfElements) elements at the middle of the array",
-                              "Remove \(numberOfElements) elements at the begining of the array one-by-one",
-                              "Remove \(numberOfElements) elements at the begining of the array"]
     
     static let dictionaryTasksTitles = ["Find the first element in array",
                                         "Find the first element in dictionary",
