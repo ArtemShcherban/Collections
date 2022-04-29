@@ -13,7 +13,7 @@ final class ArrayMainModel: TimeCalculation {
     var endTime = DispatchTime(uptimeNanoseconds: 0)
     private(set) lazy var integers: [Int] = []
     private(set) lazy var tempIntegers: [Int] = []
-    private lazy var tasksTitle = AppConstants.taskstitles
+    private lazy var tasksTitle = ArrayConstants.taskstitles
     private lazy var methods = [insertBeginingOneByOne, insertBeginingOnce,
                                 insertMiddleOneByOne, insertMiddleOnce,
                                 insertEndOneByOne, insertEndOnce,

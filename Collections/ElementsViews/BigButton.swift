@@ -33,7 +33,7 @@ class BigButton: UIButton {
     }
     
     private func configure() {
-        setTitle(AppConstants.bigButtonTitle, for: .normal)
+        setTitle(ArrayConstants.bigButtonTitle, for: .normal)
         setTitleColor(ColorsConstants.blueColor, for: .normal)
         backgroundColor = ColorsConstants.grayColor
         layer.borderWidth = 0.2
