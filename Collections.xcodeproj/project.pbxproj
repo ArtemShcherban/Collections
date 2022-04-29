@@ -249,6 +249,8 @@
 				F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */,
 			);
 			path = SetTests;
+			sourceTree = "<group>";
+		};
 		F4B2B932281BD93400CD97E8 /* CommonConstants */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +259,14 @@
 				F4D9FA7D28081013009146FA /* ErrorsConstants.swift */,
 			);
 			path = CommonConstants;
+			sourceTree = "<group>";
+		};
+		F4B2B936281BE87B00CD97E8 /* SetConstants */ = {
+			isa = PBXGroup;
+			children = (
+				F4D9FA8828085834009146FA /* IndentsConstants.swift */,
+			);
+			path = SetConstants;
 			sourceTree = "<group>";
 		};
 		F4C40D4D27FEA5D00058C9BC = {
@@ -348,10 +358,7 @@
 		F4C934FF27FECAB70099F865 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				F4C9350027FECB050099F865 /* AppConstants.swift */,
-				F4D2E84F27FEF29A0048047C /* ColorsConstants.swift */,
-				F4D9FA7D28081013009146FA /* ErrorsConstants.swift */,
-				F4D9FA8828085834009146FA /* IndentsConstants.swift */,
+				F4B2B936281BE87B00CD97E8 /* SetConstants */,
 				F4B2B932281BD93400CD97E8 /* CommonConstants */,
 			);
 			path = Constants;
@@ -531,8 +538,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4C40D6A27FEA6120058C9BC /* Build configuration list for PBXNativeTarget "Collections" */;
 			buildPhases = (
-				F4C934F327FEAB070099F865 /* ShellScript */,
 				A3238DEC8243D63CF73A843E /* [CP] Check Pods Manifest.lock */,
+				F4C934F327FEAB070099F865 /* ShellScript */,
 				F4C40D5227FEA5D00058C9BC /* Sources */,
 				F4C40D5327FEA5D00058C9BC /* Frameworks */,
 				F4C40D5427FEA5D00058C9BC /* Resources */,
