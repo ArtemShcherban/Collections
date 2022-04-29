@@ -168,6 +168,16 @@
 			path = IntegerExtension;
 			sourceTree = "<group>";
 		};
+		F4B2B932281BD93400CD97E8 /* CommonConstants */ = {
+			isa = PBXGroup;
+			children = (
+				F4C9350027FECB050099F865 /* AppConstants.swift */,
+				F4D2E84F27FEF29A0048047C /* ColorsConstants.swift */,
+				F4D9FA7D28081013009146FA /* ErrorsConstants.swift */,
+			);
+			path = CommonConstants;
+			sourceTree = "<group>";
+		};
 		F4C40D4D27FEA5D00058C9BC = {
 			isa = PBXGroup;
 			children = (
@@ -254,9 +264,7 @@
 		F4C934FF27FECAB70099F865 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				F4C9350027FECB050099F865 /* AppConstants.swift */,
-				F4D2E84F27FEF29A0048047C /* ColorsConstants.swift */,
-				F4D9FA7D28081013009146FA /* ErrorsConstants.swift */,
+				F4B2B932281BD93400CD97E8 /* CommonConstants */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
