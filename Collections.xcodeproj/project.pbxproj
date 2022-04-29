@@ -20,6 +20,7 @@
 		F47033962817D17300F188F1 /* InitialViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47033952817D17300F188F1 /* InitialViewControllerTests.swift */; };
 		F470339D2817D98800F188F1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
 		F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */; };
+		F4B2B93B281BF40100CD97E8 /* DictionaryConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */; };
 		F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */; };
 		F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */; };
 		F4C40D6127FEA5D00058C9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C40D5F27FEA5D00058C9BC /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		F47033952817D17300F188F1 /* InitialViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerTests.swift; sourceTree = "<group>"; };
 		F470339C2817D98800F188F1 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerExtension.swift; sourceTree = "<group>"; };
+		F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConstants.swift; sourceTree = "<group>"; };
 		F4C40D5627FEA5D00058C9BC /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,14 @@
 			path = CommonConstants;
 			sourceTree = "<group>";
 		};
+		F4B2B939281BF3D100CD97E8 /* DictionaryConstants */ = {
+			isa = PBXGroup;
+			children = (
+				F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */,
+			);
+			path = DictionaryConstants;
+			sourceTree = "<group>";
+		};
 		F4C40D4D27FEA5D00058C9BC = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +280,7 @@
 		F4C934FF27FECAB70099F865 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				F4B2B939281BF3D100CD97E8 /* DictionaryConstants */,
 				F4B2B932281BD93400CD97E8 /* CommonConstants */,
 			);
 			path = Constants;
@@ -559,10 +570,10 @@
 				F4604122280C160600597B25 /* BigButton.swift in Sources */,
 				F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */,
 				F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */,
+				F4B2B93B281BF40100CD97E8 /* DictionaryConstants.swift in Sources */,
 				F4C9350127FECB050099F865 /* AppConstants.swift in Sources */,
 				F4604132280C7E2700597B25 /* DictionaryWorkingModel.swift in Sources */,
 				F4D9FA95280BE660009146FA /* DictionaryMainModel.swift in Sources */,
-				F4C40D5E27FEA5D00058C9BC /* InitialMainViewController.swift in Sources */,
 				F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */,
 				F4D9FA93280BE3CF009146FA /* DictionaryMainView.swift in Sources */,
 				F4D9FA7E28081013009146FA /* ErrorsConstants.swift in Sources */,

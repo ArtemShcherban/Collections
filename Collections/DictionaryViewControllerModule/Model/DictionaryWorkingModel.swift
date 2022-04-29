@@ -13,11 +13,11 @@ class DictionaryWorkingModel: DictionaryMainModel {
     private lazy var titleFirstPart = ""
     
     func numberOfRows() -> Int {
-        return AppConstants.dictionaryTasksTitles.count
+        return DictionaryConstants.dictionaryTasksTitles.count
     }
     
     func receiveTitleFoCell(_ indexPath: IndexPath) -> String {
-        AppConstants.dictionaryTasksTitles[indexPath.row]
+        DictionaryConstants.dictionaryTasksTitles[indexPath.row]
     }
 
     func startTaskAt(_ indexPath: IndexPath) {
@@ -42,15 +42,15 @@ class DictionaryWorkingModel: DictionaryMainModel {
     
     private func findElementInArray(_ index: Int) {
         startTime = DispatchTime.now()
-        resultOfSearch = contactsArray.first { $0.name == AppConstants.elementsForSearch[index] }
+        resultOfSearch = contactsArray.first { $0.name == DictionaryConstants.elementsForSearch[index] }
         endTime = DispatchTime.now()
-        titleFirstPart = AppConstants.fistPartOfTitle[index]
+        titleFirstPart = DictionaryConstants.fistPartOfTitle[index]
     }
     
     private func findElementInDictionary(_ index: Int) {
         startTime = DispatchTime.now()
-        resultOfSearch = contactsDictionary.first { $0.key ==  AppConstants.elementsForSearch[index] }
+        resultOfSearch = contactsDictionary.first { $0.key ==  DictionaryConstants.elementsForSearch[index] }
         endTime = DispatchTime.now()
-        titleFirstPart = AppConstants.fistPartOfTitle[index]
+        titleFirstPart = DictionaryConstants.fistPartOfTitle[index]
     }
 }

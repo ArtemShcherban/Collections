@@ -31,7 +31,7 @@ final class DictionaryMainView: UIView {
     
     private func buttonsConfigure() {
         for (index, button) in buttons.enumerated() {
-            button.setTitle(AppConstants.buttonsTitles[index], for: .normal)
+            button.setTitle(DictionaryConstants.buttonsTitles[index], for: .normal)
             button.backgroundColor = .white
         }
     }
