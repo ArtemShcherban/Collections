@@ -9,8 +9,8 @@ import UIKit
 
 final class SetMainView: UIView {
     
-    private lazy var textFieldFirst = CustomTextField()
-    private lazy var textFieldSecond = CustomTextField()
+    private lazy var upperTextField = CustomTextField()
+    private lazy var bottomTextField = CustomTextField()
     private lazy var buttonFirst = CustomButton()
     private lazy var buttonSecond = CustomButton()
     private lazy var buttonThird = CustomButton()
@@ -33,10 +33,11 @@ final class SetMainView: UIView {
     }
     
     private func addSubviews() {
-        self.addSubview(textFieldFirst)
-        self.addSubview(textFieldSecond)
+        self.addSubview(upperTextField)
+        self.addSubview(bottomTextField)
         buttons.forEach { self.addSubview($0) }
         textLabels.forEach { self.addSubview($0) }
+        addAccessibilityIdentifier()
     }
     
     private func setConstraints() {
@@ -47,18 +48,18 @@ final class SetMainView: UIView {
     }
     
     private func addTextFieldTarget() {
-        textFieldFirst.addTarget(delegate, action: #selector(delegate?.textFieldDidChange), for: .editingChanged)
-        textFieldSecond.addTarget(delegate, action: #selector(delegate?.textFieldDidChange), for: .editingChanged)
+        upperTextField.addTarget(delegate, action: #selector(delegate?.textFieldDidChange), for: .editingChanged)
+        bottomTextField.addTarget(delegate, action: #selector(delegate?.textFieldDidChange), for: .editingChanged)
     }
     
     private func addTextFieldTag() {
-        textFieldFirst.tag = 1
-        textFieldSecond.tag = 2
+        upperTextField.tag = 1
+        bottomTextField.tag = 2
     }
     
     private func addTextFieldDelegate() {
-        textFieldFirst.delegate = delegate
-        textFieldSecond.delegate = delegate
+        upperTextField.delegate = delegate
+        bottomTextField.delegate = delegate
     }
     
     private func setButtonTitle() {
@@ -73,22 +74,33 @@ final class SetMainView: UIView {
         buttonThird.addTarget(delegate, action: #selector(delegate?.buttonThirdTapped), for: .touchUpInside)
     }
     
+    private func addAccessibilityIdentifier() {
+        upperTextField.accessibilityIdentifier = AppConstants.upperTextFieldID
+        bottomTextField.accessibilityIdentifier = AppConstants.bottomTextFieldID
+        buttonFirst.accessibilityIdentifier = AppConstants.buttonFirstID
+        buttonSecond.accessibilityIdentifier = AppConstants.buttonSecondID
+        buttonThird.accessibilityIdentifier = AppConstants.buttonThirdID
+        textLabelFirst.accessibilityIdentifier = AppConstants.textLabelFirstID
+        textLabelSecond.accessibilityIdentifier = AppConstants.textLabelSecondID
+        textLabelThird.accessibilityIdentifier = AppConstants.textLabelThirdID
+    }
+    
     private func setTextFieldFirstConstraints() {
-        NSLayoutConstraint.activate([textFieldFirst.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor,
+        NSLayoutConstraint.activate([upperTextField.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor,
                                                                          constant: AppConstants.textViewHeight),
-                                     textFieldFirst.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
+                                     upperTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
                                                                              constant: Indents.left),
-                                     textFieldFirst.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
+                                     upperTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
                                                                               constant: Indents.right)])
         
     }
     
     private func setTextFieldSecondConstraints() {
-        NSLayoutConstraint.activate([textFieldSecond.topAnchor.constraint(equalTo: textFieldFirst.bottomAnchor,
+        NSLayoutConstraint.activate([bottomTextField.topAnchor.constraint(equalTo: upperTextField.bottomAnchor,
                                                                           constant: AppConstants.textViewHeight),
-                                     textFieldSecond.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
+                                     bottomTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
                                                                               constant: Indents.left),
-                                     textFieldSecond.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
+                                     bottomTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
                                                                                constant: Indents.right)])
         
     }
@@ -98,7 +110,7 @@ final class SetMainView: UIView {
         buttons.forEach { button in
             NSLayoutConstraint.activate([button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Indents.left),
                                          button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Indents.right),
-                                         button.topAnchor.constraint(equalTo: textFieldSecond.bottomAnchor, constant: lineSpasing)])
+                                         button.topAnchor.constraint(equalTo: bottomTextField.bottomAnchor, constant: lineSpasing)])
             lineSpasing += 86
         }
     }

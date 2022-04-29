@@ -17,17 +17,17 @@ class SetCreationModel {
     private lazy var checkedString: String = ""
     private lazy var letters = Array(AppConstants.aphabetLetters)
     
-    func inputHandling(_ number: Int, _ string: String) -> String {
+    func inputHandling(_ textFieldTag: Int, _ string: String) -> String {
         if !string.isEmpty {
             checkedString = checkingForLetters(string.lowercased())
             if checkedString == string.lowercased() {
-                updateSetOfCharacters(number)
+                updateSetOfCharacters(textFieldTag)
                 return checkedString
             }
             return checkedString
         }
         checkedString = string
-        updateSetOfCharacters(number)
+        updateSetOfCharacters(textFieldTag)
         return checkedString
 }
 
@@ -42,8 +42,8 @@ private func checkingForLetters(_ string: String) -> String {
     }
 }
 
-private func updateSetOfCharacters(_ number: Int) {
-    switch number {
+private func updateSetOfCharacters(_ textFieldTag: Int) {
+    switch textFieldTag {
     case 1:
         controlString = controlStringOne
         setUpdate(&firstSetOfCharacters)

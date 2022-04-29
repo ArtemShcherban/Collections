@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Collections.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F4B2B91D281BBD2B00CD97E8"
+               BuildableName = "SetModuleUITests.xctest"
+               BlueprintName = "SetModuleUITests"
+               ReferencedContainer = "container:Collections.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -56,6 +70,16 @@
                BlueprintIdentifier = "F4298137281AAB8200880199"
                BuildableName = "SetModuleTests.xctest"
                BlueprintName = "SetModuleTests"
+               ReferencedContainer = "container:Collections.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F4B2B91D281BBD2B00CD97E8"
+               BuildableName = "SetModuleUITests.xctest"
+               BlueprintName = "SetModuleUITests"
                ReferencedContainer = "container:Collections.xcodeproj">
             </BuildableReference>
          </TestableReference>

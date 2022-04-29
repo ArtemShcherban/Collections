@@ -7,6 +7,7 @@
 
 import XCTest
 
+@testable import Collections
 final class InitialModuleUITests: XCTestCase {
     
     private var app: XCUIApplication!
@@ -16,5 +17,15 @@ final class InitialModuleUITests: XCTestCase {
         app = XCUIApplication()
         app.launch()
         continueAfterFailure = false
+    }
+    
+    func test_tappedSetCell_shouldPushSetViewController() {
+        let upperTextField = app.textFields["upperTextField"]
+        let bottomTextField = app.textFields["bottomTextField"]
+        
+        app.tables.cells.staticTexts["Set"].tap()
+        
+        XCTAssertTrue(upperTextField.exists)
+        XCTAssertTrue(bottomTextField.exists)
     }
 }

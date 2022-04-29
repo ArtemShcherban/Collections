@@ -14,12 +14,17 @@
 		F42980732819829900880199 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980722819829900880199 /* InitialModuleUITests.swift */; };
 		F42980752819829900880199 /* InitialModuleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980742819829900880199 /* InitialModuleUITestsLaunchTests.swift */; };
 		F429813B281AAB8200880199 /* SetModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429813A281AAB8200880199 /* SetModelsTests.swift */; };
+		F447D100281AB15600FD5095 /* SetModelsTestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D0FF281AB15600FD5095 /* SetModelsTestsExtensions.swift */; };
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
 		F460412E280C4B3600597B25 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412D280C4B3600597B25 /* CollectionView.swift */; };
 		F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412F280C75D600597B25 /* CollectionViewCell.swift */; };
 		F47033962817D17300F188F1 /* InitialViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47033952817D17300F188F1 /* InitialViewControllerTests.swift */; };
 		F470339D2817D98800F188F1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
 		F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */; };
+		F4B2B921281BBD2B00CD97E8 /* SetModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B920281BBD2B00CD97E8 /* SetModuleUITests.swift */; };
+		F4B2B923281BBD2B00CD97E8 /* SetModuleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B922281BBD2B00CD97E8 /* SetModuleUITestsLaunchTests.swift */; };
+		F4B2B92F281BC73B00CD97E8 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */; };
+		F4B2B930281BC73B00CD97E8 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */; };
 		F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */; };
 		F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */; };
 		F4C40D6127FEA5D00058C9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C40D5F27FEA5D00058C9BC /* Main.storyboard */; };
@@ -62,6 +67,13 @@
 			remoteGlobalIDString = F4C40D5527FEA5D00058C9BC;
 			remoteInfo = Collections;
 		};
+		F4B2B924281BBD2B00CD97E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4C40D4E27FEA5D00058C9BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4C40D5527FEA5D00058C9BC;
+			remoteInfo = Collections;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +86,7 @@
 		F42980742819829900880199 /* InitialModuleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4298138281AAB8200880199 /* SetModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F429813A281AAB8200880199 /* SetModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModelsTests.swift; sourceTree = "<group>"; };
+		F447D0FF281AB15600FD5095 /* SetModelsTestsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModelsTestsExtensions.swift; sourceTree = "<group>"; };
 		F4604121280C160600597B25 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
 		F460412D280C4B3600597B25 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		F460412F280C75D600597B25 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -81,6 +94,10 @@
 		F47033952817D17300F188F1 /* InitialViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerTests.swift; sourceTree = "<group>"; };
 		F470339C2817D98800F188F1 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerExtension.swift; sourceTree = "<group>"; };
+		F4B2B91E281BBD2B00CD97E8 /* SetModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B2B920281BBD2B00CD97E8 /* SetModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModuleUITests.swift; sourceTree = "<group>"; };
+		F4B2B922281BBD2B00CD97E8 /* SetModuleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModuleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTestConstants.swift; sourceTree = "<group>"; };
 		F4C40D5627FEA5D00058C9BC /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +138,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F47033902817D17300F188F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4B2B91B281BBD2B00CD97E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -176,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				F429813A281AAB8200880199 /* SetModelsTests.swift */,
+				F447D0FF281AB15600FD5095 /* SetModelsTestsExtensions.swift */,
 			);
 			path = SetModuleTests;
 			sourceTree = "<group>";
@@ -207,13 +232,32 @@
 			path = IntegerExtension;
 			sourceTree = "<group>";
 		};
+		F4B2B91F281BBD2B00CD97E8 /* SetModuleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4B2B920281BBD2B00CD97E8 /* SetModuleUITests.swift */,
+				F4B2B922281BBD2B00CD97E8 /* SetModuleUITestsLaunchTests.swift */,
+			);
+			path = SetModuleUITests;
+			sourceTree = "<group>";
+		};
+		F4B2B92B281BC1A200CD97E8 /* SetTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4298139281AAB8200880199 /* SetModuleTests */,
+				F4B2B91F281BBD2B00CD97E8 /* SetModuleUITests */,
+				F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */,
+			);
+			path = SetTests;
+			sourceTree = "<group>";
+		};
 		F4C40D4D27FEA5D00058C9BC = {
 			isa = PBXGroup;
 			children = (
 				F4C40D5827FEA5D00058C9BC /* Collections */,
 				F47033942817D17300F188F1 /* InitialModuleTests */,
 				F42980712819829900880199 /* InitialModuleUITests */,
-				F4298139281AAB8200880199 /* SetModuleTests */,
+				F4B2B92B281BC1A200CD97E8 /* SetTests */,
 				F4C40D5727FEA5D00058C9BC /* Products */,
 				FAC236CC5DD43B66C92F3E9F /* Pods */,
 				FA16CFD2A5A90720634ED14B /* Frameworks */,
@@ -227,6 +271,7 @@
 				F47033932817D17300F188F1 /* InitialModuleTests.xctest */,
 				F42980702819829900880199 /* InitialModuleUITests.xctest */,
 				F4298138281AAB8200880199 /* SetModuleTests.xctest */,
+				F4B2B91E281BBD2B00CD97E8 /* SetModuleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -455,6 +500,24 @@
 			productReference = F47033932817D17300F188F1 /* InitialModuleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F4B2B91D281BBD2B00CD97E8 /* SetModuleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4B2B928281BBD2B00CD97E8 /* Build configuration list for PBXNativeTarget "SetModuleUITests" */;
+			buildPhases = (
+				F4B2B91A281BBD2B00CD97E8 /* Sources */,
+				F4B2B91B281BBD2B00CD97E8 /* Frameworks */,
+				F4B2B91C281BBD2B00CD97E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4B2B925281BBD2B00CD97E8 /* PBXTargetDependency */,
+			);
+			name = SetModuleUITests;
+			productName = SetModuleUITests;
+			productReference = F4B2B91E281BBD2B00CD97E8 /* SetModuleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		F4C40D5527FEA5D00058C9BC /* Collections */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4C40D6A27FEA6120058C9BC /* Build configuration list for PBXNativeTarget "Collections" */;
@@ -496,6 +559,10 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = F4C40D5527FEA5D00058C9BC;
 					};
+					F4B2B91D281BBD2B00CD97E8 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F4C40D5527FEA5D00058C9BC;
+					};
 					F4C40D5527FEA5D00058C9BC = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -518,6 +585,7 @@
 				F47033922817D17300F188F1 /* InitialModuleTests */,
 				F429806F2819829900880199 /* InitialModuleUITests */,
 				F4298137281AAB8200880199 /* SetModuleTests */,
+				F4B2B91D281BBD2B00CD97E8 /* SetModuleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -538,6 +606,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F47033912817D17300F188F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4B2B91C281BBD2B00CD97E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -612,6 +687,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F447D100281AB15600FD5095 /* SetModelsTestsExtensions.swift in Sources */,
+				F4B2B92F281BC73B00CD97E8 /* SetTestConstants.swift in Sources */,
 				F429813B281AAB8200880199 /* SetModelsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,6 +699,16 @@
 			files = (
 				F47033962817D17300F188F1 /* InitialViewControllerTests.swift in Sources */,
 				F470339D2817D98800F188F1 /* TestHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4B2B91A281BBD2B00CD97E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4B2B921281BBD2B00CD97E8 /* SetModuleUITests.swift in Sources */,
+				F4B2B930281BC73B00CD97E8 /* SetTestConstants.swift in Sources */,
+				F4B2B923281BBD2B00CD97E8 /* SetModuleUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +758,11 @@
 			isa = PBXTargetDependency;
 			target = F4C40D5527FEA5D00058C9BC /* Collections */;
 			targetProxy = F47033972817D17300F188F1 /* PBXContainerItemProxy */;
+		};
+		F4B2B925281BBD2B00CD97E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4C40D5527FEA5D00058C9BC /* Collections */;
+			targetProxy = F4B2B924281BBD2B00CD97E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -803,6 +895,42 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Collections.app/Collections";
+			};
+			name = Release;
+		};
+		F4B2B926281BBD2B00CD97E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34XV2JSY5D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Shcherban.SetModuleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Collections;
+			};
+			name = Debug;
+		};
+		F4B2B927281BBD2B00CD97E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34XV2JSY5D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Shcherban.SetModuleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Collections;
 			};
 			name = Release;
 		};
@@ -1010,6 +1138,15 @@
 			buildConfigurations = (
 				F47033992817D17300F188F1 /* Debug */,
 				F470339A2817D17300F188F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4B2B928281BBD2B00CD97E8 /* Build configuration list for PBXNativeTarget "SetModuleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4B2B926281BBD2B00CD97E8 /* Debug */,
+				F4B2B927281BBD2B00CD97E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

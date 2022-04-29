@@ -48,4 +48,12 @@ struct AppConstants {
     
     static let elementsForSearch = ["Name0", "Name0", "Name9999999", "Name9999999", "Name99fdd999", "Name99fdd999"]
     static let aphabetLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    static let upperTextFieldID = "upperTextField"
+    static let bottomTextFieldID = "bottomTextField"
+    static let buttonFirstID = "buttonFirst"
+    static let buttonSecondID = "buttonSecond"
+    static let buttonThirdID = "buttonThird"
+    static let textLabelFirstID = "textLabelFirst"
+    static let textLabelSecondID = "textLabelSecond"
+    static let textLabelThirdID = "textLabelThird"
 }
