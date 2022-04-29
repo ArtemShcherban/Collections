@@ -21,7 +21,7 @@ final class CustomTextLabel: UILabel {
     
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: AppConstants.textViewHeight).isActive = true
+        heightAnchor.constraint(equalToConstant: SetConstants.textViewHeight).isActive = true
         textAlignment = .center
     }
 }

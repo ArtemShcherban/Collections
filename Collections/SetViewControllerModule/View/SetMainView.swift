@@ -64,7 +64,7 @@ final class SetMainView: UIView {
     
     private func setButtonTitle() {
         for (index, button) in buttons.enumerated() {
-            button.titleTextlabel.text = AppConstants.setButtonsTitles[index]
+            button.titleTextlabel.text = SetConstants.setButtonsTitles[index]
         }
     }
     
@@ -75,41 +75,41 @@ final class SetMainView: UIView {
     }
     
     private func addAccessibilityIdentifier() {
-        upperTextField.accessibilityIdentifier = AppConstants.upperTextFieldID
-        bottomTextField.accessibilityIdentifier = AppConstants.bottomTextFieldID
-        buttonFirst.accessibilityIdentifier = AppConstants.buttonFirstID
-        buttonSecond.accessibilityIdentifier = AppConstants.buttonSecondID
-        buttonThird.accessibilityIdentifier = AppConstants.buttonThirdID
-        textLabelFirst.accessibilityIdentifier = AppConstants.textLabelFirstID
-        textLabelSecond.accessibilityIdentifier = AppConstants.textLabelSecondID
-        textLabelThird.accessibilityIdentifier = AppConstants.textLabelThirdID
+        upperTextField.accessibilityIdentifier = SetConstants.upperTextFieldID
+        bottomTextField.accessibilityIdentifier = SetConstants.bottomTextFieldID
+        buttonFirst.accessibilityIdentifier = SetConstants.buttonFirstID
+        buttonSecond.accessibilityIdentifier = SetConstants.buttonSecondID
+        buttonThird.accessibilityIdentifier = SetConstants.buttonThirdID
+        textLabelFirst.accessibilityIdentifier = SetConstants.textLabelFirstID
+        textLabelSecond.accessibilityIdentifier = SetConstants.textLabelSecondID
+        textLabelThird.accessibilityIdentifier = SetConstants.textLabelThirdID
     }
     
     private func setTextFieldFirstConstraints() {
         NSLayoutConstraint.activate([upperTextField.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor,
-                                                                         constant: AppConstants.textViewHeight),
+                                                                         constant: SetConstants.textViewHeight),
                                      upperTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
-                                                                             constant: Indents.left),
+                                                                             constant: SetConstants.Sizes.leftIndent),
                                      upperTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
-                                                                              constant: Indents.right)])
+                                                                              constant: SetConstants.Sizes.rightIndent)])
         
     }
     
     private func setTextFieldSecondConstraints() {
         NSLayoutConstraint.activate([bottomTextField.topAnchor.constraint(equalTo: upperTextField.bottomAnchor,
-                                                                          constant: AppConstants.textViewHeight),
+                                                                          constant: SetConstants.textViewHeight),
                                      bottomTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
-                                                                              constant: Indents.left),
+                                                                              constant: SetConstants.Sizes.leftIndent),
                                      bottomTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
-                                                                               constant: Indents.right)])
+                                                                               constant: SetConstants.Sizes.rightIndent)])
         
     }
     
     private func setButtonConstraints() {
-        var lineSpasing = AppConstants.textViewHeight
+        var lineSpasing = SetConstants.textViewHeight
         buttons.forEach { button in
-            NSLayoutConstraint.activate([button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Indents.left),
-                                         button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Indents.right),
+            NSLayoutConstraint.activate([button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: SetConstants.Sizes.leftIndent),
+                                         button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: SetConstants.Sizes.rightIndent),
                                          button.topAnchor.constraint(equalTo: bottomTextField.bottomAnchor, constant: lineSpasing)])
             lineSpasing += 86
         }
@@ -118,8 +118,8 @@ final class SetMainView: UIView {
     private func setTextLabelsConstraints() {
         let lineSpasing: CGFloat = 7
         for (index, textLabel) in textLabels.enumerated() {
-            NSLayoutConstraint.activate([textLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Indents.left),
-                                         textLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Indents.right),
+            NSLayoutConstraint.activate([textLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: SetConstants.Sizes.leftIndent),
+                                         textLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: SetConstants.Sizes.rightIndent),
                                          textLabel.topAnchor.constraint(equalTo: buttons[index].bottomAnchor, constant: lineSpasing)])
         }
     }

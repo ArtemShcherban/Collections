@@ -15,7 +15,7 @@ class SetCreationModel {
     private lazy var controlStringOne: String = ""
     private lazy var controlStringTwo: String = ""
     private lazy var checkedString: String = ""
-    private lazy var letters = Array(AppConstants.aphabetLetters)
+    private lazy var letters = Array(SetConstants.aphabetLetters)
     
     func inputHandling(_ textFieldTag: Int, _ string: String) -> String {
         if !string.isEmpty {

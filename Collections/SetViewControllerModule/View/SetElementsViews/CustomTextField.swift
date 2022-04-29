@@ -50,7 +50,7 @@ final class CustomTextField: UITextField {
     
     private func setConstraints() {
         translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: AppConstants.textViewHeight).isActive = true
+        heightAnchor.constraint(equalToConstant: SetConstants.textViewHeight).isActive = true
     }
     
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {

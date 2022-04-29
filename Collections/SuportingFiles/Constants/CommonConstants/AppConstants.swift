@@ -14,12 +14,7 @@ struct AppConstants {
     static let maximumElements = 10_000_000
     static let buttonsTitles = ["Array", "Dictionary"]
     static let numberOfElements = 1000
-    static let textViewHeight: CGFloat = 36
-    
-    static let setButtonsTitles = ["All matching letters",
-                                   "All characters that do not match",
-                                   "All unique characters from the first text field that do not match in the text fields"]
-    
+ 
     static let dictionaryTasksTitles = ["Find the first element in array",
                                         "Find the first element in dictionary",
                                         "Find the last element in array",
@@ -32,13 +27,5 @@ struct AppConstants {
                                   "Non-existing element search time: ", "Non-existing element search time: "]
     
     static let elementsForSearch = ["Name0", "Name0", "Name9999999", "Name9999999", "Name99fdd999", "Name99fdd999"]
-    static let aphabetLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-    static let upperTextFieldID = "upperTextField"
-    static let bottomTextFieldID = "bottomTextField"
-    static let buttonFirstID = "buttonFirst"
-    static let buttonSecondID = "buttonSecond"
-    static let buttonThirdID = "buttonThird"
-    static let textLabelFirstID = "textLabelFirst"
-    static let textLabelSecondID = "textLabelSecond"
-    static let textLabelThirdID = "textLabelThird"
+   
 }

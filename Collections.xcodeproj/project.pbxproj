@@ -25,6 +25,7 @@
 		F4B2B923281BBD2B00CD97E8 /* SetModuleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B922281BBD2B00CD97E8 /* SetModuleUITestsLaunchTests.swift */; };
 		F4B2B92F281BC73B00CD97E8 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */; };
 		F4B2B930281BC73B00CD97E8 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */; };
+		F4B2B938281BEAED00CD97E8 /* SetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B937281BEAED00CD97E8 /* SetConstants.swift */; };
 		F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */; };
 		F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */; };
 		F4C40D6127FEA5D00058C9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C40D5F27FEA5D00058C9BC /* Main.storyboard */; };
@@ -39,7 +40,6 @@
 		F4D9FA8228081A10009146FA /* SetMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8128081A10009146FA /* SetMainView.swift */; };
 		F4D9FA8528081EE5009146FA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8428081EE5009146FA /* CustomTextField.swift */; };
 		F4D9FA8728083260009146FA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8628083260009146FA /* CustomButton.swift */; };
-		F4D9FA8928085834009146FA /* IndentsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8828085834009146FA /* IndentsConstants.swift */; };
 		F4D9FA8B28086251009146FA /* SetCreationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8A28086251009146FA /* SetCreationModel.swift */; };
 		F4D9FA8D280946A9009146FA /* SetWorkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8C280946A9009146FA /* SetWorkingModel.swift */; };
 		F4D9FA8F28094CAB009146FA /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8E28094CAB009146FA /* CustomTextLabel.swift */; };
@@ -98,6 +98,7 @@
 		F4B2B920281BBD2B00CD97E8 /* SetModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModuleUITests.swift; sourceTree = "<group>"; };
 		F4B2B922281BBD2B00CD97E8 /* SetModuleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModuleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTestConstants.swift; sourceTree = "<group>"; };
+		F4B2B937281BEAED00CD97E8 /* SetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetConstants.swift; sourceTree = "<group>"; };
 		F4C40D5627FEA5D00058C9BC /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,7 +115,6 @@
 		F4D9FA8128081A10009146FA /* SetMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMainView.swift; sourceTree = "<group>"; };
 		F4D9FA8428081EE5009146FA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F4D9FA8628083260009146FA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		F4D9FA8828085834009146FA /* IndentsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentsConstants.swift; sourceTree = "<group>"; };
 		F4D9FA8A28086251009146FA /* SetCreationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCreationModel.swift; sourceTree = "<group>"; };
 		F4D9FA8C280946A9009146FA /* SetWorkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetWorkingModel.swift; sourceTree = "<group>"; };
 		F4D9FA8E28094CAB009146FA /* CustomTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 		F4B2B936281BE87B00CD97E8 /* SetConstants */ = {
 			isa = PBXGroup;
 			children = (
-				F4D9FA8828085834009146FA /* IndentsConstants.swift */,
+				F4B2B937281BEAED00CD97E8 /* SetConstants.swift */,
 			);
 			path = SetConstants;
 			sourceTree = "<group>";
@@ -734,7 +734,6 @@
 			files = (
 				F4D9FA8528081EE5009146FA /* CustomTextField.swift in Sources */,
 				F4D9FA7828080B7B009146FA /* DictionaryViewController.swift in Sources */,
-				F4D9FA8928085834009146FA /* IndentsConstants.swift in Sources */,
 				F4D9FA8228081A10009146FA /* SetMainView.swift in Sources */,
 				F4D9FA8B28086251009146FA /* SetCreationModel.swift in Sources */,
 				F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */,
@@ -749,6 +748,7 @@
 				F4D9FA7E28081013009146FA /* ErrorsConstants.swift in Sources */,
 				F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */,
 				F4D9FA8F28094CAB009146FA /* CustomTextLabel.swift in Sources */,
+				F4B2B938281BEAED00CD97E8 /* SetConstants.swift in Sources */,
 				F4D2E85027FEF29A0048047C /* ColorsConstants.swift in Sources */,
 				F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */,
 				F40C39A8280E6CAC00EE48E2 /* TimeCalculation.swift in Sources */,
