@@ -5,7 +5,6 @@
 //  Created by Artem Shcherban on 07.04.2022.
 //
 
-import Foundation
 import UIKit
 
 struct AppConstants {
