@@ -22,4 +22,8 @@ struct ArrayConstants {
                               "Remove \(AppConstants.numberOfElements) elements at the middle of the array",
                               "Remove \(AppConstants.numberOfElements) elements at the begining of the array one-by-one",
                               "Remove \(AppConstants.numberOfElements) elements at the begining of the array"]
+    
+    static let bigButtonID = "bigButton"
+    static let collectionViewID = "collectionView"
+    
 }

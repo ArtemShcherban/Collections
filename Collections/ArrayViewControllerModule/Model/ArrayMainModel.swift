@@ -77,7 +77,6 @@ final class ArrayMainModel: TimeCalculation {
         tempIntegers = integers
         startTime = DispatchTime.now()
         for element in 1...numberOfElements {
-            print(element)
             tempIntegers.append(element)
         }
         endTime = DispatchTime.now()

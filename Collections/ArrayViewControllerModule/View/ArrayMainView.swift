@@ -13,7 +13,7 @@ final class ArrayMainView: UIView {
     
     lazy var bigButton: BigButton = {
         let tempBigButton = BigButton()
-        tempBigButton.accessibilityIdentifier = "BigButton"
+        tempBigButton.setTitle(ArrayConstants.bigButtonTitle, for: .normal)
         tempBigButton.addTarget(delegate, action: #selector(delegate?.bigButtonTapped), for: .touchUpInside)
         return tempBigButton
     }()
@@ -30,12 +30,14 @@ final class ArrayMainView: UIView {
     func createMainView() {
         backgroundColor = ColorsConstants.mainColor
         self.addSubview(bigButton)
+        addAccessibilityIdentifiers()
         setBigButtonConstraints()
     }
     
     func addCollectionView() {
         self.addSubview(collectionView)
         self.addSubview(bottomView)
+        collectionView.collectionViewLayout = collectionView.createCompositionalLayoutWithTwoDifferentCellSizes()
         collectionViewConfigure()
         setCollectionViewConstraints()
         setBottomViewConstraints()
@@ -44,7 +46,11 @@ final class ArrayMainView: UIView {
     private func collectionViewConfigure() {
         collectionView.delegate = delegate
         collectionView.dataSource = delegate
-        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
+    }
+    
+    private func addAccessibilityIdentifiers() {
+        bigButton.accessibilityIdentifier = ArrayConstants.bigButtonID
+        collectionView.accessibilityIdentifier = ArrayConstants.collectionViewID
     }
     
     private  func setBigButtonConstraints() {

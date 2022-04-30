@@ -20,7 +20,7 @@ final class InitialModuleUITests: XCTestCase {
     
         func test_tappedArrayCell_shouldPushArrayViewController() {
             let arrayCell = app.tables.cells.staticTexts["Array"]
-            let bigButton = app.buttons["BigButton"]
+            let bigButton = app.buttons["bigButton"]
     
             arrayCell.tap()
     

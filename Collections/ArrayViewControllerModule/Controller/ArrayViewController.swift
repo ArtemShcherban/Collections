@@ -65,16 +65,35 @@ extension ArrayViewController: ArrayMainViewDelegate {
         }
     }
     
+//    func bigButtonTapped1() {
+//        if arrayMainView?.bigButton.isSelected == false {
+//            arrayMainView?.bigButton.update()
+//            arrayMainView?.bigButton.startActivityIndicator()
+//            DispatchQueue.main.async {
+//                self.arrayMainModel.createArray(with: AppConstants.maximumElements)
+//                self.arrayMainView?.bigButton.stopActivityIndicator()
+//                self.arrayMainView?.bigButton.update(self.arrayMainModel.timeInterval)
+//                self.arrayMainView?.addCollectionView()
+//            }
+//        }
+//    }
+    
     func bigButtonTapped() {
+        print("Main1 \(Thread.current)")
         if arrayMainView?.bigButton.isSelected == false {
             arrayMainView?.bigButton.update()
             arrayMainView?.bigButton.startActivityIndicator()
-            DispatchQueue.main.async {
+            DispatchQueue.global(qos: .default).async {
+                print("Global \(Thread.current)")
                 self.arrayMainModel.createArray(with: AppConstants.maximumElements)
-                self.arrayMainView?.bigButton.stopActivityIndicator()
-                self.arrayMainView?.bigButton.update(self.arrayMainModel.timeInterval)
-                self.arrayMainView?.addCollectionView()
+                DispatchQueue.main.async {
+                    print("Main2!!!!!!!!!! \(Thread.current)")
+                    self.arrayMainView?.bigButton.stopActivityIndicator()
+                    self.arrayMainView?.bigButton.update(self.arrayMainModel.timeInterval)
+                    self.arrayMainView?.addCollectionView()
+                }
             }
+            print("!!!!!!!\(Thread.current)!!!!!!!!!")
         }
     }
 }
