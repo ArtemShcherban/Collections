@@ -10,9 +10,9 @@ import UIKit
 final class ArrayViewController: UIViewController {
     static let reuseIdentifier = String(describing: ArrayViewController.self)
     
-    private lazy var arrayMainModel = ArrayMainModel()
+    private(set) lazy var arrayMainModel = ArrayMainModel()
     
-    private lazy var arrayMainView: ArrayMainView? = {
+    private(set) lazy var arrayMainView: ArrayMainView? = {
         let view = ArrayMainView()
         view.delegate = self
         return view
@@ -52,7 +52,7 @@ extension ArrayViewController: ArrayMainViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell
         else { fatalError(ErrorConstants.errorTwo.rawValue + "\(indexPath)") }
-        
+
         cell.activityIndicator.startAnimating()
         cell.titleUpdate()
         DispatchQueue.global(qos: .default).async {
@@ -79,21 +79,17 @@ extension ArrayViewController: ArrayMainViewDelegate {
 //    }
     
     func bigButtonTapped() {
-        print("Main1 \(Thread.current)")
         if arrayMainView?.bigButton.isSelected == false {
             arrayMainView?.bigButton.update()
             arrayMainView?.bigButton.startActivityIndicator()
             DispatchQueue.global(qos: .default).async {
-                print("Global \(Thread.current)")
                 self.arrayMainModel.createArray(with: AppConstants.maximumElements)
                 DispatchQueue.main.async {
-                    print("Main2!!!!!!!!!! \(Thread.current)")
                     self.arrayMainView?.bigButton.stopActivityIndicator()
                     self.arrayMainView?.bigButton.update(self.arrayMainModel.timeInterval)
                     self.arrayMainView?.addCollectionView()
                 }
             }
-            print("!!!!!!!\(Thread.current)!!!!!!!!!")
         }
     }
 }

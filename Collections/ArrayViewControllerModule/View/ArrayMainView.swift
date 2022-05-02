@@ -18,7 +18,7 @@ final class ArrayMainView: UIView {
         return tempBigButton
     }()
     
-    private lazy var collectionView = CollectionView()
+    private(set) lazy var collectionView = CollectionView()
     
     private lazy var bottomView: UIView = {
         let tempBottomView = UIView()

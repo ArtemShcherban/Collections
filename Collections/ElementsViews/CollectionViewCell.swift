@@ -10,7 +10,7 @@ import UIKit
 final class CollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = String(describing: CollectionViewCell.self)
     
-    private lazy var titleTextLabel: UILabel = {
+    private(set) lazy var titleTextLabel: UILabel = {
         let tempTitleTextLabel = UILabel()
         tempTitleTextLabel.textAlignment = .center
         tempTitleTextLabel.numberOfLines = 0
