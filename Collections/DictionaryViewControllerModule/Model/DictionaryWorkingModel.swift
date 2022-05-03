@@ -7,25 +7,25 @@
 
 import Foundation
 
-class DictionaryWorkingModel: DictionaryMainModel {
+final class DictionaryWorkingModel: DictionaryMainModel {
 
-    private var resultOfSearch: Any?
+    private(set) var resultOfSearch: Any?
     private lazy var titleFirstPart = ""
     
     func numberOfRows() -> Int {
-        return DictionaryConstants.dictionaryTasksTitles.count
+        return DictionaryConstants.tasksTitles.count
     }
     
     func receiveTitleFoCell(_ indexPath: IndexPath) -> String {
-        DictionaryConstants.dictionaryTasksTitles[indexPath.row]
+        DictionaryConstants.tasksTitles[indexPath.row]
     }
 
-    func startTaskAt(_ indexPath: IndexPath) {
+    func startTaskAt(_ indexPath: IndexPath, with elementsToSearch: [String]) {
         switch indexPath.row {
         case 0, 2, 4:
-            findElementInArray(indexPath.row)
+            findElementInArray(indexPath.row, from: elementsToSearch)
         case 1, 3, 5:
-            findElementInDictionary(indexPath.row)
+            findElementInDictionary(indexPath.row, from: elementsToSearch)
         default :
             break
         }
@@ -40,16 +40,16 @@ class DictionaryWorkingModel: DictionaryMainModel {
        return titleFirstPart + timeInterval + titleSecondPart
     }
     
-    private func findElementInArray(_ index: Int) {
+    private func findElementInArray(_ index: Int, from elementsToSearch: [String] ) {
         startTime = DispatchTime.now()
-        resultOfSearch = contactsArray.first { $0.name == DictionaryConstants.elementsForSearch[index] }
+        resultOfSearch = contactsArray.first { $0.name == elementsToSearch[index] }
         endTime = DispatchTime.now()
         titleFirstPart = DictionaryConstants.fistPartOfTitle[index]
     }
     
-    private func findElementInDictionary(_ index: Int) {
+    private func findElementInDictionary(_ index: Int, from elementsToSearch: [String] ) {
         startTime = DispatchTime.now()
-        resultOfSearch = contactsDictionary.first { $0.key ==  DictionaryConstants.elementsForSearch[index] }
+        resultOfSearch = contactsDictionary.first { $0.key == elementsToSearch[index] }
         endTime = DispatchTime.now()
         titleFirstPart = DictionaryConstants.fistPartOfTitle[index]
     }

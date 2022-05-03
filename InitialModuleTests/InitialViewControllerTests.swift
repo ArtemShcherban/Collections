@@ -43,16 +43,16 @@ class InitialViewControllerTests: XCTestCase {
         XCTAssertEqual(setVC.view.backgroundColor, UIColor.magenta)
     }
     
-    func testTappedDictionaryCellShouldPushedDictionaryViewController() {
-        let navigation = UINavigationController(rootViewController: sut)
-
-        didSelectRow(in: sut.initialTableView, row: 2)
-        executeRunLoop()
-        let pushedVC = navigation.viewControllers.last
-        guard let dictionaryVC = pushedVC as? DictionaryViewController else {
-            XCTFail("Expected DictionaryViewController," + "but was \(String(describing: pushedVC))")
-            return
-        }
-        XCTAssertEqual(dictionaryVC.view.backgroundColor, UIColor.purple)
-    }
+//    func testTappedDictionaryCellShouldPushedDictionaryViewController() {
+//        let navigation = UINavigationController(rootViewController: sut)
+//
+//        didSelectRow(in: sut.initialTableView, row: 2)
+//        executeRunLoop()
+//        let pushedVC = navigation.viewControllers.last
+//        guard let dictionaryVC = pushedVC as? DictionaryViewController else {
+//            XCTFail("Expected DictionaryViewController," + "but was \(String(describing: pushedVC))")
+//            return
+//        }
+//        XCTAssertEqual(dictionaryVC.view.backgroundColor, UIColor.purple)
+//    }
 }

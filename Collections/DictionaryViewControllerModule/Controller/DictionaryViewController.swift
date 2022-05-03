@@ -9,9 +9,9 @@ import UIKit
 
 final class DictionaryViewController: UIViewController {
     
-    private lazy var dictionaryWorkingModel = DictionaryWorkingModel()
+    private(set) lazy var dictionaryWorkingModel = DictionaryWorkingModel()
     
-    private lazy var dictionaryMainView: DictionaryMainView? = {
+    private(set) lazy var dictionaryMainView: DictionaryMainView? = {
         let view = DictionaryMainView()
         view.delegate = self
         return view
@@ -52,7 +52,7 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
         cell.titleUpdate()
         cell.activityIndicator.startAnimating()
         DispatchQueue.global(qos: .default).async {
-            self.dictionaryWorkingModel.startTaskAt(indexPath)
+            self.dictionaryWorkingModel.startTaskAt(indexPath, with: DictionaryConstants.elementsForSearch)
             DispatchQueue.main.async {
                 cell.activityIndicator.stopAnimating()
                 cell.updateBackgroundColor()
@@ -65,7 +65,7 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
         dictionaryMainView?.arrayButton.update()
         dictionaryMainView?.arrayButton.startActivityIndicator()
         DispatchQueue.main.async {
-            self.dictionaryWorkingModel.createContactsArray()
+            self.dictionaryWorkingModel.createContactsArray(with: AppConstants.maximumElements)
             self.dictionaryMainView?.arrayButton.stopActivityIndicator()
             self.dictionaryMainView?.arrayButton.update(self.dictionaryWorkingModel.timeInterval)
         }
@@ -74,10 +74,12 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
     func dictionaryButtonPressed() {
         dictionaryMainView?.dictionaryButton.update()
         dictionaryMainView?.dictionaryButton.startActivityIndicator()
-        DispatchQueue.main.async {
-            self.dictionaryWorkingModel.createContactsDictionary()
-            self.dictionaryMainView?.dictionaryButton.stopActivityIndicator()
-            self.dictionaryMainView?.dictionaryButton.update(self.dictionaryWorkingModel.timeInterval)
+        DispatchQueue.global(qos: .default).async {
+            self.dictionaryWorkingModel.createContactsDictionary(with: AppConstants.maximumElements)
+            DispatchQueue.main.async {
+                self.dictionaryMainView?.dictionaryButton.stopActivityIndicator()
+                self.dictionaryMainView?.dictionaryButton.update(self.dictionaryWorkingModel.timeInterval)
+            }
         }
     }
 }

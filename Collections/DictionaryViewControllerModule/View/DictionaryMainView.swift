@@ -13,7 +13,7 @@ final class DictionaryMainView: UIView {
     lazy var dictionaryButton = BigButton()
     private lazy var buttons = [arrayButton, dictionaryButton]
     
-    private lazy var collectionView = CollectionView()
+    private(set) lazy var collectionView = CollectionView()
     
     weak var delegate: DictionaryMainViewDelegate?
     
@@ -25,6 +25,7 @@ final class DictionaryMainView: UIView {
         buttonsConfigure()
         addButtonTarget()
         collectionViewConfigure()
+        addAccessibilityIdentifiers()
         setButtonsConstraints()
         setCollectionViewConstraints()
     }
@@ -39,6 +40,11 @@ final class DictionaryMainView: UIView {
     private func addButtonTarget() {
         arrayButton.addTarget(delegate, action: #selector(delegate?.arrayButtonPressed), for: .touchUpInside)
         dictionaryButton.addTarget(delegate, action: #selector(delegate?.dictionaryButtonPressed), for: .touchUpInside)
+    }
+    
+    private func addAccessibilityIdentifiers() {
+        arrayButton.accessibilityIdentifier = DictionaryConstants.arrayButtonID
+        dictionaryButton.accessibilityIdentifier = DictionaryConstants.dictionaryButtonID
     }
     
     private func collectionViewConfigure() {

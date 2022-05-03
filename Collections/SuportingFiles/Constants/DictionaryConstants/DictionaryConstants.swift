@@ -11,7 +11,7 @@ struct DictionaryConstants {
     
     static let buttonsTitles = ["Array", "Dictionary"]
     
-    static let dictionaryTasksTitles = ["Find the first element in array",
+    static let tasksTitles = ["Find the first element in array",
                                         "Find the first element in dictionary",
                                         "Find the last element in array",
                                         "Find the last element in dictionary",
@@ -23,5 +23,8 @@ struct DictionaryConstants {
                                   "Non-existing element search time: ", "Non-existing element search time: "]
     
     static let elementsForSearch = ["Name0", "Name0", "Name9999999", "Name9999999", "Name99fdd999", "Name99fdd999"]
+    
+    static let arrayButtonID = "arrayButton"
+    static let dictionaryButtonID = "dictionaryButton"
     
 }

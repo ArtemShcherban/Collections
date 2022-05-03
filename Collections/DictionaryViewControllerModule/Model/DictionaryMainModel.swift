@@ -9,29 +9,31 @@ import Foundation
 
 class DictionaryMainModel: TimeCalculation {
     
-    var startTime = DispatchTime(uptimeNanoseconds: 0)
-    var endTime = DispatchTime(uptimeNanoseconds: 0)
+    lazy var startTime = DispatchTime(uptimeNanoseconds: 0)
+    lazy var endTime = DispatchTime(uptimeNanoseconds: 0)
     
     struct Contact {
         var name: String
         var phoneNumber: String
     }
     
+    lazy var contact: Contact! = nil
+    
     var contactsArray: [Contact] = []
     var contactsDictionary: [String: String] = [:]
     
-    func createContactsArray() {
+    func createContactsArray(with maximumElements: Int) {
         startTime = DispatchTime.now()
-        for index in 0...9_999_999 {
-          let contact = Contact.init(name: "Name\(index)", phoneNumber: "\(index)")
+        for index in 0..<maximumElements {
+          contact = Contact(name: "Name\(index)", phoneNumber: "\(index)")
             contactsArray.append(contact)
         }
         endTime = DispatchTime.now()
     }
     
-    func createContactsDictionary() {
+    func createContactsDictionary(with maximumElements: Int) {
         startTime = DispatchTime.now()
-        for index in 0...9_999_999 {
+        for index in 0..<maximumElements {
             contactsDictionary.updateValue("\(index)", forKey: "Name\(index)")
         }
         endTime = DispatchTime.now()
