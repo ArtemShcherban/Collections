@@ -8,7 +8,7 @@
 import Foundation
 
 final class DictionaryWorkingModel: DictionaryMainModel {
-
+    
     private(set) var resultOfSearch: Any?
     private lazy var titleFirstPart = ""
     
@@ -19,7 +19,7 @@ final class DictionaryWorkingModel: DictionaryMainModel {
     func receiveTitleFoCell(_ indexPath: IndexPath) -> String {
         DictionaryConstants.tasksTitles[indexPath.row]
     }
-
+    
     func startTaskAt(_ indexPath: IndexPath, with elementsToSearch: [String]) {
         switch indexPath.row {
         case 0, 2, 4:
@@ -31,13 +31,13 @@ final class DictionaryWorkingModel: DictionaryMainModel {
         }
     }
     
-   func createNewTitle() -> String {
+    func createNewTitle() -> String {
         var titleSecondPart = " Result number: 0"
         if resultOfSearch != nil {
             titleSecondPart = " Result number: 1"
         }
         resultOfSearch = nil
-       return titleFirstPart + timeInterval + titleSecondPart
+        return titleFirstPart + timeInterval + titleSecondPart
     }
     
     private func findElementInArray(_ index: Int, from elementsToSearch: [String] ) {

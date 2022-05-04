@@ -25,7 +25,7 @@ class DictionaryMainModel: TimeCalculation {
     func createContactsArray(with maximumElements: Int) {
         startTime = DispatchTime.now()
         for index in 0..<maximumElements {
-          contact = Contact(name: "Name\(index)", phoneNumber: "\(index)")
+            contact = Contact(name: "Name\(index)", phoneNumber: "\(index)")
             contactsArray.append(contact)
         }
         endTime = DispatchTime.now()
