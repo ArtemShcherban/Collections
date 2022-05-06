@@ -22,8 +22,8 @@
 		F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */; };
 		F480313C2820215600D0A986 /* DictionaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480313B2820215600D0A986 /* DictionaryViewControllerTests.swift */; };
 		F480313E28212E8600D0A986 /* DictionaryCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480313D28212E8600D0A986 /* DictionaryCollectionViewTests.swift */; };
-		F4B2B93B281BF40100CD97E8 /* DictionaryConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */; };
 		F480314128227E2800D0A986 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480314028227E2800D0A986 /* Dispatcher.swift */; };
+		F4B2B93B281BF40100CD97E8 /* DictionaryConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */; };
 		F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */; };
 		F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */; };
 		F4C40D6127FEA5D00058C9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C40D5F27FEA5D00058C9BC /* Main.storyboard */; };
@@ -82,8 +82,8 @@
 		F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerExtension.swift; sourceTree = "<group>"; };
 		F480313B2820215600D0A986 /* DictionaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewControllerTests.swift; sourceTree = "<group>"; };
 		F480313D28212E8600D0A986 /* DictionaryCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCollectionViewTests.swift; sourceTree = "<group>"; };
-		F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConstants.swift; sourceTree = "<group>"; };
 		F480314028227E2800D0A986 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConstants.swift; sourceTree = "<group>"; };
 		F4C40D5627FEA5D00058C9BC /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -259,8 +259,8 @@
 				F4C934F427FEBB0A0099F865 /* SuportingFiles */,
 				F4C934F727FEBD4F0099F865 /* InitialViewControllerModule */,
 				F4D9FA7928080BCC009146FA /* ArrayViewControllerModule */,
-				F4D9FA7528080B51009146FA /* DictionaryViewControllerModule */,
 				F4D9FA7128080A1B009146FA /* SetViewControllerModule */,
+				F4D9FA7528080B51009146FA /* DictionaryViewControllerModule */,
 			);
 			path = Collections;
 			sourceTree = "<group>";

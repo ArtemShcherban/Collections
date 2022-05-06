@@ -42,6 +42,5 @@ final class DictionaryViewControllerTests: XCTestCase {
         sut.dictionaryButtonPressed()
         
         XCTAssertEqual(sut.dictionaryWorkingModel.contactsDictionary.count, AppConstants.maximumElements)
-        
     }
 }

@@ -17,10 +17,10 @@ class DictionaryMainModel: TimeCalculation {
         var phoneNumber: String
     }
     
-    lazy var contact: Contact! = nil
+    private(set) lazy var contact: Contact! = nil
     
-    var contactsArray: [Contact] = []
-    var contactsDictionary: [String: String] = [:]
+    private(set) var contactsArray: [Contact] = []
+    private(set) var contactsDictionary: [String: String] = [:]
     
     func createContactsArray(with maximumElements: Int) {
         startTime = DispatchTime.now()

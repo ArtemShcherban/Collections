@@ -12,11 +12,11 @@ final class DictionaryModelsTests: XCTestCase {
     
     private var modelUnderTest: DictionaryWorkingModel!
     private let elementsForSearch = ["Name0", "Name0", "Name999", "Name999", "Name99fdd999", "Name99fdd999"]
+    private let oneThousandElements = 1000
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         modelUnderTest = DictionaryWorkingModel()
-        
     }
     
     override func tearDownWithError() throws {
@@ -29,9 +29,9 @@ final class DictionaryModelsTests: XCTestCase {
         if modelUnderTest.contactsArray.count != 0 {
             XCTFail("The contactsArray should be empty")
         }
-        modelUnderTest.createContactsArray(with: 1000)
+        modelUnderTest.createContactsArray(with: oneThousandElements)
         
-        XCTAssertEqual(modelUnderTest.contactsArray.count, 1000)
+        XCTAssertEqual(modelUnderTest.contactsArray.count, oneThousandElements)
     }
     
     func test_createContactsDictionary_shouldCreateContactsDictionary() {
@@ -39,14 +39,14 @@ final class DictionaryModelsTests: XCTestCase {
         if modelUnderTest.contactsDictionary.count != 0 {
             XCTFail("The contactsDictionary should be empty")
         }
-        modelUnderTest.createContactsDictionary(with: 1000)
+        modelUnderTest.createContactsDictionary(with: oneThousandElements)
         
-        XCTAssertEqual(modelUnderTest.contactsDictionary.count, 1000)
+        XCTAssertEqual(modelUnderTest.contactsDictionary.count, oneThousandElements)
     }
     
     func test_findElementInArray_first_shouldReturnNotNil() {
         let indexPath = IndexPath(row: 0, section: 0)
-        modelUnderTest.createContactsArray(with: 1000)
+        modelUnderTest.createContactsArray(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
         
         XCTAssertNotNil(modelUnderTest.resultOfSearch)
@@ -54,7 +54,7 @@ final class DictionaryModelsTests: XCTestCase {
     
     func test_test_findElementInDictionary_first_shouldReturnNotNil() {
         let indexPath = IndexPath(row: 1, section: 0)
-        modelUnderTest.createContactsDictionary(with: 1000)
+        modelUnderTest.createContactsDictionary(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
         
         XCTAssertNotNil(modelUnderTest.resultOfSearch)
@@ -62,7 +62,7 @@ final class DictionaryModelsTests: XCTestCase {
     
     func test_findElementInArray_last_shouldReturnNotNil() {
         let indexPath = IndexPath(row: 2, section: 0)
-        modelUnderTest.createContactsArray(with: 1000)
+        modelUnderTest.createContactsArray(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
         
         XCTAssertNotNil(modelUnderTest.resultOfSearch)
@@ -70,7 +70,7 @@ final class DictionaryModelsTests: XCTestCase {
     
     func test_findElementInDictionary_last_shouldReturnNotNil() {
         let indexPath = IndexPath(row: 3, section: 0)
-        modelUnderTest.createContactsDictionary(with: 1000)
+        modelUnderTest.createContactsDictionary(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
         
         XCTAssertNotNil(modelUnderTest.resultOfSearch)
@@ -78,7 +78,7 @@ final class DictionaryModelsTests: XCTestCase {
     
     func test_findElementInArray_notExistElement_shouldReturnNil() {
         let indexPath = IndexPath(row: 4, section: 0)
-        modelUnderTest.createContactsArray(with: 1000)
+        modelUnderTest.createContactsArray(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
         
         XCTAssertNil(modelUnderTest.resultOfSearch)
@@ -86,21 +86,21 @@ final class DictionaryModelsTests: XCTestCase {
     
     func test_findElementInDictionary_notExistElement_shouldReturnNil() {
         let indexPath = IndexPath(row: 5, section: 0)
-        modelUnderTest.createContactsDictionary(with: 1000)
+        modelUnderTest.createContactsDictionary(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
         
         XCTAssertNil(modelUnderTest.resultOfSearch)
     }
     
-    func testContactsArrayCreationTime() {
+    func test_ContactsArrayCreationTime() {
         measure {
-            modelUnderTest.createContactsArray(with: 10000000)
+            modelUnderTest.createContactsArray(with: AppConstants.maximumElements)
         }
     }
     
-    func testContactsDictionaryCreationTime() {
+    func test_ContactsDictionaryCreationTime() {
         measure {
-            modelUnderTest.createContactsDictionary(with: 10000000)
+            modelUnderTest.createContactsDictionary(with: AppConstants.maximumElements)
         }
     }
 }
