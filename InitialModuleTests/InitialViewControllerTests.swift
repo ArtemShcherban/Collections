@@ -30,7 +30,7 @@ final class InitialViewControllerTests: XCTestCase {
         XCTAssertEqual(numberOfRows(in: sut.initialTableView), 3)
     }
     
-    func testTappedArrayCellShouldPushedArrayViewController() {
+    func test_tappingArrayCell_shouldPushedArrayViewController() {
         let expectedTitle = "Array:"
         
         sut.performSegue(withIdentifier: "Array", sender: nil)
@@ -52,7 +52,7 @@ final class InitialViewControllerTests: XCTestCase {
         XCTAssertEqual(String(title), expectedTitle)
     }
 
-    func testTappedSetCellShouldPushedSetViewController() {
+    func test_tappingSetCell_shouldPushedSetViewController() {
         let expectedTitle = "Set:"
         
         didSelectRow(in: sut.initialTableView, row: 1)
@@ -75,7 +75,7 @@ final class InitialViewControllerTests: XCTestCase {
 
     }
     
-    func testTappedDictionaryCellShouldPushedDictionaryViewController() {
+    func test_tappingDictionaryCell_shouldPushedDictionaryViewController() {
         let expectedTitle = "Dictionary:"
 
         didSelectRow(in: sut.initialTableView, row: 2)

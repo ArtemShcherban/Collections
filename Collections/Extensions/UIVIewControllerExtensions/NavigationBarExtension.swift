@@ -26,7 +26,7 @@ extension UIViewController {
     private func createTitle(for viewController: UIViewController.Type) -> String {
         var title = String()
         guard let navigationTitle = navigationItem.title else { return String() }
-       
+        
         if viewController == InitialMainViewController.self {
             title = AppConstants.mainTitle
             

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+final class CollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = String(describing: CollectionViewCell.self)
     
     lazy var titleTextLabel: UILabel = {
@@ -20,7 +20,7 @@ class CollectionViewCell: UICollectionViewCell {
     }()
     
     lazy var activityIndicator: UIActivityIndicatorView = {
-       let tempActivityindicator = UIActivityIndicatorView()
+        let tempActivityindicator = UIActivityIndicatorView()
         tempActivityindicator.style = .medium
         return tempActivityindicator
     }()
