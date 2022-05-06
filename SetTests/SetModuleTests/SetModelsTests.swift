@@ -9,9 +9,9 @@ import XCTest
 @testable import Collections
 
 final class SetModelsTests: XCTestCase {
-
+    
     private(set) var modelUnderTest: SetWorkingModel!
-    var sut: SetViewController!
+    private var sut: SetViewController!
     let upperTextField = SetTestConstants.upperTextField
     let bottomTextField = SetTestConstants.bottomTextField
     let firstInputedString = SetTestConstants.firstInputedString
@@ -31,12 +31,6 @@ final class SetModelsTests: XCTestCase {
         modelUnderTest = nil
         try super.tearDownWithError()
     }
-    
-//    func textFieldStatusChanged(textField: UITextField) {
-//
-//         _ = textField.delegate?.textFieldShouldBeginEditing?(textField)
-//
-//    }
     
     func test_inputHandlingLettersAndNumbers_returnStringWithLettersOnly() {
         XCTAssertEqual(inputString(in: upperTextField, firstInputedString), firstExpectedString)

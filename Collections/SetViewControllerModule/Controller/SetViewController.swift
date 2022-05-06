@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SetViewController: UIViewController {
+final class SetViewController: UIViewController {
     
     private lazy var setWorkingModel = SetWorkingModel()
     
@@ -49,16 +49,16 @@ extension SetViewController: SetMainViewDelegate {
         sender.text = setWorkingModel.inputHandling(sender.tag, sender.text ?? "")
     }
     
-    internal func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if let textField = textField as? CustomTextField {
-                    textField.isActive = true
+            textField.isActive = true
         }
         return true
     }
     
-    internal func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if let textField = textField as? CustomTextField {
-                    textField.isActive = false
+            textField.isActive = false
         }
         return true
     }

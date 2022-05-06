@@ -8,7 +8,7 @@
 import XCTest
 
 final class SetModuleUITests: XCTestCase {
-
+    
     private var app: XCUIApplication!
     private lazy var cell = app.cells.staticTexts["Set"]
     private lazy var upperTextField = app.textFields["upperTextField"]
@@ -19,7 +19,7 @@ final class SetModuleUITests: XCTestCase {
     private lazy var textLabelFirst = app.staticTexts["textLabelFirst"]
     private lazy var textLabelSecond = app.staticTexts["textLabelSecond"]
     private lazy var textLabelThird = app.staticTexts["textLabelThird"]
-      
+    
     override func setUpWithError() throws {
         try super.setUpWithError()
         app = XCUIApplication()
@@ -35,12 +35,12 @@ final class SetModuleUITests: XCTestCase {
         bottomTextField.tap()
         bottomTextField.typeText(SetTestConstants.secondInputedString)
     }
- 
+    
     func test_tappingButtonFirst_textInTextLabelFirstAppear() {
-   
+        
         if textLabelFirst.label != "" { XCTFail("\(textLabelFirst) should be empty") }
         buttonFirst.tap()
-
+        
         XCTAssertNotEqual(textLabelFirst.label, "")
     }
     
@@ -48,7 +48,7 @@ final class SetModuleUITests: XCTestCase {
         
         if textLabelSecond.label != "" { XCTFail("\(textLabelSecond) should be empty") }
         buttonSecond.tap()
-
+        
         XCTAssertNotEqual(textLabelSecond.label, "")
     }
     
@@ -56,7 +56,7 @@ final class SetModuleUITests: XCTestCase {
         
         if textLabelThird.label != "" { XCTFail("\(textLabelThird) should be empty") }
         buttonThird.tap()
-
+        
         XCTAssertNotEqual(textLabelThird.label, "")
     }
 }

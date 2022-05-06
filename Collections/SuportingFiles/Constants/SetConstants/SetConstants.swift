@@ -25,6 +25,7 @@ struct SetConstants {
     static let textLabelThirdID = "textLabelThird"
     
     static let textViewHeight: CGFloat = 36
+    
     struct Sizes {
         static let leftIndent: CGFloat = 16
         static let rightIndent: CGFloat = -16

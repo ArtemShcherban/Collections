@@ -8,7 +8,7 @@
 import UIKit
 
 final class CustomButton: UIButton {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -23,26 +23,26 @@ final class CustomButton: UIButton {
         setTitleLabelConstraint()
     }
     
-   lazy var titleTextlabel: UILabel = {
+    lazy var titleTextlabel: UILabel = {
         let tempTitleTextLabel = UILabel()
-       tempTitleTextLabel.textAlignment = .center
-       tempTitleTextLabel.textColor = ColorsConstants.blueColor
-       tempTitleTextLabel.numberOfLines = 0
-       tempTitleTextLabel.sizeToFit()
+        tempTitleTextLabel.textAlignment = .center
+        tempTitleTextLabel.textColor = ColorsConstants.blueColor
+        tempTitleTextLabel.numberOfLines = 0
+        tempTitleTextLabel.sizeToFit()
         return tempTitleTextLabel
     }()
     
     private func configure() {
         addSubview(titleTextlabel)
         titleLabel?.numberOfLines = 0
-
+        
     }
     
     private func setConstraints() {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalTo: titleTextlabel.heightAnchor).isActive = true
     }
-
+    
     private func setTitleLabelConstraint() {
         titleTextlabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([titleTextlabel.topAnchor.constraint(equalTo: self.topAnchor),
