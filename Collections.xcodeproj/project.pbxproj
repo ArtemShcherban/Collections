@@ -12,7 +12,6 @@
 		F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */; };
 		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
 		F42980732819829900880199 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980722819829900880199 /* InitialModuleUITests.swift */; };
-		F42980752819829900880199 /* InitialModuleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980742819829900880199 /* InitialModuleUITestsLaunchTests.swift */; };
 		F429813B281AAB8200880199 /* SetModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429813A281AAB8200880199 /* SetModelsTests.swift */; };
 		F447D100281AB15600FD5095 /* SetModelsTestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D0FF281AB15600FD5095 /* SetModelsTestsExtensions.swift */; };
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
@@ -83,7 +82,6 @@
 		F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		F42980702819829900880199 /* InitialModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42980722819829900880199 /* InitialModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITests.swift; sourceTree = "<group>"; };
-		F42980742819829900880199 /* InitialModuleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4298138281AAB8200880199 /* SetModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F429813A281AAB8200880199 /* SetModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModelsTests.swift; sourceTree = "<group>"; };
 		F447D0FF281AB15600FD5095 /* SetModelsTestsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModelsTestsExtensions.swift; sourceTree = "<group>"; };
@@ -176,7 +174,8 @@
 				F47289AC28190FFE00B7ECB1 /* IntegerExtension */,
 				F40C39C42811443500EE48E2 /* UIVIewControllerExtensions */,
 			);
-			path = Extensions;
+			name = Extensions;
+			path = ../Extensions;
 			sourceTree = "<group>";
 		};
 		F40C39C42811443500EE48E2 /* UIVIewControllerExtensions */ = {
@@ -303,9 +302,6 @@
 		F4C40D5827FEA5D00058C9BC /* Collections */ = {
 			isa = PBXGroup;
 			children = (
-				F480313F28227DFE00D0A986 /* Dispatcher */,
-				F40C39A6280E6C5700EE48E2 /* Protocols */,
-				F40C39C32811440500EE48E2 /* Extensions */,
 				F4C934F427FEBB0A0099F865 /* SuportingFiles */,
 				F4604120280C15EA00597B25 /* ElementsViews */,
 				F4C934F727FEBD4F0099F865 /* InitialViewControllerModule */,
@@ -319,6 +315,9 @@
 		F4C934F427FEBB0A0099F865 /* SuportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				F480313F28227DFE00D0A986 /* Dispatcher */,
+				F40C39C32811440500EE48E2 /* Extensions */,
+				F40C39A6280E6C5700EE48E2 /* Protocols */,
 				F4C934FF27FECAB70099F865 /* Constants */,
 				F4C934F527FEBB230099F865 /* Application */,
 				F4C934F627FEBB3C0099F865 /* View */,
