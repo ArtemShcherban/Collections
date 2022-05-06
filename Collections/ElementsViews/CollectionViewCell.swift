@@ -20,7 +20,7 @@ final class CollectionViewCell: UICollectionViewCell {
     }()
     
     lazy var activityIndicator: UIActivityIndicatorView = {
-       let tempActivityindicator = UIActivityIndicatorView()
+        let tempActivityindicator = UIActivityIndicatorView()
         tempActivityindicator.style = .medium
         return tempActivityindicator
     }()

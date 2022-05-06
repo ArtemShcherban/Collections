@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BigButton: UIButton {
+final class BigButton: UIButton {
     
    private lazy var activityIndicator: UIActivityIndicatorView = {
         let tempIndicator = UIActivityIndicatorView()

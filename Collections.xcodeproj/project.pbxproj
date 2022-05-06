@@ -12,7 +12,6 @@
 		F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */; };
 		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
 		F42980732819829900880199 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980722819829900880199 /* InitialModuleUITests.swift */; };
-		F42980752819829900880199 /* InitialModuleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980742819829900880199 /* InitialModuleUITestsLaunchTests.swift */; };
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
 		F4604126280C185F00597B25 /* ArrayMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604125280C185F00597B25 /* ArrayMainModel.swift */; };
 		F4604128280C18DE00597B25 /* ArrayMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604127280C18DE00597B25 /* ArrayMainView.swift */; };
@@ -78,7 +77,6 @@
 		F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		F42980702819829900880199 /* InitialModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42980722819829900880199 /* InitialModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITests.swift; sourceTree = "<group>"; };
-		F42980742819829900880199 /* InitialModuleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4604121280C160600597B25 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
 		F4604125280C185F00597B25 /* ArrayMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayMainModel.swift; sourceTree = "<group>"; };
 		F4604127280C18DE00597B25 /* ArrayMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayMainView.swift; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				F42980722819829900880199 /* InitialModuleUITests.swift */,
-				F42980742819829900880199 /* InitialModuleUITestsLaunchTests.swift */,
 			);
 			path = InitialModuleUITests;
 			sourceTree = "<group>";
@@ -674,7 +671,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42980732819829900880199 /* InitialModuleUITests.swift in Sources */,
-				F42980752819829900880199 /* InitialModuleUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
