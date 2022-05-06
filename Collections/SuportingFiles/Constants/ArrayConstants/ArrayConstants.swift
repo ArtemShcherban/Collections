@@ -8,6 +8,7 @@
 import Foundation
 
 struct ArrayConstants {
+    
     static let bigButtonTitle = "Create Int array with \(AppConstants.maximumElements.decimalFormat()) elements"
     
     static let taskstitles = ["Insert \(AppConstants.numberOfElements) elements at the begining of the array one-by-one",

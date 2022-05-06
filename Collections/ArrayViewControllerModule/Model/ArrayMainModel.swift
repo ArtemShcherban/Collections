@@ -9,8 +9,8 @@ import Foundation
 
 final class ArrayMainModel: TimeCalculation {
     
-    var startTime = DispatchTime(uptimeNanoseconds: 0)
-    var endTime = DispatchTime(uptimeNanoseconds: 0)
+    lazy var startTime = DispatchTime(uptimeNanoseconds: 0)
+    lazy var endTime = DispatchTime(uptimeNanoseconds: 0)
     private(set) lazy var integers: [Int] = []
     private(set) lazy var tempIntegers: [Int] = []
     private lazy var tasksTitle = ArrayConstants.taskstitles

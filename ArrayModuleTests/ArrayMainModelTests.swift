@@ -26,7 +26,7 @@ class ArrayMainModelTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testArrayCreation() {
+    func test_arrayCreation() {
         let maximumElements =  1100
         
         modelUnderTests.createArray(with: maximumElements)
@@ -34,7 +34,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.integers.last, 1099)
     }
     
-    func testInsertBeginingOneByOne() {
+    func test_insertBeginingOneByOne() {
         
         modelUnderTests.startTask(indexPath, numberOfElements)
         
@@ -42,7 +42,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers[100], 0)
     }
     
-    func testInsertBeginingOnce() {
+    func test_insertBeginingOnce() {
         indexPath.row = 1
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -51,7 +51,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers[100], 0)
     }
     
-    func testInsertMiddleOneByOne() {
+    func test_insertMiddleOneByOne() {
         indexPath.row += 2
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -60,7 +60,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers[600], 100)
     }
     
-    func testInsertMiddleOnce() {
+    func test_insertMiddleOnce() {
         indexPath.row = 3
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -69,7 +69,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers[600], 100)
     }
     
-    func testInsertEndOneByOne() {
+    func test_insertEndOneByOne() {
         indexPath.row = 4
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -78,7 +78,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers[1000], 1)
     }
     
-    func testInsertEndOnce() {
+    func test_insertEndOnce() {
         indexPath.row = 5
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -87,7 +87,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers[1000], 1)
     }
     
-    func testRemoveEndOneByOne() {
+    func test_removeEndOneByOne() {
         indexPath.row = 6
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -95,7 +95,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers.last, 899)
     }
     
-    func testRemoveEndOnce() {
+    func test_removeEndOnce() {
         indexPath.row = 7
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -103,7 +103,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers.last, 899)
     }
     
-    func testRemoveMiddleOneByOne() {
+    func test_removeMiddleOneByOne() {
         indexPath.row = 8
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -114,7 +114,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers[400], 400)
     }
     
-    func testRemoveMiddleOnce() {
+    func test_removeMiddleOnce() {
         indexPath.row = 9
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -125,7 +125,7 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers[400], 400)
     }
     
-    func testRemoveBeginingOneByOne() {
+    func test_removeBeginingOneByOne() {
         indexPath.row = 10
         
         modelUnderTests.startTask(indexPath, numberOfElements)
@@ -134,12 +134,18 @@ class ArrayMainModelTests: XCTestCase {
         XCTAssertEqual(modelUnderTests.tempIntegers.last, 999)
     }
     
-    func testRemoveBeginingOnce() {
+    func test_removeBeginingOnce() {
         indexPath.row = 11
         
         modelUnderTests.startTask(indexPath, numberOfElements)
         
         XCTAssertEqual(modelUnderTests.tempIntegers.first, 100)
         XCTAssertEqual(modelUnderTests.tempIntegers.last, 999)
+    }
+    
+    func test_arrayCreationTime() throws {
+        self.measure {
+            modelUnderTests.createArray(with: AppConstants.maximumElements)
+        }
     }
 }

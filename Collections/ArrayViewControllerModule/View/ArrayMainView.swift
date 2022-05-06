@@ -42,7 +42,7 @@ final class ArrayMainView: UIView {
         setCollectionViewConstraints()
         setBottomViewConstraints()
     }
-
+    
     private func collectionViewConfigure() {
         collectionView.delegate = delegate
         collectionView.dataSource = delegate
@@ -79,6 +79,6 @@ final class ArrayMainView: UIView {
 }
 
 @objc protocol ArrayMainViewDelegate: UICollectionViewDelegate, UICollectionViewDataSource {
-   
+    
     func bigButtonTapped()
 }

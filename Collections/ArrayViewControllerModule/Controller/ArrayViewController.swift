@@ -10,6 +10,9 @@ import UIKit
 final class ArrayViewController: UIViewController {
     static let reuseIdentifier = String(describing: ArrayViewController.self)
     
+    var globalQueue: Dispatching!
+    var mainQuaue: Dispatching!
+    
     private(set) lazy var arrayMainModel = ArrayMainModel()
     
     private(set) lazy var arrayMainView: ArrayMainView? = {
@@ -25,6 +28,8 @@ final class ArrayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         arrayMainView?.createMainView()
+        globalQueue = AsyncQueue.global
+        mainQuaue = AsyncQueue.main
     }
      
     override func viewWillAppear(_ animated: Bool) {
@@ -53,11 +58,15 @@ extension ArrayViewController: ArrayMainViewDelegate {
         guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell
         else { fatalError(ErrorConstants.errorTwo.rawValue + "\(indexPath)") }
 
+        didSelect(cell, at: indexPath)
+    }
+    
+    func didSelect(_ cell: CollectionViewCell, at indexPath: IndexPath) {
         cell.activityIndicator.startAnimating()
         cell.titleUpdate()
-        DispatchQueue.global(qos: .default).async {
+        globalQueue.dispatch {
             self.arrayMainModel.startTask(indexPath)
-            DispatchQueue.main.async {
+            self.mainQuaue.dispatch {
                 cell.activityIndicator.stopAnimating()
                 cell.updateAppearance()
                 cell.titleUpdate(self.arrayMainModel.timeInterval)
@@ -65,26 +74,13 @@ extension ArrayViewController: ArrayMainViewDelegate {
         }
     }
     
-//    func bigButtonTapped1() {
-//        if arrayMainView?.bigButton.isSelected == false {
-//            arrayMainView?.bigButton.update()
-//            arrayMainView?.bigButton.startActivityIndicator()
-//            DispatchQueue.main.async {
-//                self.arrayMainModel.createArray(with: AppConstants.maximumElements)
-//                self.arrayMainView?.bigButton.stopActivityIndicator()
-//                self.arrayMainView?.bigButton.update(self.arrayMainModel.timeInterval)
-//                self.arrayMainView?.addCollectionView()
-//            }
-//        }
-//    }
-    
     func bigButtonTapped() {
         if arrayMainView?.bigButton.isSelected == false {
             arrayMainView?.bigButton.update()
             arrayMainView?.bigButton.startActivityIndicator()
-            DispatchQueue.global(qos: .default).async {
+            globalQueue.dispatch {
                 self.arrayMainModel.createArray(with: AppConstants.maximumElements)
-                DispatchQueue.main.async {
+                self.mainQuaue.dispatch {
                     self.arrayMainView?.bigButton.stopActivityIndicator()
                     self.arrayMainView?.bigButton.update(self.arrayMainModel.timeInterval)
                     self.arrayMainView?.addCollectionView()
