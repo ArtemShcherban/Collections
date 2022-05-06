@@ -26,6 +26,7 @@
 		F4B2B92F281BC73B00CD97E8 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */; };
 		F4B2B930281BC73B00CD97E8 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */; };
 		F4B2B938281BEAED00CD97E8 /* SetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B937281BEAED00CD97E8 /* SetConstants.swift */; };
+		F480314128227E2800D0A986 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480314028227E2800D0A986 /* Dispatcher.swift */; };
 		F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */; };
 		F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */; };
 		F4C40D6127FEA5D00058C9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C40D5F27FEA5D00058C9BC /* Main.storyboard */; };
@@ -99,6 +100,7 @@
 		F4B2B922281BBD2B00CD97E8 /* SetModuleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModuleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTestConstants.swift; sourceTree = "<group>"; };
 		F4B2B937281BEAED00CD97E8 /* SetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetConstants.swift; sourceTree = "<group>"; };
+		F480314028227E2800D0A986 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		F4C40D5627FEA5D00058C9BC /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +251,14 @@
 				F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */,
 			);
 			path = SetTests;
+            sourceTree = "<group>";
+        };
+		F480313F28227DFE00D0A986 /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				F480314028227E2800D0A986 /* Dispatcher.swift */,
+			);
+			path = Dispatcher;
 			sourceTree = "<group>";
 		};
 		F4B2B932281BD93400CD97E8 /* CommonConstants */ = {
@@ -297,6 +307,7 @@
 		F4C40D5827FEA5D00058C9BC /* Collections */ = {
 			isa = PBXGroup;
 			children = (
+				F480313F28227DFE00D0A986 /* Dispatcher */,
 				F40C39C32811440500EE48E2 /* Extensions */,
 				F4C934F427FEBB0A0099F865 /* SuportingFiles */,
 				F4604120280C15EA00597B25 /* ElementsViews */,
@@ -737,6 +748,7 @@
 				F4D9FA8228081A10009146FA /* SetMainView.swift in Sources */,
 				F4D9FA8B28086251009146FA /* SetCreationModel.swift in Sources */,
 				F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */,
+				F480314128227E2800D0A986 /* Dispatcher.swift in Sources */,
 				F460412E280C4B3600597B25 /* CollectionView.swift in Sources */,
 				F4D9FA7428080A38009146FA /* SetViewController.swift in Sources */,
 				F4604122280C160600597B25 /* BigButton.swift in Sources */,
