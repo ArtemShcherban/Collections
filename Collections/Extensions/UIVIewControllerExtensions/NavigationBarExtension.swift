@@ -25,17 +25,19 @@ extension UIViewController {
     
     private func createTitle(for viewController: UIViewController.Type) -> String {
         var title = String()
+        guard let navigationTitle = navigationItem.title else { return String() }
+       
         if viewController == InitialMainViewController.self {
             title = AppConstants.mainTitle
             
         } else if viewController == ArrayViewController.self {
-            title = AppConstants.titles[0] + (navigationItem.title ?? "")
+            title = AppConstants.titles[0] + navigationTitle
             
         } else if viewController == SetViewController.self {
-            title = AppConstants.titles[1] + (navigationItem.title ?? "")
+            title = AppConstants.titles[1] + navigationTitle
             
         } else if viewController == DictionaryViewController.self {
-            title = AppConstants.titles[2] + (navigationItem.title ?? "")
+            title = AppConstants.titles[2] + navigationTitle
         }
         return title
     }
