@@ -12,6 +12,8 @@
 		F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */; };
 		F41AFC0F28266991000E9F65 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC0C28266991000E9F65 /* NavigationBarExtension.swift */; };
 		F41AFC1028266991000E9F65 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC0E28266991000E9F65 /* IntegerExtension.swift */; };
+		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
+		F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
 		F42980732819829900880199 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980722819829900880199 /* InitialModuleUITests.swift */; };
 		F429813B281AAB8200880199 /* SetModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429813A281AAB8200880199 /* SetModelsTests.swift */; };
 		F447D100281AB15600FD5095 /* SetModelsTestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D0FF281AB15600FD5095 /* SetModelsTestsExtensions.swift */; };
@@ -20,6 +22,7 @@
 		F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412F280C75D600597B25 /* CollectionViewCell.swift */; };
 		F47033962817D17300F188F1 /* InitialViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47033952817D17300F188F1 /* InitialViewControllerTests.swift */; };
 		F470339D2817D98800F188F1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
+		F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */; };
 		F480314128227E2800D0A986 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480314028227E2800D0A986 /* Dispatcher.swift */; };
 		F4B2B921281BBD2B00CD97E8 /* SetModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B920281BBD2B00CD97E8 /* SetModuleUITests.swift */; };
 		F4B2B92F281BC73B00CD97E8 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */; };
@@ -191,6 +194,12 @@
 				F41AFC0E28266991000E9F65 /* IntegerExtension.swift */,
 			);
 			path = IntegerExtension;
+		F41AFC0828265AC8000E9F65 /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				F470339C2817D98800F188F1 /* TestHelpers.swift */,
+			);
+			path = TestHelpers;
 			sourceTree = "<group>";
 		};
 		F42980712819829900880199 /* InitialModuleUITests */ = {
@@ -224,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				F47033952817D17300F188F1 /* InitialViewControllerTests.swift */,
-				F470339C2817D98800F188F1 /* TestHelpers.swift */,
 			);
 			path = InitialModuleTests;
 			sourceTree = "<group>";
@@ -307,6 +315,7 @@
 				F4D9FA7928080BCC009146FA /* ArrayViewControllerModule */,
 				F4D9FA7128080A1B009146FA /* SetViewControllerModule */,
 				F4D9FA7528080B51009146FA /* DictionaryViewControllerModule */,
+				F41AFC0828265AC8000E9F65 /* TestHelpers */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -718,7 +727,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47033962817D17300F188F1 /* InitialViewControllerTests.swift in Sources */,
-				F470339D2817D98800F188F1 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,6 +758,7 @@
 				F4D9FA8D280946A9009146FA /* SetWorkingModel.swift in Sources */,
 				F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */,
 				F4D9FA7E28081013009146FA /* ErrorsConstants.swift in Sources */,
+				F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */,
 				F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */,
 				F41AFC1028266991000E9F65 /* IntegerExtension.swift in Sources */,
 				F4D9FA8F28094CAB009146FA /* CustomTextLabel.swift in Sources */,
