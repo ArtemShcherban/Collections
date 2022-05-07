@@ -57,7 +57,9 @@ final class InitialViewControllerTests: XCTestCase {
         
         didSelectRow(in: sut.initialTableView, row: 1)
         executeRunLoop()
-        XCTAssertEqual(navigation.viewControllers.count, 2, "navigation stack")
+        if navigation.viewControllers.count != 2 {
+            XCTFail("Should be two viewControllers in navigation stack")
+        }
         
         let pushedVC = navigation.viewControllers.last
         guard let setVC = pushedVC as? SetViewController else {
@@ -78,6 +80,9 @@ final class InitialViewControllerTests: XCTestCase {
 
         didSelectRow(in: sut.initialTableView, row: 2)
         executeRunLoop()
+        if navigation.viewControllers.count != 2 {
+            XCTFail("Should be two viewControllers in navigation stack")
+        }
         let pushedVC = navigation.viewControllers.last
         guard let dictionaryVC = pushedVC as? DictionaryViewController else {
             XCTFail("Expected DictionaryViewController," + "but was \(String(describing: pushedVC))")
