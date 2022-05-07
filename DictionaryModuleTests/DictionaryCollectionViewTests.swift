@@ -34,13 +34,13 @@ final class DictionaryCollectionViewTests: XCTestCase {
     }
     
     func test_numberOfRows_shouldBeSix() {
-        XCTAssertEqual(numberOfRows(in: collectionView), 6)
+        XCTAssertEqual(numberOfItems(in: collectionView), 6)
     }
     
     func test_cellForItemAt_withRow3_shouldSetCorrectTitle() {
         let expectedTitle = DictionaryConstants.tasksTitles[3]
         
-        let cell = cellForItem(in: collectionView, row: 3)
+        let cell = cellForItem(in: collectionView, item: 3)
         
         XCTAssertEqual(cell?.titleTextLabel.text, expectedTitle)
     }
@@ -48,7 +48,7 @@ final class DictionaryCollectionViewTests: XCTestCase {
     func test_cellForItemAt_withRow9_shouldSetCorrectTitle() {
         let expectedTitle = DictionaryConstants.tasksTitles[5]
         
-        let cell = cellForItem(in: collectionView, row: 5)
+        let cell = cellForItem(in: collectionView, item: 5)
         
         XCTAssertEqual(cell?.titleTextLabel.text, expectedTitle)
     }
@@ -60,18 +60,9 @@ final class DictionaryCollectionViewTests: XCTestCase {
         sut.mainQueue = background
         let expectedColor = ColorsConstants.newColor
         
-        guard let cell = cellForItem(in: collectionView, row: 3) else { return XCTFail("Cannot create a cell") }
+        guard let cell = cellForItem(in: collectionView, item: 3) else { return XCTFail("Cannot create a cell") }
         sut.didSelect(cell, at: IndexPath(item: 3, section: 0))
         
         XCTAssertEqual(cell.backgroundColor, expectedColor)
-    }
-    
-    func cellForItem(in collectionView: CollectionView, row: Int, section: Int = 0) -> CollectionViewCell? {
-        let cell = collectionView.dataSource?.collectionView(collectionView, cellForItemAt: IndexPath(row: row, section: section))
-        return cell as? CollectionViewCell
-    }
-    
-    func numberOfRows(in collectionView: CollectionView, section: Int = 0) -> Int? {
-        collectionView.dataSource?.collectionView(collectionView, numberOfItemsInSection: section)
     }
 }
