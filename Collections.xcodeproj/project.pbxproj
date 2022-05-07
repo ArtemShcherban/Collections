@@ -194,6 +194,8 @@
 				F41AFC0E28266991000E9F65 /* IntegerExtension.swift */,
 			);
 			path = IntegerExtension;
+            sourceTree = "<group>";
+        };
 		F41AFC0828265AC8000E9F65 /* TestHelpers */ = {
 			isa = PBXGroup;
 			children = (
