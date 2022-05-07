@@ -11,13 +11,13 @@
 		F40C39A8280E6CAC00EE48E2 /* TimeCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39A7280E6CAC00EE48E2 /* TimeCalculation.swift */; };
 		F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */; };
 		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
+		F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
 		F42980732819829900880199 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980722819829900880199 /* InitialModuleUITests.swift */; };
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
 		F460412E280C4B3600597B25 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412D280C4B3600597B25 /* CollectionView.swift */; };
 		F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412F280C75D600597B25 /* CollectionViewCell.swift */; };
 		F4604132280C7E2700597B25 /* DictionaryWorkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604131280C7E2700597B25 /* DictionaryWorkingModel.swift */; };
 		F47033962817D17300F188F1 /* InitialViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47033952817D17300F188F1 /* InitialViewControllerTests.swift */; };
-		F470339D2817D98800F188F1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
 		F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */; };
 		F480313C2820215600D0A986 /* DictionaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480313B2820215600D0A986 /* DictionaryViewControllerTests.swift */; };
 		F480313E28212E8600D0A986 /* DictionaryCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480313D28212E8600D0A986 /* DictionaryCollectionViewTests.swift */; };
@@ -161,6 +161,14 @@
 			path = UIVIewControllerExtensions;
 			sourceTree = "<group>";
 		};
+		F41AFC0828265AC8000E9F65 /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				F470339C2817D98800F188F1 /* TestHelpers.swift */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
 		F42980712819829900880199 /* InitialModuleUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				F47033952817D17300F188F1 /* InitialViewControllerTests.swift */,
-				F470339C2817D98800F188F1 /* TestHelpers.swift */,
 			);
 			path = InitialModuleTests;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 				F4D9FA7928080BCC009146FA /* ArrayViewControllerModule */,
 				F4D9FA7128080A1B009146FA /* SetViewControllerModule */,
 				F4D9FA7528080B51009146FA /* DictionaryViewControllerModule */,
+				F41AFC0828265AC8000E9F65 /* TestHelpers */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -625,7 +633,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47033962817D17300F188F1 /* InitialViewControllerTests.swift in Sources */,
-				F470339D2817D98800F188F1 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +655,7 @@
 				F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */,
 				F4D9FA93280BE3CF009146FA /* DictionaryMainView.swift in Sources */,
 				F4D9FA7E28081013009146FA /* ErrorsConstants.swift in Sources */,
+				F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */,
 				F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */,
 				F4D2E85027FEF29A0048047C /* ColorsConstants.swift in Sources */,
 				F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */,
