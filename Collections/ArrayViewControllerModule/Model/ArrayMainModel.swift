@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ArrayMainModel: TimeCalculation {
+final class ArrayMainModel: TimeCalculating {
     
     lazy var startTime = DispatchTime(uptimeNanoseconds: 0)
     lazy var endTime = DispatchTime(uptimeNanoseconds: 0)
