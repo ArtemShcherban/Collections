@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		409D341CF17F75B3D8591048 /* Pods_Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0DEA73437FDB598AFAEAC0 /* Pods_Collections.framework */; };
-		F40C39A8280E6CAC00EE48E2 /* TimeCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39A7280E6CAC00EE48E2 /* TimeCalculation.swift */; };
+		F40C39A8280E6CAC00EE48E2 /* TimeCalculating.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39A7280E6CAC00EE48E2 /* TimeCalculating.swift */; };
 		F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */; };
 		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
 		F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
@@ -51,7 +51,7 @@
 
 /* Begin PBXFileReference section */
 		9E960AE9B1870A8FA855DDB2 /* Pods-Collections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collections.release.xcconfig"; path = "Target Support Files/Pods-Collections/Pods-Collections.release.xcconfig"; sourceTree = "<group>"; };
-		F40C39A7280E6CAC00EE48E2 /* TimeCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculation.swift; sourceTree = "<group>"; };
+		F40C39A7280E6CAC00EE48E2 /* TimeCalculating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculating.swift; sourceTree = "<group>"; };
 		F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMainViewController.swift; sourceTree = "<group>"; };
 		F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		F42980702819829900880199 /* InitialModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +110,7 @@
 		F40C39A6280E6C5700EE48E2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				F40C39A7280E6CAC00EE48E2 /* TimeCalculation.swift */,
+				F40C39A7280E6CAC00EE48E2 /* TimeCalculating.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -556,7 +556,7 @@
 				F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */,
 				F4D2E85027FEF29A0048047C /* ColorsConstants.swift in Sources */,
 				F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */,
-				F40C39A8280E6CAC00EE48E2 /* TimeCalculation.swift in Sources */,
+				F40C39A8280E6CAC00EE48E2 /* TimeCalculating.swift in Sources */,
 				F4D9FA7C28080C08009146FA /* ArrayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
