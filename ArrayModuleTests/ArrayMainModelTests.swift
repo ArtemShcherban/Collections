@@ -35,6 +35,7 @@ class ArrayMainModelTests: XCTestCase {
     }
     
     func test_insertBeginingOneByOne() {
+        indexPath.row = 0
         
         modelUnderTests.startTask(indexPath, numberOfElements)
         
@@ -52,7 +53,7 @@ class ArrayMainModelTests: XCTestCase {
     }
     
     func test_insertMiddleOneByOne() {
-        indexPath.row += 2
+        indexPath.row = 2
         
         modelUnderTests.startTask(indexPath, numberOfElements)
         

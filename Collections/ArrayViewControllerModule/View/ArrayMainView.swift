@@ -9,12 +9,15 @@ import UIKit
 
 final class ArrayMainView: UIView {
     
+    let collectionViewDataSource = ArrayDataSource()
+    weak var collectionViewDelegate: UICollectionViewDelegate?
+    
     weak var delegate: ArrayMainViewDelegate?
     
     lazy var bigButton: BigButton = {
         let tempBigButton = BigButton()
         tempBigButton.setTitle(ArrayConstants.bigButtonTitle, for: .normal)
-        tempBigButton.addTarget(delegate, action: #selector(delegate?.bigButtonTapped), for: .touchUpInside)
+        tempBigButton.addTarget(self, action: #selector(delegateAction), for: .touchUpInside)
         return tempBigButton
     }()
     
@@ -44,13 +47,17 @@ final class ArrayMainView: UIView {
     }
     
     private func collectionViewConfigure() {
-        collectionView.delegate = delegate
-        collectionView.dataSource = delegate
+        collectionView.delegate = collectionViewDelegate
+        collectionView.dataSource = collectionViewDataSource
     }
     
     private func addAccessibilityIdentifiers() {
         bigButton.accessibilityIdentifier = ArrayConstants.bigButtonID
         collectionView.accessibilityIdentifier = ArrayConstants.collectionViewID
+    }
+    
+    @objc private func delegateAction() {
+        delegate?.bigButtonTapped()
     }
     
     private  func setBigButtonConstraints() {
@@ -78,7 +85,7 @@ final class ArrayMainView: UIView {
     }
 }
 
-@objc protocol ArrayMainViewDelegate: UICollectionViewDelegate, UICollectionViewDataSource {
+protocol ArrayMainViewDelegate: AnyObject {
     
     func bigButtonTapped()
 }

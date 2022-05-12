@@ -8,12 +8,14 @@
 import Foundation
 
 final class ArrayMainModel: TimeCalculating {
+    static let shared = ArrayMainModel()
     
     lazy var startTime = DispatchTime(uptimeNanoseconds: 0)
     lazy var endTime = DispatchTime(uptimeNanoseconds: 0)
     private(set) lazy var integers: [Int] = []
     private(set) lazy var tempIntegers: [Int] = []
     private lazy var tasksTitle = ArrayConstants.taskstitles
+    lazy var numberOfRows = tasksTitle.count
     private lazy var methods = [insertBeginingOneByOne, insertBeginingOnce,
                                 insertMiddleOneByOne, insertMiddleOnce,
                                 insertEndOneByOne, insertEndOnce,
@@ -25,10 +27,6 @@ final class ArrayMainModel: TimeCalculating {
         startTime = DispatchTime.now()
         integers = Array(0..<maximumElements)
         endTime = DispatchTime.now()
-    }
-    
-    func numberOfRow() -> Int {
-        tasksTitle.count
     }
     
     func receiveTitle(_ indexPath: IndexPath) -> String {

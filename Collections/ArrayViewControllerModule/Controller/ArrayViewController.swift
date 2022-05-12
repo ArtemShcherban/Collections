@@ -13,11 +13,12 @@ final class ArrayViewController: UIViewController {
     var globalQueue: Dispatching!
     var mainQuaue: Dispatching!
     
-    private(set) lazy var arrayMainModel = ArrayMainModel()
+    private(set) lazy var arrayMainModel = ArrayMainModel.shared
     
-    private(set) lazy var arrayMainView: ArrayMainView? = {
+    private(set) lazy var arrayMainView: ArrayMainView = {
         let view = ArrayMainView()
         view.delegate = self
+        view.collectionViewDelegate = self
         return view
     }()
     
@@ -27,37 +28,23 @@ final class ArrayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        arrayMainView?.createMainView()
+        arrayMainView.createMainView()
         globalQueue = AsyncQueue.global
         mainQuaue = AsyncQueue.main
     }
-     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createNavigationBar(for: ArrayViewController.self)
     }
 }
 
-extension ArrayViewController: ArrayMainViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        arrayMainModel.numberOfRow()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier,
-                                                            for: indexPath) as? CollectionViewCell
-        else { fatalError(ErrorConstants.errorOne.rawValue) }
-        
-        let celltitle = arrayMainModel.receiveTitle(indexPath)
-        cell.configure(celltitle)
-        
-        return cell
-    }
+extension ArrayViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell
         else { fatalError(ErrorConstants.errorTwo.rawValue + "\(indexPath)") }
-
+        
         didSelect(cell, at: indexPath)
     }
     
@@ -73,17 +60,19 @@ extension ArrayViewController: ArrayMainViewDelegate {
             }
         }
     }
-    
+}
+
+extension ArrayViewController: ArrayMainViewDelegate {
     func bigButtonTapped() {
-        if arrayMainView?.bigButton.isSelected == false {
-            arrayMainView?.bigButton.update()
-            arrayMainView?.bigButton.startActivityIndicator()
+        if arrayMainView.bigButton.isSelected == false {
+            arrayMainView.bigButton.update()
+            arrayMainView.bigButton.startActivityIndicator()
             globalQueue.dispatch {
                 self.arrayMainModel.createArray(with: AppConstants.maximumElements)
                 self.mainQuaue.dispatch {
-                    self.arrayMainView?.bigButton.stopActivityIndicator()
-                    self.arrayMainView?.bigButton.update(self.arrayMainModel.timeInterval)
-                    self.arrayMainView?.addCollectionView()
+                    self.arrayMainView.bigButton.stopActivityIndicator()
+                    self.arrayMainView.bigButton.update(self.arrayMainModel.timeInterval)
+                    self.arrayMainView.addCollectionView()
                 }
             }
         }
