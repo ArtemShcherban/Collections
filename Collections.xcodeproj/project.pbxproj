@@ -13,6 +13,7 @@
 		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
 		F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
 		F41AFC14282B93FA000E9F65 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC13282B93FA000E9F65 /* ArrayDataSource.swift */; };
+		F41AFC18282E1538000E9F65 /* TimeMeasureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */; };
 		F42980732819829900880199 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980722819829900880199 /* InitialModuleUITests.swift */; };
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
 		F4604126280C185F00597B25 /* ArrayMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604125280C185F00597B25 /* ArrayMainModel.swift */; };
@@ -77,6 +78,7 @@
 		F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMainViewController.swift; sourceTree = "<group>"; };
 		F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		F41AFC13282B93FA000E9F65 /* ArrayDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
+		F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMeasureModel.swift; sourceTree = "<group>"; };
 		F42980702819829900880199 /* InitialModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42980722819829900880199 /* InitialModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITests.swift; sourceTree = "<group>"; };
 		F4604121280C160600597B25 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
@@ -192,6 +194,12 @@
 				F41AFC13282B93FA000E9F65 /* ArrayDataSource.swift */,
 			);
 			path = Data;
+		F41AFC16282E145F000E9F65 /* TimeMeasureModel */ = {
+			isa = PBXGroup;
+			children = (
+				F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */,
+			);
+			path = TimeMeasureModel;
 			sourceTree = "<group>";
 		};
 		F42980712819829900880199 /* InitialModuleUITests */ = {
@@ -319,6 +327,7 @@
 			children = (
 				F4C934F427FEBB0A0099F865 /* SuportingFiles */,
 				F4604120280C15EA00597B25 /* ElementsViews */,
+				F41AFC16282E145F000E9F65 /* TimeMeasureModel */,
 				F4C934F727FEBD4F0099F865 /* InitialViewControllerModule */,
 				F4D9FA7928080BCC009146FA /* ArrayViewControllerModule */,
 				F4D9FA7528080B51009146FA /* DictionaryViewControllerModule */,
@@ -724,6 +733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D9FA7828080B7B009146FA /* DictionaryViewController.swift in Sources */,
+				F41AFC18282E1538000E9F65 /* TimeMeasureModel.swift in Sources */,
 				F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */,
 				F480314128227E2800D0A986 /* Dispatcher.swift in Sources */,
 				F460412E280C4B3600597B25 /* CollectionView.swift in Sources */,
