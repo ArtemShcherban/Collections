@@ -1,5 +1,5 @@
 //
-//  TimeCalculation.swift
+//  TimeCalculating.swift
 //  Collections
 //
 //  Created by Artem Shcherban on 18.04.2022.
@@ -7,23 +7,14 @@
 
 import Foundation
 
-protocol TimeCalculation {
+protocol TimeCalculating {
+    
     var startTime: DispatchTime { get }
     
     var endTime: DispatchTime { get }
-    
-    var timeInterval: String { get }
 }
 
-extension TimeCalculation {
-    
-    var startTime: DispatchTime {
-        return DispatchTime.init(uptimeNanoseconds: 0)
-    }
-    
-    var endTime: DispatchTime {
-        return DispatchTime.init(uptimeNanoseconds: 0)
-    }
+extension TimeCalculating {
     
     var timeInterval: String {
         let nanoTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds)

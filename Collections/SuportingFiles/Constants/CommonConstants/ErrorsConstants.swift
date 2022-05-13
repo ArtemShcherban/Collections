@@ -8,6 +8,6 @@
 import Foundation
 
 enum ErrorConstants: String {
-    case errorOne = "Cannot create a cell"
-    case errorTwo = "Cannot get a cell at "
+    case cannotCreateCell = "Cannot create a cell"
+    case cannotGetCell = "Cannot get a cell at "
 }
