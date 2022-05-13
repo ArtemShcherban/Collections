@@ -7,11 +7,10 @@
 
 import Foundation
 
-final class ArrayMainModel: TimeCalculating {
+final class ArrayMainModel {
     static let shared = ArrayMainModel()
     
-    lazy var startTime = DispatchTime(uptimeNanoseconds: 0)
-    lazy var endTime = DispatchTime(uptimeNanoseconds: 0)
+    lazy var timeMeasureModel = TimeMeasureModel.shared
     private(set) lazy var integers: [Int] = []
     private(set) lazy var tempIntegers: [Int] = []
     private lazy var tasksTitle = ArrayConstants.taskstitles
@@ -24,9 +23,9 @@ final class ArrayMainModel: TimeCalculating {
                                 removeBeginingOneByOne, removeBeginingOnce]
     
     func createArray(with maximumElements: Int) {
-        startTime = DispatchTime.now()
-        integers = Array(0..<maximumElements)
-        endTime = DispatchTime.now()
+        timeMeasureModel.timeMeasureRunningCode {
+            integers = Array(0..<maximumElements)
+        }
     }
     
     func receiveTitle(_ indexPath: IndexPath) -> String {
@@ -35,103 +34,70 @@ final class ArrayMainModel: TimeCalculating {
     
     func startTask(_ indexPath: IndexPath, _ numberOfElements: Int = AppConstants.numberOfElements) {
         let method = methods[indexPath.row]
-        method(numberOfElements)
+        timeMeasureModel.timeMeasureRunningCode {
+            tempIntegers = integers
+            method(numberOfElements)
+        }
     }
     
     private func insertBeginingOneByOne(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         for element in 1...numberOfElements {
             tempIntegers.insert(element, at: 0)
         }
-        endTime = DispatchTime.now()
     }
     
     private func insertBeginingOnce(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         tempIntegers.insert(contentsOf: Array(1...numberOfElements), at: 0)
-        endTime = DispatchTime.now()
     }
     
     private func insertMiddleOneByOne(_ numberOfElements: Int) {
-        tempIntegers = integers
         let index = tempIntegers.count / 2
-        startTime = DispatchTime.now()
         for element in 1...numberOfElements {
             tempIntegers.insert(element, at: (index + element))
         }
-        endTime = DispatchTime.now()
     }
     
     private func insertMiddleOnce(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         tempIntegers.insert(contentsOf: Array(1...numberOfElements), at: (tempIntegers.count / 2 + 1))
-        endTime = DispatchTime.now()
     }
     
     private func insertEndOneByOne(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         for element in 1...numberOfElements {
             tempIntegers.append(element)
         }
-        endTime = DispatchTime.now()
     }
     
     private func insertEndOnce(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         tempIntegers.append(contentsOf: Array(1...numberOfElements))
-        endTime = DispatchTime.now()
     }
     
     private func removeEndOneByOne(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         for _ in 1...numberOfElements {
             tempIntegers.removeLast(1)
         }
-        endTime = DispatchTime.now()
     }
     
     private func removeEndOnce(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         tempIntegers.removeLast(numberOfElements)
-        endTime = DispatchTime.now()
     }
     
     private func removeMiddleOneByOne(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         for _ in 1...numberOfElements {
             tempIntegers.remove(at: Int(tempIntegers.count / 2))
         }
-        endTime = DispatchTime.now()
     }
     
     private func removeMiddleOnce(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         tempIntegers.removeSubrange((tempIntegers.count / 2 - numberOfElements / 2)..<(tempIntegers.count / 2 + numberOfElements / 2))
-        endTime = DispatchTime.now()
     }
     
     private func removeBeginingOneByOne(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         for _ in 1...numberOfElements {
             tempIntegers.remove(at: 0)
         }
-        endTime = DispatchTime.now()
     }
     
     private func removeBeginingOnce(_ numberOfElements: Int) {
-        tempIntegers = integers
-        startTime = DispatchTime.now()
         tempIntegers.removeSubrange(0..<numberOfElements)
-        endTime = DispatchTime.now()
     }
 }

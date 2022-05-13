@@ -14,7 +14,7 @@ final class ArrayViewController: UIViewController {
     var mainQuaue: Dispatching!
     
     private(set) lazy var arrayMainModel = ArrayMainModel.shared
-    
+    private(set) lazy var timeMeasureModel = TimeMeasureModel.shared
     private(set) lazy var arrayMainView: ArrayMainView = {
         let view = ArrayMainView()
         view.delegate = self
@@ -43,7 +43,7 @@ extension ArrayViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell
-        else { fatalError(ErrorConstants.errorTwo.rawValue + "\(indexPath)") }
+        else { fatalError(ErrorConstants.cannotGetCell.rawValue + "\(indexPath)") }
         
         didSelect(cell, at: indexPath)
     }
@@ -56,7 +56,7 @@ extension ArrayViewController: UICollectionViewDelegate {
             self.mainQuaue.dispatch {
                 cell.activityIndicator.stopAnimating()
                 cell.updateAppearance()
-                cell.titleUpdate(self.arrayMainModel.timeInterval)
+                cell.titleUpdate(self.timeMeasureModel.timeInterval)
             }
         }
     }
@@ -71,7 +71,7 @@ extension ArrayViewController: ArrayMainViewDelegate {
                 self.arrayMainModel.createArray(with: AppConstants.maximumElements)
                 self.mainQuaue.dispatch {
                     self.arrayMainView.bigButton.stopActivityIndicator()
-                    self.arrayMainView.bigButton.update(self.arrayMainModel.timeInterval)
+                    self.arrayMainView.bigButton.update(self.timeMeasureModel.timeInterval)
                     self.arrayMainView.addCollectionView()
                 }
             }

@@ -18,7 +18,7 @@ class ArrayDataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier,
                                                             for: indexPath) as? CollectionViewCell
-        else { fatalError(ErrorConstants.errorOne.rawValue) }
+        else { fatalError(ErrorConstants.cannotCreateCell.rawValue) }
         
         let celltitle = arrayMainModel.receiveTitle(indexPath)
         cell.configure(celltitle)
