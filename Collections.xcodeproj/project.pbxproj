@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		409D341CF17F75B3D8591048 /* Pods_Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0DEA73437FDB598AFAEAC0 /* Pods_Collections.framework */; };
-		F40C39A8280E6CAC00EE48E2 /* TimeCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39A7280E6CAC00EE48E2 /* TimeCalculation.swift */; };
+		F40C39A8280E6CAC00EE48E2 /* TimeCalculating.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39A7280E6CAC00EE48E2 /* TimeCalculating.swift */; };
 		F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */; };
 		F41AFC0F28266991000E9F65 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC0C28266991000E9F65 /* NavigationBarExtension.swift */; };
 		F41AFC1028266991000E9F65 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC0E28266991000E9F65 /* IntegerExtension.swift */; };
 		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
 		F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
+		F41AFC18282E1538000E9F65 /* TimeMeasureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */; };
 		F42980732819829900880199 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980722819829900880199 /* InitialModuleUITests.swift */; };
 		F429813B281AAB8200880199 /* SetModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429813A281AAB8200880199 /* SetModelsTests.swift */; };
 		F447D100281AB15600FD5095 /* SetModelsTestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D0FF281AB15600FD5095 /* SetModelsTestsExtensions.swift */; };
@@ -80,10 +81,12 @@
 
 /* Begin PBXFileReference section */
 		9E960AE9B1870A8FA855DDB2 /* Pods-Collections.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collections.release.xcconfig"; path = "Target Support Files/Pods-Collections/Pods-Collections.release.xcconfig"; sourceTree = "<group>"; };
-		F40C39A7280E6CAC00EE48E2 /* TimeCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculation.swift; sourceTree = "<group>"; };
+		F40C39A7280E6CAC00EE48E2 /* TimeCalculating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculating.swift; sourceTree = "<group>"; };
 		F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMainViewController.swift; sourceTree = "<group>"; };
 		F41AFC0C28266991000E9F65 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		F41AFC0E28266991000E9F65 /* IntegerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerExtension.swift; sourceTree = "<group>"; };
+		F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
+		F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMeasureModel.swift; sourceTree = "<group>"; };
 		F42980702819829900880199 /* InitialModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42980722819829900880199 /* InitialModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITests.swift; sourceTree = "<group>"; };
 		F4298138281AAB8200880199 /* SetModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +169,7 @@
 		F40C39A6280E6C5700EE48E2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				F40C39A7280E6CAC00EE48E2 /* TimeCalculation.swift */,
+				F40C39A7280E6CAC00EE48E2 /* TimeCalculating.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -202,6 +205,14 @@
 				F470339C2817D98800F188F1 /* TestHelpers.swift */,
 			);
 			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		F41AFC16282E145F000E9F65 /* TimeMeasureModel */ = {
+			isa = PBXGroup;
+			children = (
+				F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */,
+			);
+			path = TimeMeasureModel;
 			sourceTree = "<group>";
 		};
 		F42980712819829900880199 /* InitialModuleUITests */ = {
@@ -313,6 +324,7 @@
 			children = (
 				F4C934F427FEBB0A0099F865 /* SuportingFiles */,
 				F4604120280C15EA00597B25 /* ElementsViews */,
+				F41AFC16282E145F000E9F65 /* TimeMeasureModel */,
 				F4C934F727FEBD4F0099F865 /* InitialViewControllerModule */,
 				F4D9FA7928080BCC009146FA /* ArrayViewControllerModule */,
 				F4D9FA7128080A1B009146FA /* SetViewControllerModule */,
@@ -750,6 +762,7 @@
 				F4D9FA8228081A10009146FA /* SetMainView.swift in Sources */,
 				F41AFC0F28266991000E9F65 /* NavigationBarExtension.swift in Sources */,
 				F4D9FA8B28086251009146FA /* SetCreationModel.swift in Sources */,
+				F41AFC18282E1538000E9F65 /* TimeMeasureModel.swift in Sources */,
 				F40C39C22811247D00EE48E2 /* InitialMainViewController.swift in Sources */,
 				F480314128227E2800D0A986 /* Dispatcher.swift in Sources */,
 				F460412E280C4B3600597B25 /* CollectionView.swift in Sources */,
@@ -767,6 +780,8 @@
 				F4B2B938281BEAED00CD97E8 /* SetConstants.swift in Sources */,
 				F4D2E85027FEF29A0048047C /* ColorsConstants.swift in Sources */,
 				F40C39A8280E6CAC00EE48E2 /* TimeCalculation.swift in Sources */,
+				F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */,
+				F40C39A8280E6CAC00EE48E2 /* TimeCalculating.swift in Sources */,
 				F4D9FA7C28080C08009146FA /* ArrayViewController.swift in Sources */,
 				F4D9FA8728083260009146FA /* CustomButton.swift in Sources */,
 			);
