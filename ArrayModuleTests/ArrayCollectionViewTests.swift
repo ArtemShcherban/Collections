@@ -1,5 +1,5 @@
 //
-//  CollectionViewTests.swift
+//  ArrayCollectionViewTests.swift
 //  ArrayModuleTests
 //
 //  Created by Artem Shcherban on 02.05.2022.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Collections
 
-final class CollectionViewTests: XCTestCase {
+final class ArrayCollectionViewTests: XCTestCase {
     private var sut: ArrayViewController!
     private var collectionView: CollectionView!
     
@@ -52,7 +52,7 @@ final class CollectionViewTests: XCTestCase {
         sut.globalQueue = globalDefault
         sut.mainQuaue = globalBackground
         let expectedColor = ColorsConstants.newColor
-        
+
         guard let cell = cellForItem(in: collectionView, item: 5) else { XCTFail("Cannot create a cell")
             return
         }
