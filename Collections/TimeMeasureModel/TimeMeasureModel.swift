@@ -18,5 +18,5 @@ final class TimeMeasureModel: TimeCalculating {
         startTime = DispatchTime.now()
         operationBlok()
         endTime = DispatchTime.now()
-    } 
+    }
 }
