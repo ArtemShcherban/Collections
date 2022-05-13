@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ArrayDataSource: NSObject, UICollectionViewDataSource {
+final class ArrayDataSource: NSObject, UICollectionViewDataSource {
     
     private(set) lazy var arrayMainModel = ArrayMainModel.shared
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TimeMeasureModel: TimeCalculating {
+final class TimeMeasureModel: TimeCalculating {
     
     var startTime = DispatchTime(uptimeNanoseconds: 0)
     var endTime = DispatchTime(uptimeNanoseconds: 0)
