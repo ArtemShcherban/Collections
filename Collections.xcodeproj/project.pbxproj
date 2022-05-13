@@ -13,6 +13,8 @@
 		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
 		F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
 		F41AFC18282E1538000E9F65 /* TimeMeasureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */; };
+		F41AFC1B282E2519000E9F65 /* DictionaryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC1A282E2519000E9F65 /* DictionaryDataSource.swift */; };
+		F41AFC1D282E2F97000E9F65 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC1C282E2F97000E9F65 /* Contact.swift */; };
 		F42980732819829900880199 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980722819829900880199 /* InitialModuleUITests.swift */; };
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
 		F460412E280C4B3600597B25 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412D280C4B3600597B25 /* CollectionView.swift */; };
@@ -70,6 +72,8 @@
 		F40C39C12811247D00EE48E2 /* InitialMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMainViewController.swift; sourceTree = "<group>"; };
 		F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMeasureModel.swift; sourceTree = "<group>"; };
+		F41AFC1A282E2519000E9F65 /* DictionaryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataSource.swift; sourceTree = "<group>"; };
+		F41AFC1C282E2F97000E9F65 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F42980702819829900880199 /* InitialModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42980722819829900880199 /* InitialModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITests.swift; sourceTree = "<group>"; };
 		F4604121280C160600597B25 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
@@ -177,6 +181,14 @@
 				F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */,
 			);
 			path = TimeMeasureModel;
+			sourceTree = "<group>";
+		};
+		F41AFC19282E24F9000E9F65 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F41AFC1A282E2519000E9F65 /* DictionaryDataSource.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		F42980712819829900880199 /* InitialModuleUITests */ = {
@@ -365,7 +377,8 @@
 		F4D9FA7528080B51009146FA /* DictionaryViewControllerModule */ = {
 			isa = PBXGroup;
 			children = (
-				F4D9FA91280BE3A9009146FA /* Model */,
+				F41AFC19282E24F9000E9F65 /* Data */,
+				F4D9FA91280BE3A9009146FA /* Models */,
 				F4D9FA90280BE394009146FA /* View */,
 				F4D9FA7628080B67009146FA /* Controller */,
 			);
@@ -404,13 +417,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F4D9FA91280BE3A9009146FA /* Model */ = {
+		F4D9FA91280BE3A9009146FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F41AFC1C282E2F97000E9F65 /* Contact.swift */,
 				F4D9FA94280BE660009146FA /* DictionaryMainModel.swift */,
 				F4604131280C7E2700597B25 /* DictionaryWorkingModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FA16CFD2A5A90720634ED14B /* Frameworks */ = {
@@ -663,6 +677,7 @@
 				F4B2B93B281BF40100CD97E8 /* DictionaryConstants.swift in Sources */,
 				F4C9350127FECB050099F865 /* AppConstants.swift in Sources */,
 				F4604132280C7E2700597B25 /* DictionaryWorkingModel.swift in Sources */,
+				F41AFC1D282E2F97000E9F65 /* Contact.swift in Sources */,
 				F4D9FA95280BE660009146FA /* DictionaryMainModel.swift in Sources */,
 				F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */,
 				F4D9FA93280BE3CF009146FA /* DictionaryMainView.swift in Sources */,
@@ -673,6 +688,7 @@
 				F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */,
 				F40C39A8280E6CAC00EE48E2 /* TimeCalculating.swift in Sources */,
 				F4D9FA7C28080C08009146FA /* ArrayViewController.swift in Sources */,
+				F41AFC1B282E2519000E9F65 /* DictionaryDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

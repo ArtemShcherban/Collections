@@ -25,14 +25,6 @@ final class DictionaryCollectionViewTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func test_collectionViewDelegate_notNil() {
-        XCTAssertNotNil(collectionView.delegate)
-    }
-    
-    func test_collectionViewDataSource_notNil() {
-        XCTAssertNotNil(collectionView.dataSource)
-    }
-    
     func test_numberOfRows_shouldBeSix() {
         XCTAssertEqual(numberOfItems(in: collectionView), 6)
     }

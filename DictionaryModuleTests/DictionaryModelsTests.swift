@@ -24,60 +24,85 @@ final class DictionaryModelsTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func test_createContactsArray_shouldCreateContactsArray() {
+    func test_createContactsArray_shouldCreateArray() {
         
-        if modelUnderTest.contactsArray.count != 0 {
-            XCTFail("The contactsArray should be empty")
-        }
+        XCTAssertFalse(modelUnderTest.contactsArray.count != 0, "The contactsArray should be empty")
+        
         modelUnderTest.createContactsArray(with: oneThousandElements)
         
         XCTAssertEqual(modelUnderTest.contactsArray.count, oneThousandElements)
     }
     
-    func test_createContactsDictionary_shouldCreateContactsDictionary() {
+    func test_createContactsDictionary_shouldCreateDictionary() {
         
-        if modelUnderTest.contactsDictionary.count != 0 {
-            XCTFail("The contactsDictionary should be empty")
-        }
+        XCTAssertFalse(modelUnderTest.contactsDictionary.count != 0, "The contactsDictionary should be empty")
+        
         modelUnderTest.createContactsDictionary(with: oneThousandElements)
         
         XCTAssertEqual(modelUnderTest.contactsDictionary.count, oneThousandElements)
     }
     
-    func test_findElementInArray_first_shouldReturnNotNil() {
+    func test_findElementInArray_first_shouldReturnExpectedValue() {
         let indexPath = IndexPath(row: 0, section: 0)
+        let expectedResult = Contact(name: "Name0", phoneNumber: "0")
+        
         modelUnderTest.createContactsArray(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
-        
-        XCTAssertNotNil(modelUnderTest.resultOfSearch)
+        guard let obtainedResult = modelUnderTest.resultOfSearch as? Contact else {
+            XCTFail("Value should has type 'Contact'")
+            return
+        }
+        XCTAssertEqual(obtainedResult, expectedResult)
     }
     
-    func test_test_findElementInDictionary_first_shouldReturnNotNil() {
+    func test_test_findElementInDictionary_first_shouldReturnExpectedValues() {
         let indexPath = IndexPath(row: 1, section: 0)
+        let expectedKey = "Name0"
+        let expectedValue = "0"
+        
         modelUnderTest.createContactsDictionary(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
+        guard let obtainedResult = modelUnderTest.resultOfSearch as? Dictionary<String, String>.Element else {
+            XCTFail("Value should has type 'Dictionary<String, String>.Element'")
+            return
+        }
         
-        XCTAssertNotNil(modelUnderTest.resultOfSearch)
+        XCTAssertEqual(obtainedResult.key, expectedKey)
+        XCTAssertEqual(obtainedResult.value, expectedValue)
     }
     
-    func test_findElementInArray_last_shouldReturnNotNil() {
+    func test_findElementInArray_last_shouldReturnExpectedValue() {
         let indexPath = IndexPath(row: 2, section: 0)
+        let expectedResult = Contact(name: "Name999", phoneNumber: "999")
+        
         modelUnderTest.createContactsArray(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
-        
-        XCTAssertNotNil(modelUnderTest.resultOfSearch)
+        guard let obtainedResult = modelUnderTest.resultOfSearch as? Contact else {
+            XCTFail("Value should has type 'Contact'")
+            return
+        }
+        XCTAssertEqual(obtainedResult, expectedResult)
     }
     
-    func test_findElementInDictionary_last_shouldReturnNotNil() {
+    func test_findElementInDictionary_last_shouldReturnExpectedValues() {
         let indexPath = IndexPath(row: 3, section: 0)
+        let expectedKey = "Name999"
+        let expectedValue = "999"
+        
         modelUnderTest.createContactsDictionary(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
+        guard let obtainedResult = modelUnderTest.resultOfSearch as? Dictionary<String, String>.Element else {
+            XCTFail("Value should has type 'Dictionary<String, String>.Element'")
+            return
+        }
         
-        XCTAssertNotNil(modelUnderTest.resultOfSearch)
+        XCTAssertEqual(obtainedResult.key, expectedKey)
+        XCTAssertEqual(obtainedResult.value, expectedValue)
     }
     
     func test_findElementInArray_notExistElement_shouldReturnNil() {
         let indexPath = IndexPath(row: 4, section: 0)
+        
         modelUnderTest.createContactsArray(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
         
@@ -86,6 +111,7 @@ final class DictionaryModelsTests: XCTestCase {
     
     func test_findElementInDictionary_notExistElement_shouldReturnNil() {
         let indexPath = IndexPath(row: 5, section: 0)
+        
         modelUnderTest.createContactsDictionary(with: oneThousandElements)
         modelUnderTest.startTaskAt(indexPath, with: elementsForSearch)
         

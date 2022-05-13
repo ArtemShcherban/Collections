@@ -12,10 +12,11 @@ final class DictionaryViewController: UIViewController {
     var mainQueue: Dispatching!
     
     private(set) lazy var dictionaryWorkingModel = DictionaryWorkingModel()
-    
+    private(set) lazy var timeMeasureModel = TimeMeasureModel.shared
     private(set) lazy var dictionaryMainView: DictionaryMainView? = {
         let view = DictionaryMainView()
         view.delegate = self
+        view.collectionViewDelegate = self
         return view
     }()
     
@@ -36,22 +37,10 @@ final class DictionaryViewController: UIViewController {
     }
 }
 
-extension DictionaryViewController: DictionaryMainViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dictionaryWorkingModel.numberOfRows()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier,
-                                                            for: indexPath) as? CollectionViewCell else { fatalError(ErrorConstants.errorOne.rawValue)}
-        
-        let cellTitle = dictionaryWorkingModel.receiveTitleFoCell(indexPath)
-        cell.cellConfigure(cellTitle)
-        return cell
-    }
+extension DictionaryViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell else { fatalError(ErrorConstants.errorTwo.rawValue + "\(indexPath)") }
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell else { fatalError(ErrorConstants.cannotGetCell.rawValue + "\(indexPath)") }
         
         didSelect(cell, at: indexPath)
     }
@@ -68,6 +57,9 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
             }
         }
     }
+}
+
+extension DictionaryViewController: DictionaryMainViewDelegate {
     
     func arrayButtonPressed() {
         dictionaryMainView?.arrayButton.update()
@@ -76,7 +68,7 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
             self.dictionaryWorkingModel.createContactsArray(with: AppConstants.maximumElements)
             self.mainQueue.dispatch {
                 self.dictionaryMainView?.arrayButton.stopActivityIndicator()
-                self.dictionaryMainView?.arrayButton.update(self.dictionaryWorkingModel.timeInterval)
+                self.dictionaryMainView?.arrayButton.update(self.timeMeasureModel.timeInterval)
             }
         }
     }
@@ -88,7 +80,7 @@ extension DictionaryViewController: DictionaryMainViewDelegate {
             self.dictionaryWorkingModel.createContactsDictionary(with: AppConstants.maximumElements)
             self.mainQueue.dispatch {
                 self.dictionaryMainView?.dictionaryButton.stopActivityIndicator()
-                self.dictionaryMainView?.dictionaryButton.update(self.dictionaryWorkingModel.timeInterval)
+                self.dictionaryMainView?.dictionaryButton.update(self.timeMeasureModel.timeInterval)
             }
         }
     }

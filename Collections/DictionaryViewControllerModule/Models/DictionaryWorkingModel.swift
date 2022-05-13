@@ -9,6 +9,8 @@ import Foundation
 
 final class DictionaryWorkingModel: DictionaryMainModel {
     
+    static let shared = DictionaryWorkingModel()
+    
     private(set) var resultOfSearch: Any?
     private lazy var titleFirstPart = ""
     
@@ -37,20 +39,20 @@ final class DictionaryWorkingModel: DictionaryMainModel {
             titleSecondPart = " Result number: 1"
         }
         resultOfSearch = nil
-        return titleFirstPart + timeInterval + titleSecondPart
+        return titleFirstPart + timeMeasureModel.timeInterval + titleSecondPart
     }
     
     private func findElementInArray(_ index: Int, from elementsToSearch: [String] ) {
-        startTime = DispatchTime.now()
-        resultOfSearch = contactsArray.first { $0.name == elementsToSearch[index] }
-        endTime = DispatchTime.now()
+        timeMeasureModel.timeMeasureRunningCode {
+            resultOfSearch = contactsArray.first { $0.name == elementsToSearch[index] }
+        }
         titleFirstPart = DictionaryConstants.fistPartOfTitle[index]
     }
     
     private func findElementInDictionary(_ index: Int, from elementsToSearch: [String] ) {
-        startTime = DispatchTime.now()
-        resultOfSearch = contactsDictionary.first { $0.key == elementsToSearch[index] }
-        endTime = DispatchTime.now()
+        timeMeasureModel.timeMeasureRunningCode {
+            resultOfSearch = contactsDictionary.first { $0.key == elementsToSearch[index] }
+        }
         titleFirstPart = DictionaryConstants.fistPartOfTitle[index]
     }
 }

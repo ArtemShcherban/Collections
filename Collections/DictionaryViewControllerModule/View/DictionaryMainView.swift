@@ -14,7 +14,8 @@ final class DictionaryMainView: UIView {
     private lazy var buttons = [arrayButton, dictionaryButton]
     
     private(set) lazy var collectionView = CollectionView()
-    
+    private lazy var collectionViewDataSource = DictionaryDataSource()
+    weak var collectionViewDelegate: UICollectionViewDelegate?
     weak var delegate: DictionaryMainViewDelegate?
     
     func createMainView() {
@@ -38,8 +39,16 @@ final class DictionaryMainView: UIView {
     }
     
     private func addButtonTarget() {
-        arrayButton.addTarget(delegate, action: #selector(delegate?.arrayButtonPressed), for: .touchUpInside)
-        dictionaryButton.addTarget(delegate, action: #selector(delegate?.dictionaryButtonPressed), for: .touchUpInside)
+        arrayButton.addTarget(self, action: #selector(arrayButtonAction), for: .touchUpInside)
+        dictionaryButton.addTarget(self, action: #selector(dictionaryButtonAction), for: .touchUpInside)
+    }
+    
+    @objc private func arrayButtonAction() {
+        delegate?.arrayButtonPressed()
+    }
+    
+    @objc private func dictionaryButtonAction() {
+        delegate?.dictionaryButtonPressed()
     }
     
     private func addAccessibilityIdentifiers() {
@@ -48,8 +57,8 @@ final class DictionaryMainView: UIView {
     }
     
     private func collectionViewConfigure() {
-        collectionView.delegate = delegate
-        collectionView.dataSource = delegate
+        collectionView.delegate = collectionViewDelegate
+        collectionView.dataSource = collectionViewDataSource
     }
     
     private func setButtonsConstraints() {
@@ -75,7 +84,7 @@ final class DictionaryMainView: UIView {
     }
 }
 
-@objc protocol DictionaryMainViewDelegate: UICollectionViewDelegate, UICollectionViewDataSource {
+protocol DictionaryMainViewDelegate: AnyObject {
     func arrayButtonPressed()
     func dictionaryButtonPressed()
 }
