@@ -50,7 +50,7 @@ final class DictionaryCollectionViewTests: XCTestCase {
         let background = SyncQueue.background
         sut.globalQueue = global
         sut.mainQueue = background
-        let expectedColor = ColorsConstants.newColor
+        let expectedColor = ColorsConstants.whiteColor
         
         guard let cell = cellForItem(in: collectionView, item: 3) else { return XCTFail("Cannot create a cell") }
         sut.didSelect(cell, at: IndexPath(item: 3, section: 0))

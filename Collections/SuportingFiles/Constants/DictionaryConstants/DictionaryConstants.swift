@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DictionaryConstants {
+enum DictionaryConstants {
     
     static let buttonsTitles = ["Array", "Dictionary"]
     

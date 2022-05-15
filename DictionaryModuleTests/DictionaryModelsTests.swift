@@ -26,16 +26,12 @@ final class DictionaryModelsTests: XCTestCase {
     
     func test_createContactsArray_shouldCreateArray() {
         
-        XCTAssertFalse(modelUnderTest.contactsArray.count != 0, "The contactsArray should be empty")
-        
         modelUnderTest.createContactsArray(with: oneThousandElements)
         
         XCTAssertEqual(modelUnderTest.contactsArray.count, oneThousandElements)
     }
     
     func test_createContactsDictionary_shouldCreateDictionary() {
-        
-        XCTAssertFalse(modelUnderTest.contactsDictionary.count != 0, "The contactsDictionary should be empty")
         
         modelUnderTest.createContactsDictionary(with: oneThousandElements)
         
