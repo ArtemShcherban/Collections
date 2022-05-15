@@ -7,10 +7,15 @@
 
 import Foundation
 
-final class TimeMeasureModel: TimeCalculating {
+final class TimeMeasureModel {
     
-    var startTime = DispatchTime(uptimeNanoseconds: 0)
-    var endTime = DispatchTime(uptimeNanoseconds: 0)
+    private var startTime: DispatchTime!
+    private var endTime: DispatchTime!
+    
+    var timeInterval: String {
+        let nanoTime = (endTime.uptimeNanoseconds - startTime.uptimeNanoseconds)
+        return String(format: "%.3f", Double(nanoTime) / 1_000_000) + " ms."
+    }
     
     static let shared = TimeMeasureModel()
     
