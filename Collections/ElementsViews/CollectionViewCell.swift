@@ -49,7 +49,7 @@ final class CollectionViewCell: UICollectionViewCell {
     }
     
     func updateBackgroundColor() {
-        backgroundColor = ColorsConstants.newColor
+        backgroundColor = ColorsConstants.whiteColor
     }
     
     func setTitleTextLabelConstraints() {
