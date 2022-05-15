@@ -164,15 +164,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F40C39A6280E6C5700EE48E2 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				F40C39A7280E6CAC00EE48E2 /* TimeCalculating.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		F41AFC0A28266991000E9F65 /* Extensions */ = {
 		F40C39C32811440500EE48E2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,9 +327,7 @@
 		F4C934F427FEBB0A0099F865 /* SuportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F41AFC0A28266991000E9F65 /* Extensions */,
 				F480313F28227DFE00D0A986 /* Dispatcher */,
-				F40C39A6280E6C5700EE48E2 /* Protocols */,
 				F40C39C32811440500EE48E2 /* Extensions */,
 				F4C934FF27FECAB70099F865 /* Constants */,
 				F4C934F527FEBB230099F865 /* Application */,
@@ -779,7 +768,6 @@
 				F4D9FA8F28094CAB009146FA /* CustomTextLabel.swift in Sources */,
 				F4B2B938281BEAED00CD97E8 /* SetConstants.swift in Sources */,
 				F4D2E85027FEF29A0048047C /* ColorsConstants.swift in Sources */,
-				F40C39A8280E6CAC00EE48E2 /* TimeCalculation.swift in Sources */,
 				F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */,
 				F4D9FA7C28080C08009146FA /* ArrayViewController.swift in Sources */,
 				F4D9FA8728083260009146FA /* CustomButton.swift in Sources */,

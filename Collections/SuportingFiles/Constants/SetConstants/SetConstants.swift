@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct SetConstants {
+enum SetConstants {
     
     static let aphabetLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     
@@ -26,7 +26,7 @@ struct SetConstants {
     
     static let textViewHeight: CGFloat = 36
     
-    struct Sizes {
+    enum Sizes {
         static let leftIndent: CGFloat = 16
         static let rightIndent: CGFloat = -16
     }
