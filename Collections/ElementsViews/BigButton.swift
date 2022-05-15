@@ -45,7 +45,7 @@ final class BigButton: UIButton {
             isSelected.toggle()
         } else {
             setTitle(title, for: .selected)
-            backgroundColor = ColorsConstants.newColor
+            backgroundColor = ColorsConstants.whiteColor
         }
     }
     
