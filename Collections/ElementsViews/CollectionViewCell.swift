@@ -49,9 +49,12 @@ final class CollectionViewCell: UICollectionViewCell {
     }
     
     func updateAppearance() {
-        backgroundColor = ColorsConstants.newColor
+        backgroundColor = ColorsConstants.whiteColor
         titleTextLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         titleTextLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    }
+    func updateBackgroundColor() {
+        backgroundColor = ColorsConstants.whiteColor
     }
     
     private func setTitleTextLabelConstraints() {

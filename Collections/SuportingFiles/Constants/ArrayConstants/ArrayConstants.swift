@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ArrayConstants {
+enum ArrayConstants {
     
     static let bigButtonTitle = "Create Int array with \(AppConstants.maximumElements.decimalFormat()) elements"
     
-    static let taskstitles = ["Insert \(AppConstants.numberOfElements) elements at the begining of the array one-by-one",
+    static let taskTitles = ["Insert \(AppConstants.numberOfElements) elements at the begining of the array one-by-one",
                               "Insert \(AppConstants.numberOfElements) elements at the begining of the array",
                               "Insert \(AppConstants.numberOfElements) elements at the middle of the array one-by-one",
                               "Insert \(AppConstants.numberOfElements) elements at the middle of the array",

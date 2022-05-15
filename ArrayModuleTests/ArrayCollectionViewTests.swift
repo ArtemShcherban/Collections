@@ -31,7 +31,7 @@ final class ArrayCollectionViewTests: XCTestCase {
     }
     
     func test_cellForItemAt_withRow3_shouldSetCorrectTitle() {
-        let expectedTitle = ArrayConstants.taskstitles[3]
+        let expectedTitle = ArrayConstants.taskTitles[3]
         
         let cell = cellForItem(in: collectionView, item: 3)
         
@@ -39,7 +39,7 @@ final class ArrayCollectionViewTests: XCTestCase {
     }
     
     func test_cellForItemAt_withRow9_shouldSetCorrectTitle() {
-        let expectedTitle = ArrayConstants.taskstitles[9]
+        let expectedTitle = ArrayConstants.taskTitles[9]
         
         let cell = cellForItem(in: collectionView, item: 9)
         
@@ -51,7 +51,7 @@ final class ArrayCollectionViewTests: XCTestCase {
         let globalBackground = SyncQueue.background
         sut.globalQueue = globalDefault
         sut.mainQuaue = globalBackground
-        let expectedColor = ColorsConstants.newColor
+        let expectedColor = ColorsConstants.whiteColor
 
         guard let cell = cellForItem(in: collectionView, item: 5) else { XCTFail("Cannot create a cell")
             return

@@ -13,8 +13,7 @@ final class ArrayMainModel {
     lazy var timeMeasureModel = TimeMeasureModel.shared
     private(set) lazy var integers: [Int] = []
     private(set) lazy var tempIntegers: [Int] = []
-    private lazy var tasksTitle = ArrayConstants.taskstitles
-    lazy var numberOfRows = tasksTitle.count
+    var numberOfRows: Int { ArrayConstants.taskTitles.count }
     private lazy var methods = [insertBeginingOneByOne, insertBeginingOnce,
                                 insertMiddleOneByOne, insertMiddleOnce,
                                 insertEndOneByOne, insertEndOnce,
@@ -29,7 +28,7 @@ final class ArrayMainModel {
     }
     
     func receiveTitle(_ indexPath: IndexPath) -> String {
-        tasksTitle[indexPath.row]
+        ArrayConstants.taskTitles[indexPath.row]
     }
     
     func startTask(_ indexPath: IndexPath, _ numberOfElements: Int = AppConstants.numberOfElements) {
