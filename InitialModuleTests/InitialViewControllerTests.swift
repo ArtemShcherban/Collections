@@ -66,6 +66,7 @@ final class InitialViewControllerTests: XCTestCase {
             XCTFail("Expected SetViewController," + "but was \(String(describing: pushedVC))")
             return
         }
+
         setVC.createNavigationBar(for: SetViewController.self)
         guard let title = setVC.title?.prefix(4) else {
             XCTFail("No title found")
@@ -73,6 +74,7 @@ final class InitialViewControllerTests: XCTestCase {
         }
         
         XCTAssertEqual(String(title), expectedTitle)
+
     }
     
     func test_tappingDictionaryCell_shouldPushedDictionaryViewController() {
