@@ -20,28 +20,13 @@
                ReferencedContainer = "container:Collections.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4B2B91D281BBD2B00CD97E8"
-               BuildableName = "SetModuleUITests.xctest"
-               BlueprintName = "SetModuleUITests"
-               ReferencedContainer = "container:Collections.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -50,36 +35,6 @@
                BlueprintIdentifier = "F47033922817D17300F188F1"
                BuildableName = "InitialModuleTests.xctest"
                BlueprintName = "InitialModuleTests"
-               ReferencedContainer = "container:Collections.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F47289932819047D00B7ECB1"
-               BuildableName = "ArrayModuleTests.xctest"
-               BlueprintName = "ArrayModuleTests"
-               ReferencedContainer = "container:Collections.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F429806F2819829900880199"
-               BuildableName = "InitialModuleUITests.xctest"
-               BlueprintName = "InitialModuleUITests"
-               ReferencedContainer = "container:Collections.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4B2B93F281BFA0C00CD97E8"
-               BuildableName = "ArrayModuleUITests.xctest"
-               BlueprintName = "ArrayModuleUITests"
                ReferencedContainer = "container:Collections.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -97,7 +52,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4B2B91D281BBD2B00CD97E8"
+               BlueprintIdentifier = "F429805128197BFF00880199"
                BuildableName = "SetModuleUITests.xctest"
                BlueprintName = "SetModuleUITests"
                ReferencedContainer = "container:Collections.xcodeproj">
@@ -107,9 +62,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4CD1AF8281FE3DD00F682E0"
-               BuildableName = "DictionaryModuleTests.xctest"
-               BlueprintName = "DictionaryModuleTests"
+               BlueprintIdentifier = "F42980C9281A880500880199"
+               BuildableName = "SetModuleUnitTests.xctest"
+               BlueprintName = "SetModuleUnitTests"
+               ReferencedContainer = "container:Collections.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F4298137281AAB8200880199"
+               BuildableName = "SetModuleTests.xctest"
+               BlueprintName = "SetModuleTests"
                ReferencedContainer = "container:Collections.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -125,16 +90,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F4C40D5527FEA5D00058C9BC"
-            BuildableName = "Collections.app"
-            BlueprintName = "Collections"
-            ReferencedContainer = "container:Collections.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -142,8 +97,7 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4C40D5527FEA5D00058C9BC"
@@ -151,7 +105,7 @@
             BlueprintName = "Collections"
             ReferencedContainer = "container:Collections.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
