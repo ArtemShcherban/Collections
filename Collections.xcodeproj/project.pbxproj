@@ -14,26 +14,33 @@
 		F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */; };
 		F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
 		F41AFC18282E1538000E9F65 /* TimeMeasureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */; };
+		F41AFC1B282E2519000E9F65 /* DictionaryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC1A282E2519000E9F65 /* DictionaryDataSource.swift */; };
+		F41AFC1D282E2F97000E9F65 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AFC1C282E2F97000E9F65 /* Contact.swift */; };
 		F42980732819829900880199 /* InitialModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42980722819829900880199 /* InitialModuleUITests.swift */; };
 		F429813B281AAB8200880199 /* SetModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F429813A281AAB8200880199 /* SetModelsTests.swift */; };
 		F447D100281AB15600FD5095 /* SetModelsTestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F447D0FF281AB15600FD5095 /* SetModelsTestsExtensions.swift */; };
 		F4604122280C160600597B25 /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604121280C160600597B25 /* BigButton.swift */; };
 		F460412E280C4B3600597B25 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412D280C4B3600597B25 /* CollectionView.swift */; };
 		F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460412F280C75D600597B25 /* CollectionViewCell.swift */; };
+		F4604132280C7E2700597B25 /* DictionaryWorkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4604131280C7E2700597B25 /* DictionaryWorkingModel.swift */; };
 		F47033962817D17300F188F1 /* InitialViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47033952817D17300F188F1 /* InitialViewControllerTests.swift */; };
 		F470339D2817D98800F188F1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470339C2817D98800F188F1 /* TestHelpers.swift */; };
 		F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */; };
+		F480313C2820215600D0A986 /* DictionaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480313B2820215600D0A986 /* DictionaryViewControllerTests.swift */; };
+		F480313E28212E8600D0A986 /* DictionaryCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480313D28212E8600D0A986 /* DictionaryCollectionViewTests.swift */; };
 		F480314128227E2800D0A986 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480314028227E2800D0A986 /* Dispatcher.swift */; };
 		F4B2B921281BBD2B00CD97E8 /* SetModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B920281BBD2B00CD97E8 /* SetModuleUITests.swift */; };
 		F4B2B92F281BC73B00CD97E8 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */; };
 		F4B2B930281BC73B00CD97E8 /* SetTestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */; };
 		F4B2B938281BEAED00CD97E8 /* SetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B937281BEAED00CD97E8 /* SetConstants.swift */; };
+		F4B2B93B281BF40100CD97E8 /* DictionaryConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */; };
 		F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */; };
 		F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */; };
 		F4C40D6127FEA5D00058C9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C40D5F27FEA5D00058C9BC /* Main.storyboard */; };
 		F4C40D6327FEA6120058C9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C40D6227FEA6120058C9BC /* Assets.xcassets */; };
 		F4C40D6627FEA6120058C9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C40D6427FEA6120058C9BC /* LaunchScreen.storyboard */; };
 		F4C9350127FECB050099F865 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C9350027FECB050099F865 /* AppConstants.swift */; };
+		F4CD1AFC281FE3DD00F682E0 /* DictionaryModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD1AFB281FE3DD00F682E0 /* DictionaryModelsTests.swift */; };
 		F4D2E85027FEF29A0048047C /* ColorsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2E84F27FEF29A0048047C /* ColorsConstants.swift */; };
 		F4D9FA7428080A38009146FA /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA7328080A38009146FA /* SetViewController.swift */; };
 		F4D9FA7828080B7B009146FA /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA7728080B7B009146FA /* DictionaryViewController.swift */; };
@@ -45,6 +52,8 @@
 		F4D9FA8B28086251009146FA /* SetCreationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8A28086251009146FA /* SetCreationModel.swift */; };
 		F4D9FA8D280946A9009146FA /* SetWorkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8C280946A9009146FA /* SetWorkingModel.swift */; };
 		F4D9FA8F28094CAB009146FA /* CustomTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA8E28094CAB009146FA /* CustomTextLabel.swift */; };
+		F4D9FA93280BE3CF009146FA /* DictionaryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA92280BE3CF009146FA /* DictionaryMainView.swift */; };
+		F4D9FA95280BE660009146FA /* DictionaryMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9FA94280BE660009146FA /* DictionaryMainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +79,13 @@
 			remoteInfo = Collections;
 		};
 		F4B2B924281BBD2B00CD97E8 /* PBXContainerItemProxy */ = {
+              isa = PBXContainerItemProxy;
+            containerPortal = F4C40D4E27FEA5D00058C9BC /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = F4C40D5527FEA5D00058C9BC;
+            remoteInfo = Collections;
+        };
+		F4CD1AFD281FE3DD00F682E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4C40D4E27FEA5D00058C9BC /* Project object */;
 			proxyType = 1;
@@ -85,6 +101,8 @@
 		F41AFC0E28266991000E9F65 /* IntegerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerExtension.swift; sourceTree = "<group>"; };
 		F40C39C52811449E00EE48E2 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMeasureModel.swift; sourceTree = "<group>"; };
+		F41AFC1A282E2519000E9F65 /* DictionaryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataSource.swift; sourceTree = "<group>"; };
+		F41AFC1C282E2F97000E9F65 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		F42980702819829900880199 /* InitialModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42980722819829900880199 /* InitialModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialModuleUITests.swift; sourceTree = "<group>"; };
 		F4298138281AAB8200880199 /* SetModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +111,7 @@
 		F4604121280C160600597B25 /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
 		F460412D280C4B3600597B25 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		F460412F280C75D600597B25 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F4604131280C7E2700597B25 /* DictionaryWorkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryWorkingModel.swift; sourceTree = "<group>"; };
 		F47033932817D17300F188F1 /* InitialModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InitialModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47033952817D17300F188F1 /* InitialViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerTests.swift; sourceTree = "<group>"; };
 		F470339C2817D98800F188F1 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
@@ -101,6 +120,11 @@
 		F4B2B920281BBD2B00CD97E8 /* SetModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModuleUITests.swift; sourceTree = "<group>"; };
 		F4B2B92E281BC73B00CD97E8 /* SetTestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTestConstants.swift; sourceTree = "<group>"; };
 		F4B2B937281BEAED00CD97E8 /* SetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetConstants.swift; sourceTree = "<group>"; };
+		F47289AD28190FFE00B7ECB1 /* IntegerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerExtension.swift; sourceTree = "<group>"; };
+		F480313B2820215600D0A986 /* DictionaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewControllerTests.swift; sourceTree = "<group>"; };
+		F480313D28212E8600D0A986 /* DictionaryCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCollectionViewTests.swift; sourceTree = "<group>"; };
+		F480314028227E2800D0A986 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConstants.swift; sourceTree = "<group>"; };
 		F4C40D5627FEA5D00058C9BC /* Collections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C40D5927FEA5D00058C9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4C40D5B27FEA5D00058C9BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +133,8 @@
 		F4C40D6527FEA6120058C9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4C40D6727FEA6120058C9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4C9350027FECB050099F865 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F4CD1AF9281FE3DD00F682E0 /* DictionaryModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DictionaryModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CD1AFB281FE3DD00F682E0 /* DictionaryModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryModelsTests.swift; sourceTree = "<group>"; };
 		F4D2E84F27FEF29A0048047C /* ColorsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsConstants.swift; sourceTree = "<group>"; };
 		F4D9FA7328080A38009146FA /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		F4D9FA7728080B7B009146FA /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +146,8 @@
 		F4D9FA8A28086251009146FA /* SetCreationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCreationModel.swift; sourceTree = "<group>"; };
 		F4D9FA8C280946A9009146FA /* SetWorkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetWorkingModel.swift; sourceTree = "<group>"; };
 		F4D9FA8E28094CAB009146FA /* CustomTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextLabel.swift; sourceTree = "<group>"; };
+		F4D9FA92280BE3CF009146FA /* DictionaryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryMainView.swift; sourceTree = "<group>"; };
+		F4D9FA94280BE660009146FA /* DictionaryMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryMainModel.swift; sourceTree = "<group>"; };
 		FBE04EF89276C6A010993A98 /* Pods-Collections.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collections.debug.xcconfig"; path = "Target Support Files/Pods-Collections/Pods-Collections.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0DEA73437FDB598AFAEAC0 /* Pods_Collections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Collections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,6 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				409D341CF17F75B3D8591048 /* Pods_Collections.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CD1AF6281FE3DD00F682E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +238,14 @@
 				F41AFC17282E1538000E9F65 /* TimeMeasureModel.swift */,
 			);
 			path = TimeMeasureModel;
+			sourceTree = "<group>";
+		};
+		F41AFC19282E24F9000E9F65 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F41AFC1A282E2519000E9F65 /* DictionaryDataSource.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		F42980712819829900880199 /* InitialModuleUITests */ = {
@@ -282,6 +325,14 @@
 				F4B2B937281BEAED00CD97E8 /* SetConstants.swift */,
 			);
 			path = SetConstants;
+            sourceTree = "<group>";
+        };
+		F4B2B939281BF3D100CD97E8 /* DictionaryConstants */ = {
+			isa = PBXGroup;
+			children = (
+				F4B2B93A281BF40100CD97E8 /* DictionaryConstants.swift */,
+			);
+			path = DictionaryConstants;
 			sourceTree = "<group>";
 		};
 		F4C40D4D27FEA5D00058C9BC = {
@@ -291,6 +342,7 @@
 				F47033942817D17300F188F1 /* InitialModuleTests */,
 				F42980712819829900880199 /* InitialModuleUITests */,
 				F4B2B92B281BC1A200CD97E8 /* SetTests */,
+				F4CD1AFA281FE3DD00F682E0 /* DictionaryModuleTests */,
 				F4C40D5727FEA5D00058C9BC /* Products */,
 				FAC236CC5DD43B66C92F3E9F /* Pods */,
 				FA16CFD2A5A90720634ED14B /* Frameworks */,
@@ -305,6 +357,7 @@
 				F42980702819829900880199 /* InitialModuleUITests.xctest */,
 				F4298138281AAB8200880199 /* SetModuleTests.xctest */,
 				F4B2B91E281BBD2B00CD97E8 /* SetModuleUITests.xctest */,
+				F4CD1AF9281FE3DD00F682E0 /* DictionaryModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -376,9 +429,20 @@
 			isa = PBXGroup;
 			children = (
 				F4B2B936281BE87B00CD97E8 /* SetConstants */,
+				F4B2B939281BF3D100CD97E8 /* DictionaryConstants */,
 				F4B2B932281BD93400CD97E8 /* CommonConstants */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		F4CD1AFA281FE3DD00F682E0 /* DictionaryModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F480313D28212E8600D0A986 /* DictionaryCollectionViewTests.swift */,
+				F480313B2820215600D0A986 /* DictionaryViewControllerTests.swift */,
+				F4CD1AFB281FE3DD00F682E0 /* DictionaryModelsTests.swift */,
+			);
+			path = DictionaryModuleTests;
 			sourceTree = "<group>";
 		};
 		F4D9FA7128080A1B009146FA /* SetViewControllerModule */ = {
@@ -402,6 +466,9 @@
 		F4D9FA7528080B51009146FA /* DictionaryViewControllerModule */ = {
 			isa = PBXGroup;
 			children = (
+				F41AFC19282E24F9000E9F65 /* Data */,
+				F4D9FA91280BE3A9009146FA /* Models */,
+				F4D9FA90280BE394009146FA /* View */,
 				F4D9FA7628080B67009146FA /* Controller */,
 			);
 			path = DictionaryViewControllerModule;
@@ -436,6 +503,14 @@
 			children = (
 				F4D9FA8328081E9B009146FA /* SetElementsViews */,
 				F4D9FA8128081A10009146FA /* SetMainView.swift */,
+                );
+            path = View;
+            sourceTree = "<group>";
+        };
+		F4D9FA90280BE394009146FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4D9FA92280BE3CF009146FA /* DictionaryMainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,6 +532,16 @@
 				F4D9FA8E28094CAB009146FA /* CustomTextLabel.swift */,
 			);
 			path = SetElementsViews;
+            sourceTree = "<group>";
+        };
+		F4D9FA91280BE3A9009146FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F41AFC1C282E2F97000E9F65 /* Contact.swift */,
+				F4D9FA94280BE660009146FA /* DictionaryMainModel.swift */,
+				F4604131280C7E2700597B25 /* DictionaryWorkingModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FA16CFD2A5A90720634ED14B /* Frameworks */ = {
@@ -570,6 +655,24 @@
 			productReference = F4C40D5627FEA5D00058C9BC /* Collections.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F4CD1AF8281FE3DD00F682E0 /* DictionaryModuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4CD1B01281FE3DD00F682E0 /* Build configuration list for PBXNativeTarget "DictionaryModuleTests" */;
+			buildPhases = (
+				F4CD1AF5281FE3DD00F682E0 /* Sources */,
+				F4CD1AF6281FE3DD00F682E0 /* Frameworks */,
+				F4CD1AF7281FE3DD00F682E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4CD1AFE281FE3DD00F682E0 /* PBXTargetDependency */,
+			);
+			name = DictionaryModuleTests;
+			productName = DictionaryModuleTests;
+			productReference = F4CD1AF9281FE3DD00F682E0 /* DictionaryModuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -599,6 +702,10 @@
 					F4C40D5527FEA5D00058C9BC = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
+					F4CD1AF8281FE3DD00F682E0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F4C40D5527FEA5D00058C9BC;
+					};
 				};
 			};
 			buildConfigurationList = F4C40D5127FEA5D00058C9BC /* Build configuration list for PBXProject "Collections" */;
@@ -619,6 +726,7 @@
 				F429806F2819829900880199 /* InitialModuleUITests */,
 				F4298137281AAB8200880199 /* SetModuleTests */,
 				F4B2B91D281BBD2B00CD97E8 /* SetModuleUITests */,
+				F4CD1AF8281FE3DD00F682E0 /* DictionaryModuleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -659,6 +767,13 @@
 				F4C40D6627FEA6120058C9BC /* LaunchScreen.storyboard in Resources */,
 				F4C40D6327FEA6120058C9BC /* Assets.xcassets in Resources */,
 				F4C40D6127FEA5D00058C9BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CD1AF7281FE3DD00F682E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,7 +875,14 @@
 				F4604130280C75D600597B25 /* CollectionViewCell.swift in Sources */,
 				F4C9350127FECB050099F865 /* AppConstants.swift in Sources */,
 				F4D9FA8D280946A9009146FA /* SetWorkingModel.swift in Sources */,
+				F40C39C62811449E00EE48E2 /* NavigationBarExtension.swift in Sources */,
+				F4B2B93B281BF40100CD97E8 /* DictionaryConstants.swift in Sources */,
+				F4C9350127FECB050099F865 /* AppConstants.swift in Sources */,
+				F4604132280C7E2700597B25 /* DictionaryWorkingModel.swift in Sources */,
+				F41AFC1D282E2F97000E9F65 /* Contact.swift in Sources */,
+				F4D9FA95280BE660009146FA /* DictionaryMainModel.swift in Sources */,
 				F4C40D5A27FEA5D00058C9BC /* AppDelegate.swift in Sources */,
+				F4D9FA93280BE3CF009146FA /* DictionaryMainView.swift in Sources */,
 				F4D9FA7E28081013009146FA /* ErrorsConstants.swift in Sources */,
 				F41AFC0928265AF6000E9F65 /* TestHelpers.swift in Sources */,
 				F4C40D5C27FEA5D00058C9BC /* SceneDelegate.swift in Sources */,
@@ -771,6 +893,17 @@
 				F47289AE28190FFE00B7ECB1 /* IntegerExtension.swift in Sources */,
 				F4D9FA7C28080C08009146FA /* ArrayViewController.swift in Sources */,
 				F4D9FA8728083260009146FA /* CustomButton.swift in Sources */,
+				F41AFC1B282E2519000E9F65 /* DictionaryDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CD1AF5281FE3DD00F682E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F480313C2820215600D0A986 /* DictionaryViewControllerTests.swift in Sources */,
+				F480313E28212E8600D0A986 /* DictionaryCollectionViewTests.swift in Sources */,
+				F4CD1AFC281FE3DD00F682E0 /* DictionaryModelsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +929,11 @@
 			isa = PBXTargetDependency;
 			target = F4C40D5527FEA5D00058C9BC /* Collections */;
 			targetProxy = F4B2B924281BBD2B00CD97E8 /* PBXContainerItemProxy */;
+        };
+		F4CD1AFE281FE3DD00F682E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4C40D5527FEA5D00058C9BC /* Collections */;
+			targetProxy = F4CD1AFD281FE3DD00F682E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1145,6 +1283,44 @@
 			};
 			name = Release;
 		};
+		F4CD1AFF281FE3DD00F682E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34XV2JSY5D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Shcherban.DictionaryModuleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Collections.app/Collections";
+			};
+			name = Debug;
+		};
+		F4CD1B00281FE3DD00F682E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34XV2JSY5D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Shcherban.DictionaryModuleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Collections.app/Collections";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1198,6 +1374,15 @@
 			buildConfigurations = (
 				F4C40D6B27FEA6120058C9BC /* Debug */,
 				F4C40D6C27FEA6120058C9BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4CD1B01281FE3DD00F682E0 /* Build configuration list for PBXNativeTarget "DictionaryModuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CD1AFF281FE3DD00F682E0 /* Debug */,
+				F4CD1B00281FE3DD00F682E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
