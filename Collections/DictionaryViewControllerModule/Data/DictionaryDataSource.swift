@@ -20,7 +20,7 @@ final class DictionaryDataSource: NSObject, UICollectionViewDataSource {
                                                             for: indexPath) as? CollectionViewCell else { fatalError(ErrorConstants.cannotCreateCell.rawValue)}
         
         let cellTitle = dictionaryWorkingModel.receiveTitleFoCell(indexPath)
-        cell.cellConfigure(cellTitle)
+        cell.configure(cellTitle)
         return cell
     }
 }

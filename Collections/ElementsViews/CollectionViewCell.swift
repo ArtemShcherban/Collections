@@ -10,7 +10,7 @@ import UIKit
 final class CollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = String(describing: CollectionViewCell.self)
     
-    lazy var titleTextLabel: UILabel = {
+    private(set) lazy var titleTextLabel: UILabel = {
         let tempTitleTextLabel = UILabel()
         tempTitleTextLabel.textAlignment = .center
         tempTitleTextLabel.numberOfLines = 0
@@ -25,16 +25,16 @@ final class CollectionViewCell: UICollectionViewCell {
         return tempActivityindicator
     }()
     
-    func cellConfigure(_ cellTitle: String) {
+    func configure(_ title: String) {
         layer.borderWidth = 0.2
         layer.borderColor = UIColor.black.cgColor
         backgroundColor = ColorsConstants.grayColor
-        titleTextLabel.text = cellTitle
+        titleTextLabel.text = title
         addTitleTextLabel()
         addActivityIndicator()
     }
     
-    func addTitleTextLabel() {
+    private func addTitleTextLabel() {
         self.addSubview(titleTextLabel)
         setTitleTextLabelConstraints()
     }
@@ -43,24 +43,29 @@ final class CollectionViewCell: UICollectionViewCell {
         titleTextLabel.text = title
     }
     
-    func addActivityIndicator() {
+    private func addActivityIndicator() {
         self.addSubview(activityIndicator)
         setActivityIndicatorConstraints()
     }
     
+    func updateAppearance() {
+        backgroundColor = ColorsConstants.whiteColor
+        titleTextLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        titleTextLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    }
     func updateBackgroundColor() {
         backgroundColor = ColorsConstants.whiteColor
     }
     
-    func setTitleTextLabelConstraints() {
+    private func setTitleTextLabelConstraints() {
         titleTextLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([titleTextLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                                      titleTextLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-                                     titleTextLabel.topAnchor.constraint(equalTo: self.topAnchor),
-                                     titleTextLabel.bottomAnchor.constraint(greaterThanOrEqualTo: self.bottomAnchor)])
+                                     titleTextLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: self.frame.height / 7),
+                                     titleTextLabel.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor)])
     }
     
-    func setActivityIndicatorConstraints() {
+    private func setActivityIndicatorConstraints() {
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([activityIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
                                      activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor)])

@@ -21,6 +21,15 @@ final class InitialModuleUITests: XCTestCase {
         app.launch()
         continueAfterFailure = false
     }
+    
+    func test_tappedArrayCell_shouldPushArrayViewController() {
+        let arrayCell = app.tables.cells.staticTexts["Array"]
+        let bigButton = app.buttons["bigButton"]
+        
+        arrayCell.tap()
+        
+        XCTAssertTrue(bigButton.exists)
+    }
 
     func test_tappedSetCell_shouldPushSetViewController() {
         let upperTextField = app.textFields["upperTextField"]
